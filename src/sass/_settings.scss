@@ -24,19 +24,6 @@ MAIN SASS CONFIGURATION
 — — — — — — — — — — — - — — — — — — — — — — — - — — — — — — — — — — — - */
 
 
-@-webkit-keyframes scrollHelper {
-    0% {-webkit-transform: translateX(-25px);}
-    50% {-webkit-transform: translateX(25px);}
-    100% {-webkit-transform: translateX(-25px);}
-}
-
-/* Standard syntax */
-@keyframes scrollHelper {
-  0% {transform: translateX(-25px);}
-  50% {transform: translateX(25px);}
-  100% {transform: translateX(-25px);}
-}
-
 /* — — — — — — — — — — — - — — — — — — — — — — — - — — — — — — — — — — — -
 2. EASINGS
 — — — — — — — — — — — - — — — — — — — — — — — - — — — — — — — — — — — - */
@@ -194,7 +181,7 @@ body {
   height: auto;
   font-family: '#', Helvetica, Arial, sans-serif;
   color: #ffffff;
-  background-color: $black;
+  background-color: #000000;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
           overflow-scrolling: touch;
@@ -210,7 +197,7 @@ body.open-nav {
 }
 body.js-byrefresh {
   opacity: 0; 
-  background-color: $black;
+  background-color: #000000;
 }
 .no-js body.js-byrefresh {opacity: 1;}
 body.js-loading-page { cursor: progress; }
