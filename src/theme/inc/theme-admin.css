@@ -1,0 +1,9 @@
+.post-type-equipa #edit-slug-box,
+.post-type-consulta #edit-slug-box { display: none; }
+.buro-separator { margin-top: 10px !important; }
+
+
+.post-type-clients_requests button[data-event='add-row'] { display: none; }
+
+.taxonomy-product_cat #col-left { display: none; }
+.taxonomy-product_cat #col-right { width: 100%; }

@@ -1,0 +1,76 @@
+#toplevel_page_Wordfence,
+#toplevel_page_woocommerce,
+#tagsdiv-product_tag { display: none; }
+
+.buro-link-name { display: none; }
+.buro-hide { opacity: 0; height: 0; }
+.buro-separator {
+  text-align: center;
+  clear: both;
+  margin-top: 60px !important;
+  background: gray;
+}
+.field_type-relationship .choices:before{
+  content: "Por adicionar";
+  padding: 10px 10px 10px 10px;
+  position: relative;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  border-right: #DFDFDF solid 1px;
+  border-bottom: #ccc solid 1px;
+  font-weight: 700;
+}
+.field_type-relationship .values:before{
+  content: "Adicionado";
+  padding: 0px 10px 10px 10px;
+  margin-top: 10px;
+  position: relative;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-bottom: #ccc solid 1px;
+}
+
+.buro-separator:first-of-type { margin-top:0px !important; }
+.buro-separator .acf-label { margin: 0; }
+.buro-separator .acf-label label,
+.acf-field.buro-separator .acf-label label {
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+#side-sortables .buro-separator { background-color: gray; margin-top: 0 !important; }
+#side-sortables .buro-separator .acf-label label {
+  font-size: 12px;
+  color: #fff;
+  text-transform: initial;
+  font-weight: 300;
+}
+.acf-postbox { margin-bottom: 0px; }
+
+.acf-hndle-cog.acf-js-tooltip { display: none; }
+.acf-postbox .hndle { color: transparent; }
+
+#select-post-language { display: none; }
+#ml_box p { display: none; }
+#post-translations p { display: inline;}
+
+/*.post-type-sectors .add-new-h2,
+.post-type-page .add-new-h2,
+.post-type-applications .add-new-h2 { display: none; }
+
+.post-type-jobs .acf-google-map .canvas,
+.post-type-academy .acf-google-map .canvas { display: none; }
+
+
+.post-type-slideshow #preview-action { display: none;}
+
+.post-type-newsletter .row-title { pointer-events: none; color: #444444;}
+.post-type-newsletter .row-actions { display: none; }
+.post-type-newsletter .column-title { padding: 12px; line-height: 1em; }*/
+
+#product_catdiv{
+  display: none;
+}
