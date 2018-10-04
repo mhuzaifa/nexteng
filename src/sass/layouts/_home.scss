@@ -1,11 +1,14 @@
 // Body Level
-.home{
-
+.home {
 }
 
 // Page Level
 .home-page {
   .page-header{
+    .carousel-inspire {
+      background-image: url('../imgs/inspire@.jpg') ;
+      background-posi
+  }
 
   }
   .page-content{
@@ -39,23 +42,23 @@
 }
 
 @include max-screen-height(820px) {
- 
+
 }
 
 @include max-screen($medium) {
-  
+
 }
 
 @include max-screen($small) { // --- iPad portrait ---
- 
+
 }
 
 @include max-screen($xsmall) { // --- iPhone 6/6S/7 and plus versions portrait ---
- 
 
-  
+
+
 }
 
 @include max-screen($xxsmall) { // --- iPhone 4/4S/5/5S portrait ---
-  
+
 }

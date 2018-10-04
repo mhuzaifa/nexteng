@@ -176,7 +176,7 @@ gulp.task('build-dev', [
 		port: '3020'
 	}, () => {
 		browserSync({
-			proxy: "next.local"
+			//proxy: "next.local"
 		});
 	});
 });

@@ -1,10 +1,6 @@
 function homePage() {
-
-  
-
   /*Variables*/
- 
-
+  
   /*DOM variables*/
   
 
@@ -33,7 +29,7 @@ function homePage() {
 
   var kill = function() {
     //Kill Events
-
+    $_window.off("resize.homePage");
     _scrollRef = null;
     cancelAnimationFrame(_raf_main_id);
 
@@ -45,12 +41,15 @@ function homePage() {
  
 
   function initEvents() {
-   
+    $_window.on("resize.homePage", resize);
   }
 
+  function resize() {
+    //stuff
+  }
 
   function home_scroll_rAF(status) {
-   
+   console.log("here");
   }
 
   return {

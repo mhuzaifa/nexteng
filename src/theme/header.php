@@ -46,9 +46,9 @@ BBÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
     if( class_exists('acf') ) {
       $social = buro_getShareInfo(
           $post->ID,
-          "Valto",
+          "NEXT",
           site_url('public/imgs/social/social-default.jpg'),
-          "Valto"
+          "NEXT"
         ); 
     }
     else {
@@ -139,5 +139,5 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
 
 
 
-  <div class="scroll-content-wrapper" data-scrollbar>
+  <div class="scroll-content-wrapper">
    
