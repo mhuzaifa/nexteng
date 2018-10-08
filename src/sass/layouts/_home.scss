@@ -1,72 +1,113 @@
 // Body Level
 .home {
+	font-family: 'Sharp Grotesk Medium 20';
 }
 
 // Page Level
 .home-page {
+
 	.page-header {
+		.carousel-wrapper {
+			display: flex;
+			justify-content: flex-end;
+
+		}
+
 		&.header-purple {
 			background-image: linear-gradient(to right, $purple, $purple 75%, white 25%);
+			height: 100vh;
 		}
 
 		.carousel-content {
-			min-height: 747px;
-			min-width: 1041px;
-			background-repeat: no-repeat;
-			background-position: 30px center;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			margin: 160px 0 92.5px;
-
 			&.inspire {
-				background-image: url('../imgs/inspire.jpg');
+				background-image: url("../imgs/inspire.jpg");
 
-				#inspire--logo {
-					top: -68px;
+				.logo-container {
 					position: relative;
+					top: -152px;
+					width: 735px;
+
+					@include max-screen($maxlarge) {
+						top: -124px;
+						width: 610px;
+					}
+
+					@include max-screen($xlarge) {
+						top: -115px;
+						width: 580px;
+					}
+
+					@include max-screen($large) {
+						top: -125px;
+						width: 620px;
+					}
+
+					@include max-screen($medium) {
+						top: -98px;
+						width: 620px;
+					}
+
 				}
 
-				.inspire--slogan {
-					font-size: 56px;
+				.carousel--slogan {
 					position: relative;
+					font-size: 56px;
 					top: 40px;
 					left: -20px;
+				}
+
+				margin-left: auto;
+				min-height: 75vh;
+				min-width: 62.8vw;
+				background-repeat: no-repeat;
+				background-position: 44px center;
+				background-size: cover;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				margin: 16vh 3.5vw 0;
+
+				@include max-screen(1920px) {
+					background-position: 40px center;
+				}
+
+				@include max-screen($xlarge) {
+					background-position: 35px center;
+				}
+
+				@include max-screen($medium) {
+					max-width: 64vw;
+					min-width: 64vw;
+					min-height: 72vh;
+					margin: 12vh 4vw 0;
 				}
 			}
 		}
 	}
 }
 
-.page-content {
-}
+.page-content {}
 
 // Media Queries
-@include screen($medium, $xxlarge, $orientation: false) {
-}
+@include screen($medium, $xxlarge, $orientation: false) {}
 
 @include screen($xlarge, 2100px, $orientation: false) {
 	// --- MacBook Pro 15'(.ie) ---
 }
 
-@include min-screen($medium) {
-}
+@include min-screen($medium) {}
 
 @include screen(1024px, 1366px, $orientation: portrait) {
 	// --- IPAD Pro ---
 }
 
-@include ipad($orientation: landscape) {
-}
+@include ipad($orientation: landscape) {}
 
-@include ipad($orientation: portrait) {
-}
+@include ipad($orientation: portrait) {}
 
-@include max-screen-height(820px) {
-}
+@include max-screen-height(820px) {}
 
-@include max-screen($medium) {
-}
+@include max-screen($medium) {}
 
 @include max-screen($small) {
 	// --- iPad portrait ---

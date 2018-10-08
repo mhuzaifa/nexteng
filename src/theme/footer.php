@@ -51,10 +51,14 @@
     // ga('create', 'UA-XXXXXX-1', 'auto');
     // ga('send', 'pageview');
 </script>
- 
+
 <!-- end #ANALYTICS -->
-<script type='text/javascript' id="__bs_script__">//<![CDATA[
-    document.write("<script async src='/browser-sync/browser-sync-client.2.10.1.js'><\/script>".replace("HOST", location.hostname));
-//]]></script> 
+<script id="__bs_script__">
+    //<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.24.7'><\/script>".replace(
+        "HOST", location.hostname));
+    //]]>
+</script>
 </body>
+
 </html>
