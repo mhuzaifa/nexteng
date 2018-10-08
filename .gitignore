@@ -7,7 +7,7 @@ backups/**
 wp-config.php
 node_modules/**
 src/concat/*.scss
-
+gulpfile.js
 # IDE & Editors
 .idea
 .vscode

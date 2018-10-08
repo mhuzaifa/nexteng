@@ -5,12 +5,40 @@
 // Page Level
 .home-page {
 	.page-header {
-		.carousel-inspire {
-			background-image: url('../imgs/inspire@.jpg');
+		&.header-purple {
+			background-image: linear-gradient(to right, $purple, $purple 75%, white 25%);
+		}
+
+		.carousel-content {
+			min-height: 747px;
+			min-width: 1041px;
+			background-repeat: no-repeat;
+			background-position: 30px center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin: 160px 0 92.5px;
+
+			&.inspire {
+				background-image: url('../imgs/inspire.jpg');
+
+				#inspire--logo {
+					top: -68px;
+					position: relative;
+				}
+
+				.inspire--slogan {
+					font-size: 56px;
+					position: relative;
+					top: 40px;
+					left: -20px;
+				}
+			}
 		}
 	}
-	.page-content {
-	}
+}
+
+.page-content {
 }
 
 // Media Queries
