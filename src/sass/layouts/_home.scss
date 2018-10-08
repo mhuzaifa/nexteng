@@ -4,61 +4,50 @@
 
 // Page Level
 .home-page {
-  .page-header{
-    .carousel-inspire {
-      background-image: url('../imgs/inspire@.jpg') ;
-      background-posi
-  }
-
-  }
-  .page-content{
-
-  }
+	.page-header {
+		.carousel-inspire {
+			background-image: url('../imgs/inspire@.jpg');
+		}
+	}
+	.page-content {
+	}
 }
 
 // Media Queries
 @include screen($medium, $xxlarge, $orientation: false) {
-
 }
 
-@include screen($xlarge, 2100px, $orientation: false) {  // --- MacBook Pro 15'(.ie) ---
-
+@include screen($xlarge, 2100px, $orientation: false) {
+	// --- MacBook Pro 15'(.ie) ---
 }
 
 @include min-screen($medium) {
-
 }
 
-@include screen(1024px, 1366px, $orientation: portrait) { // --- IPAD Pro ---
-
+@include screen(1024px, 1366px, $orientation: portrait) {
+	// --- IPAD Pro ---
 }
 
 @include ipad($orientation: landscape) {
-
 }
 
 @include ipad($orientation: portrait) {
-
 }
 
 @include max-screen-height(820px) {
-
 }
 
 @include max-screen($medium) {
-
 }
 
-@include max-screen($small) { // --- iPad portrait ---
-
+@include max-screen($small) {
+	// --- iPad portrait ---
 }
 
-@include max-screen($xsmall) { // --- iPhone 6/6S/7 and plus versions portrait ---
-
-
-
+@include max-screen($xsmall) {
+	// --- iPhone 6/6S/7 and plus versions portrait ---
 }
 
-@include max-screen($xxsmall) { // --- iPhone 4/4S/5/5S portrait ---
-
+@include max-screen($xxsmall) {
+	// --- iPhone 4/4S/5/5S portrait ---
 }

@@ -26,9 +26,9 @@ const zip = require('gulp-zip');
 const imagemin = require('gulp-imagemin');
 const clean = require('gulp-clean');
 const sass = require('gulp-sass');
-const notify      = require('gulp-notify');
-const beep        = require('beepbeep');
-const pump        = require('pump');
+const notify = require('gulp-notify');
+const beep = require('beepbeep');
+const pump = require('pump');
 
 /* -------------------------------------------------------------------------------------------------
 Theme Name
@@ -80,8 +80,8 @@ gulp.task('cleanup', () => {
 
 gulp.task('download-wordpress', () => {
 	remoteSrc(['latest.zip'], {
-		base: 'https://wordpress.org/'
-	})
+			base: 'https://wordpress.org/'
+		})
 		.pipe(gulp.dest('build/'));
 });
 
@@ -102,10 +102,10 @@ gulp.task('copy-config', () => {
 		.pipe(inject.after('define(\'DISABLE_WP_CRON\', \'\');', '\ndefine(\'UPLOADS\', "/public/uploads");'))
 		.pipe(gulp.dest('build/wordpress'))
 		.on('end', () => {
-				gutil.beep();
-				gutil.log(devServerReady);
-				gutil.log(thankYou);
-			});
+			gutil.beep();
+			gutil.log(devServerReady);
+			gutil.log(thankYou);
+		});
 });
 
 gulp.task('disable-cron', () => {
@@ -133,8 +133,7 @@ gulp.task('uploads-folder', () => {
 		}
 		if (data.indexOf('UPLOADS') >= 0) {
 			gutil.log('UPLOADS already defined');
-		}
-		else {
+		} else {
 			gulp.src('build/wordpress/wp-config.php')
 				.pipe(inject.after('define(\'WP_DEBUG\', false);', '\ndefine(\'UPLOADS\', "/public/uploads");'))
 				.pipe(gulp.dest('build/wordpress'));
@@ -176,7 +175,7 @@ gulp.task('build-dev', [
 		port: '3020'
 	}, () => {
 		browserSync({
-			//proxy: "next.local"
+			proxy: "next.local"
 		});
 	});
 });
@@ -223,54 +222,60 @@ gulp.task('copy-3d-dev', () => {
 
 //CSS CONCATS
 gulp.task('clean-sass', function () {
-  return gulp.src('src/sass/style.scss', {read: false})
-      .pipe(clean());
+	return gulp.src('src/sass/style.scss', {
+			read: false
+		})
+		.pipe(clean());
 });
 
-gulp.task('style-sass-concat', ['clean-sass'], function() {
-  return gulp.src([
-  	'src/sass/*.scss',
-    'src/sass/**/*.scss',
-   	'src/components/**/*.scss'
-  ])
-  .pipe(concat('styles.scss'))
-  .pipe(gulp.dest('src/concat'))
+gulp.task('style-sass-concat', ['clean-sass'], function () {
+	return gulp.src([
+			'src/sass/*.scss',
+			'src/sass/**/*.scss',
+			'src/components/**/*.scss'
+		])
+		.pipe(concat('styles.scss'))
+		.pipe(gulp.dest('src/concat'))
 });
 
-gulp.task('style-dev', ['style-sass-concat'], function() {
+gulp.task('style-dev', ['style-sass-concat'], function () {
 	return gulp.src([
 			'src/concat/styles.scss',
 		])
-		.pipe(plumber({ errorHandler: onError }))
+		.pipe(plumber({
+			errorHandler: onError
+		}))
 		.pipe(sourcemaps.init())
 		.pipe(sass())
 		.on('error', onError)
-    .pipe(sourcemaps.write('/'))
+		.pipe(sourcemaps.write('/'))
 		.pipe(gulp.dest('build/wordpress/public/scripts'))
 		//.pipe(browserSync.stream({ match: '**/*.css' }))
 		.pipe(notify({
-        title   : 'Gulp Task Complete',
-        message : 'SCSS compliled and no errors. Good job!!'
-    }));
+			title: 'Gulp Task Complete',
+			message: 'SCSS compliled and no errors. Good job!!'
+		}));
 });
 
 
 //CSS CONCATS
-gulp.task('style-dev-concat', ['style-dev'], function() {
-  return gulp.src([
-    'build/wordpress/public/scripts/*.css',
-    'node_modules/smooth-scrollbar/dist/smooth-scrollbar.css',
-    'node_modules/outdated-browser/outdatedbrowser/outdatedbrowser.css'
-  ])
-  .pipe(sourcemaps.init())
-    .pipe(concat('styles.css'))
-  .pipe(sourcemaps.write('/'))
-  .pipe(gulp.dest('build/wordpress/public/scripts'))
-  .pipe(browserSync.reload({stream: true}))
-  .pipe(notify({
-      title   : 'Gulp Task Complete',
-      message : 'Main CSS concat. Good job!!'
-  }));
+gulp.task('style-dev-concat', ['style-dev'], function () {
+	return gulp.src([
+			'build/wordpress/public/scripts/*.css',
+			'node_modules/smooth-scrollbar/dist/smooth-scrollbar.css',
+			'node_modules/outdated-browser/outdatedbrowser/outdatedbrowser.css'
+		])
+		.pipe(sourcemaps.init())
+		.pipe(concat('styles.css'))
+		.pipe(sourcemaps.write('/'))
+		.pipe(gulp.dest('build/wordpress/public/scripts'))
+		.pipe(browserSync.reload({
+			stream: true
+		}))
+		.pipe(notify({
+			title: 'Gulp Task Complete',
+			message: 'Main CSS concat. Good job!!'
+		}));
 });
 
 // gulp.task('header-scripts-dev', () => {
@@ -294,87 +299,89 @@ gulp.task('style-dev-concat', ['style-dev'], function() {
 // 		.pipe(gulp.dest('build/wordpress/wp-content/themes/' + themeName + '/js'));
 // });
 
-gulp.task('concat-scripts-dev', function() {
-  return gulp.src([
-    'src/js/*.js',
-    'src/components/**/*.js',
-    'src/js/views/*.js'
-  ])
-  .pipe(sourcemaps.init())
-    .pipe(concat('main-engine.js'))
-  .pipe(sourcemaps.write('/'))
-  .pipe(gulp.dest('build/wordpress/public/scripts'))
-  .pipe(browserSync.reload({stream: true}))
-  .pipe(notify({
-      title   : 'Gulp Task Complete',
-      message : 'Main Javascript concat. Good job!!'
-  }));
+gulp.task('concat-scripts-dev', function () {
+	return gulp.src([
+			'src/js/*.js',
+			'src/components/**/*.js',
+			'src/js/views/*.js'
+		])
+		.pipe(sourcemaps.init())
+		.pipe(concat('main-engine.js'))
+		.pipe(sourcemaps.write('/'))
+		.pipe(gulp.dest('build/wordpress/public/scripts'))
+		.pipe(browserSync.reload({
+			stream: true
+		}))
+		.pipe(notify({
+			title: 'Gulp Task Complete',
+			message: 'Main Javascript concat. Good job!!'
+		}));
 });
 
 //VENDORS CONCAT TASK
-gulp.task('concat-vendor-js', function() {
-  return gulp.src(
-    [
-      'node_modules/gsap/src/minified/TweenMax.min.js',
-      'node_modules/gsap/src/minified/plugins/CSSRulePlugin.min.js',
-      'node_modules/gsap/src/minified/utils/Draggable.min.js',
-      'node_modules/gsap/src/minified/plugins/ScrollToPlugin.min.js',
-      'node_modules/gsap/src/minified/plugins/EndArrayPlugin.min.js',
-      'node_modules/cookie_js/cookie.min.js',
-      'src/js/defaults/SplitText.min.js',
-      'src/js/defaults/MorphSVGPlugin.min.js',
-      'src/js/defaults/bodymovin.min.js',
-      'src/js/defaults/turf.min.js',
-      'node_modules/imagesloaded/imagesloaded.pkgd.min.js',
-      'node_modules/fastclick/lib/fastclick.js',
-      'node_modules/benmajor-jquery-touch-events/src/jquery.mobile-events.min.js',
-      'node_modules/raf/app/requestAnimationFrame.js',
-      'node_modules/svg4everybody/lib/svg4everybody.js',
-      'node_modules/verge/verge.js',
-      'node_modules/viewport-units-buggyfill/viewport-units-buggyfill.js',
-      'node_modules/respimage/respimage.min.js',
-      'node_modules/smooth-scrollbar/dist/smooth-scrollbar.js',
-      'node_modules/outdated-browser/outdatedbrowser/outdatedbrowser.min.js',
-      'node_modules/intersection-observer-polyfill/dist/IntersectionObserver.js',
-      'node_modules/snapsvg/dist/snap.svg.js',
-      'node_modules/easing-js-ii/easing-min.js',
-      'node_modules/tippy.js/dist/tippy.all.min.js',
-      'node_modules/slick-carousel/slick/slick.js',
-      'node_modules/countup.js/dist/countUp.min.js',
-      'node_modules/inobounce/inobounce.min.js',
-      'node_modules/pizzicato/distr/Pizzicato.min.js',
-      'node_modules/three/build/three.min.js',
-      'node_modules/jquery-mousewheel/jquery.mousewheel.js',
-      'src/js/defaults/mapbox.js',
-      'src/js/defaults/burocratik-default.js',
-    ])
-    .pipe(sourcemaps.init())
-      .pipe(concat('buro-workers.js'))
-    .pipe(sourcemaps.write('/'))
-    .pipe(gulp.dest('build/wordpress/public/scripts'))
-    .pipe(notify({
-        title   : 'Gulp Task Complete',
-        message : 'Buro Workers concat. Good job!!'
-    }));
+gulp.task('concat-vendor-js', function () {
+	return gulp.src(
+			[
+				'node_modules/gsap/src/minified/TweenMax.min.js',
+				'node_modules/gsap/src/minified/plugins/CSSRulePlugin.min.js',
+				'node_modules/gsap/src/minified/utils/Draggable.min.js',
+				'node_modules/gsap/src/minified/plugins/ScrollToPlugin.min.js',
+				'node_modules/gsap/src/minified/plugins/EndArrayPlugin.min.js',
+				'node_modules/cookie_js/cookie.min.js',
+				'src/js/defaults/SplitText.min.js',
+				'src/js/defaults/MorphSVGPlugin.min.js',
+				'src/js/defaults/bodymovin.min.js',
+				'src/js/defaults/turf.min.js',
+				'node_modules/imagesloaded/imagesloaded.pkgd.min.js',
+				'node_modules/fastclick/lib/fastclick.js',
+				'node_modules/benmajor-jquery-touch-events/src/jquery.mobile-events.min.js',
+				'node_modules/raf/app/requestAnimationFrame.js',
+				'node_modules/svg4everybody/lib/svg4everybody.js',
+				'node_modules/verge/verge.js',
+				'node_modules/viewport-units-buggyfill/viewport-units-buggyfill.js',
+				'node_modules/respimage/respimage.min.js',
+				'node_modules/smooth-scrollbar/dist/smooth-scrollbar.js',
+				'node_modules/outdated-browser/outdatedbrowser/outdatedbrowser.min.js',
+				'node_modules/intersection-observer-polyfill/dist/IntersectionObserver.js',
+				'node_modules/snapsvg/dist/snap.svg.js',
+				'node_modules/easing-js-ii/easing-min.js',
+				'node_modules/tippy.js/dist/tippy.all.min.js',
+				'node_modules/slick-carousel/slick/slick.js',
+				'node_modules/countup.js/dist/countUp.min.js',
+				'node_modules/inobounce/inobounce.min.js',
+				'node_modules/pizzicato/distr/Pizzicato.min.js',
+				'node_modules/three/build/three.min.js',
+				'node_modules/jquery-mousewheel/jquery.mousewheel.js',
+				'src/js/defaults/mapbox.js',
+				'src/js/defaults/burocratik-default.js',
+			])
+		.pipe(sourcemaps.init())
+		.pipe(concat('buro-workers.js'))
+		.pipe(sourcemaps.write('/'))
+		.pipe(gulp.dest('build/wordpress/public/scripts'))
+		.pipe(notify({
+			title: 'Gulp Task Complete',
+			message: 'Buro Workers concat. Good job!!'
+		}));
 });
 
 //MOVE MODERNIZR
-gulp.task('move-modernizr', function(){
-  return gulp
-    .src('node_modules/Modernizr/modernizr.custom.js')
-    .pipe(gulp.dest('build/wordpress/public/scripts'));
+gulp.task('move-modernizr', function () {
+	return gulp
+		.src('node_modules/Modernizr/modernizr.custom.js')
+		.pipe(gulp.dest('build/wordpress/public/scripts'));
 })
 
-gulp.task('move-cssbrowserselector', function(){
-  return gulp
-    .src('src/js/defaults/css_browser_selector.min.js')
-    .pipe(gulp.dest('build/wordpress/public/scripts'));
+gulp.task('move-cssbrowserselector', function () {
+	return gulp
+		.src('src/js/defaults/css_browser_selector.min.js')
+		.pipe(gulp.dest('build/wordpress/public/scripts'));
 })
 
-gulp.task('move-jquery', function(){
-  return gulp
-    .src('node_modules/jquery/dist/jquery.min.js')
-    .pipe(gulp.dest('build/wordpress/public/scripts'));
+gulp.task('move-jquery', function () {
+	return gulp
+		.src('node_modules/jquery/dist/jquery.min.js')
+		.pipe(gulp.dest('build/wordpress/public/scripts'));
 })
 
 gulp.task('plugins-dev', () => {
@@ -462,9 +469,15 @@ gulp.task('copy-fonts-prod', () => {
 
 gulp.task('process-images', ['copy-theme-prod'], () => {
 	return gulp.src('src/theme/img/**')
-		.pipe(plumber({ errorHandler: onError }))
+		.pipe(plumber({
+			errorHandler: onError
+		}))
 		.pipe(imagemin([
-			imagemin.svgo({ plugins: [{ removeViewBox: true }] })
+			imagemin.svgo({
+				plugins: [{
+					removeViewBox: true
+				}]
+			})
 		], {
 			verbose: true
 		}))
@@ -473,14 +486,18 @@ gulp.task('process-images', ['copy-theme-prod'], () => {
 
 gulp.task('style-prod', () => {
 	return gulp.src('src/style/style.css')
-		.pipe(plumber({ errorHandler: onError }))
+		.pipe(plumber({
+			errorHandler: onError
+		}))
 		.pipe(postcss(pluginsProd))
 		.pipe(gulp.dest('dist/themes/' + themeName))
 });
 
 gulp.task('header-scripts-prod', () => {
 	return gulp.src(headerJS)
-		.pipe(plumber({ errorHandler: onError }))
+		.pipe(plumber({
+			errorHandler: onError
+		}))
 		.pipe(concat('header-bundle.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('dist/themes/' + themeName + '/js'));
@@ -488,7 +505,9 @@ gulp.task('header-scripts-prod', () => {
 
 gulp.task('footer-scripts-prod', () => {
 	return gulp.src(footerJS)
-		.pipe(plumber({ errorHandler: onError }))
+		.pipe(plumber({
+			errorHandler: onError
+		}))
 		.pipe(babel({
 			presets: ['env']
 		}))
