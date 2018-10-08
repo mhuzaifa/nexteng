@@ -1,64 +1,75 @@
 // Body Level
-.home {
-}
+.home {}
 
 // Page Level
 .home-page {
-  .page-header{
-    .carousel-inspire {
-      background-image: url('../imgs/inspire@.jpg') ;
-      background-posi
-  }
+	.page-header {
+		&.header-purple {
+			background-image: linear-gradient(to right, $purple, $purple 75%, white 25%);
+		}
 
-  }
-  .page-content{
+		.carousel-content {
+			min-height: 747px;
+			min-width: 1041px;
+			background-repeat: no-repeat;
+			background-position: 30px center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin: 160px 0 92.5px;
 
-  }
+			&.inspire {
+				background-image: url('../imgs/inspire.jpg');
+
+				#inspire--logo {
+					top: -68px;
+					position: relative;
+				}
+
+				.inspire--slogan {
+					font-size: 56px;
+					position: relative;
+					top: 40px;
+					left: -20px;
+
+				}
+			}
+		}
+	}
 }
+
+.page-content {}
+
 
 // Media Queries
-@include screen($medium, $xxlarge, $orientation: false) {
+@include screen($medium, $xxlarge, $orientation: false) {}
 
+@include screen($xlarge, 2100px, $orientation: false) {
+	// --- MacBook Pro 15'(.ie) ---
 }
 
-@include screen($xlarge, 2100px, $orientation: false) {  // --- MacBook Pro 15'(.ie) ---
+@include min-screen($medium) {}
 
+@include screen(1024px, 1366px, $orientation: portrait) {
+	// --- IPAD Pro ---
 }
 
-@include min-screen($medium) {
+@include ipad($orientation: landscape) {}
 
+@include ipad($orientation: portrait) {}
+
+@include max-screen-height(820px) {}
+
+@include max-screen($medium) {}
+
+@include max-screen($small) {
+	// --- iPad portrait ---
 }
 
-@include screen(1024px, 1366px, $orientation: portrait) { // --- IPAD Pro ---
-
+@include max-screen($xsmall) {
+	// --- iPhone 6/6S/7 and plus versions portrait ---
 }
 
-@include ipad($orientation: landscape) {
-
-}
-
-@include ipad($orientation: portrait) {
-
-}
-
-@include max-screen-height(820px) {
-
-}
-
-@include max-screen($medium) {
-
-}
-
-@include max-screen($small) { // --- iPad portrait ---
-
-}
-
-@include max-screen($xsmall) { // --- iPhone 6/6S/7 and plus versions portrait ---
-
-
-
-}
-
-@include max-screen($xxsmall) { // --- iPhone 4/4S/5/5S portrait ---
-
+@include max-screen($xxsmall) {
+	// --- iPhone 4/4S/5/5S portrait ---
 }
