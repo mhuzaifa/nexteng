@@ -1,92 +1,793 @@
+html {
+	font-size: 62.5%;
+
+	@include max-screen($xxlarge) {
+		font-size: 82.5%;
+	}
+
+	@include max-screen($xlarge) {
+		font-size: 62.5%;
+	}
+
+	@include max-screen($large) {
+		font-size: 50.5%;
+	}
+
+	@include max-screen($medium) {
+		font-size: 52.5%;
+	}
+
+	@include max-screen($small) {
+		font-size: 42.5%;
+	}
+
+	@include max-screen($xsmall) {
+		font-size: 32.5%;
+	}
+}
+
 // Body Level
 .home {
-	font-family: 'Sharp Grotesk Medium 20';
+
+	/*******************/
+	/*NAVIGATION STARTS*/
+	header,
+	main,
+	.manifesto-wrapper,
+	.info-wrapper,
+	.big-data-wrapper,
+	.rpa-wrapper,
+	.setores-wrapper {
+		position: relative;
+	}
+
+	.header {
+		height: 100vh;
+	}
+
+	.header,
+	.content,
+	.manifesto,
+	.info-tech,
+	.big-data,
+	.rpa,
+	.setores {
+		position: absolute;
+		width: 100%;
+		clip: rect(auto, auto, auto, auto);
+		box-sizing: border-box;
+	}
+
+	nav {
+		@include max-screen($small) {
+			display: none;
+		}
+
+		top: 0;
+		left: 0;
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		left: 6vw;
+		z-index: 9999;
+
+		.scroll-wrapper {
+			position: relative;
+
+
+			.scroll-bar {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 1.5px;
+				height: 100%;
+				background-color: #9e7491;
+				z-index: -2;
+			}
+
+			.scroll-handler {
+				position: absolute;
+				top: 0;
+				left: -5px;
+				width: 10.5px;
+				height: 30px;
+				background-color: $white;
+				z-index: 9999999;
+				border-radius: 10px;
+			}
+		}
+
+		.items-wrapper {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 390px;
+
+			div:last-child {
+				position: relative;
+				top: -3px;
+			}
+		}
+
+		.scroll-item {
+			line-height: 0;
+
+			.scroll-anchor {
+				height: 10px;
+				width: 10px;
+				background-color: $purple;
+				z-index: 2222;
+				border: 1.5px solid #9e7491;
+				border-radius: 50%;
+				display: inline-block;
+				left: -4px;
+				margin-top: 0;
+				position: absolute;
+			}
+
+			.link-text {
+				font-family: 'Sharp Grotesk Book 20';
+				font-size: 12.5px;
+				letter-spacing: 0.5px;
+				color: $white;
+				left: 40px;
+				position: relative;
+			}
+		}
+	}
+
+	.header .menu-full {
+		.scroll-item {
+			&:not(.active-intro) .link-text {
+				color: #9e7491;
+			}
+		}
+
+		.scroll-item {
+			&.active-intro .link-text {
+				color: $white;
+			}
+		}
+	}
+
+	.menu-light .scroll-item .link-text,
+	.menu-full.manif .scroll-item .link-text {
+		font-size: 9px;
+		position: relative;
+		padding: 5px 12px;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		border-radius: 2px;
+		left: 20px;
+		top: 5px;
+	}
+
+	.menu-light .scroll-item .link-text:after {
+		border-color: transparent $purple;
+	}
+
+	.menu-full.manif .scroll-item .link-text:after {
+		border-color: transparent $white;
+	}
+
+	.menu-light .scroll-item .link-text:after,
+	.menu-full.manif .scroll-item .link-text:after {
+		content: '';
+		position: absolute;
+		border-style: solid;
+		border-width: 0 15px 8px 0;
+		display: block;
+		width: 0;
+		z-index: 1;
+		left: -12px;
+		top: 0px;
+	}
+
+	.menu-light .scroll-item .link-text {
+		background-color: $purple;
+		color: $white;
+	}
+
+	.menu-full.manif .scroll-item .link-text {
+		background-color: $white;
+		color: $purple;
+	}
+
+	.menu-light .scroll-anchor:hover,
+	.menu-full.manif .scroll-anchor:hover {
+		cursor: pointer;
+	}
+
+	.menu-light {
+		.scroll-wrapper {
+			.scroll-bar {
+				background-color: $purple;
+				opacity: 1;
+			}
+
+			.scroll-handler {
+				background-color: $purple;
+			}
+
+			.scroll-item {
+				.scroll-anchor {
+					border-color: $purple;
+					background: white;
+
+					&:hover {
+						background: $purple;
+					}
+				}
+			}
+		}
+
+		.scroll-item {
+			.scroll-anchor:hover {}
+
+			a {}
+		}
+	}
+
+	.sectors-tang .scroll-wrapper .scroll-item .scroll-anchor {
+		background: $tang;
+	}
+
+	.setores .scroll-wrapper .scroll-item .scroll-anchor {
+		background: #f5e8e4;
+	}
+
+
+	/*******************/
+	/*NAVIGATION ENDS HERE*/
 }
 
 // Page Level
 .home-page {
-
 	.page-header {
 		.carousel-wrapper {
 			display: flex;
 			justify-content: flex-end;
-
 		}
 
 		&.header-purple {
-			background-image: linear-gradient(to right, $purple, $purple 75%, white 25%);
+			background-image: linear-gradient(to right, $purple, $purple 70%, white 30%);
 			height: 100vh;
 		}
 
 		.carousel-content {
-			&.inspire {
-				background-image: url("../imgs/inspire.jpg");
+			overflow: hidden;
+			position: relative;
+			margin-left: auto;
+			min-height: 75vh;
+			min-width: 62.8vw;
+			margin: 16vh 3.5vw 0;
 
+			.carousel--img {
+				position: absolute;
+				max-width: inherit;
+				top: 0;
+				left: 4.5rem;
+				width: 110rem;
+			}
+
+			&.inspire {
 				.logo-container {
 					position: relative;
-					top: -152px;
-					width: 735px;
+					left: 1.5rem;
+					top: 21.6rem;
+					max-width: 52rem;
 
-					@include max-screen($maxlarge) {
-						top: -124px;
-						width: 610px;
+					#tr_1_,
+					#tr {
+						transform: translate(2rem);
 					}
-
-					@include max-screen($xlarge) {
-						top: -115px;
-						width: 580px;
-					}
-
-					@include max-screen($large) {
-						top: -125px;
-						width: 620px;
-					}
-
-					@include max-screen($medium) {
-						top: -98px;
-						width: 620px;
-					}
-
 				}
 
 				.carousel--slogan {
+					font-family: 'Sharp Grotesk Medium 25';
+					font-size: 5.5rem;
+					top: 36.2rem;
+					letter-spacing: -1px;
 					position: relative;
-					font-size: 56px;
-					top: 40px;
-					left: -20px;
-				}
+					font-size: 5.5rem;
+					top: 36.2rem;
+					color: $white;
 
-				margin-left: auto;
-				min-height: 75vh;
-				min-width: 62.8vw;
-				background-repeat: no-repeat;
-				background-position: 44px center;
-				background-size: cover;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				margin: 16vh 3.5vw 0;
+					@include max-screen($medium) {
+						font-size: 4.5rem;
+					}
 
-				@include max-screen(1920px) {
-					background-position: 40px center;
-				}
-
-				@include max-screen($xlarge) {
-					background-position: 35px center;
-				}
-
-				@include max-screen($medium) {
-					max-width: 64vw;
-					min-width: 64vw;
-					min-height: 72vh;
-					margin: 12vh 4vw 0;
+					@include max-screen($small) {
+						font-size: 5vw;
+						margin-right: 5vw;
+					}
 				}
 			}
 		}
 	}
 }
 
-.page-content {}
+.page-content {
+	.service {
+		padding: 18.8rem 0rem;
+
+		@include max-screen($medium) {
+			padding: 10rem 0rem;
+		}
+
+		.service--title {
+			font-family: 'Sharp Grotesk Medium 25';
+			font-size: 5.5rem;
+			letter-spacing: -1px;
+			padding-top: 18.4rem;
+			padding-bottom: 4.2rem;
+
+			@include max-screen($xxlarge) {
+				max-width: 1220px;
+			}
+
+			@include max-screen($xlarge) {
+				max-width: 920px;
+			}
+
+			line-height: 6.7rem;
+
+			sup {
+				font-size: 1.6rem;
+				top: -3.5rem;
+			}
+		}
+
+		.service--subtitle {
+			font-family: 'Sharp Grotesk Medium 20';
+			font-size: 3rem;
+
+			@include max-screen($xsmall) {
+				margin-top: 6rem;
+			}
+		}
+
+		.service--box {
+			max-height: 57.6rem;
+			height: 50rem;
+			min-height: 50rem;
+			margin: 1rem 0;
+
+			.box--title {
+				font-family: 'Sharp Grotesk Medium 25';
+				font-size: 5rem;
+				color: $purple;
+				letter-spacing: -2px;
+				padding: 5.3rem 4.8rem;
+
+				@include min-screen($maxlarge) {
+					font-size: 4rem;
+				}
+
+				@include min-screen($xxlarge) {
+					font-size: 5rem;
+				}
+			}
+
+			&.consultoria,
+			&.nearshore {
+				margin-top: 16.8rem;
+
+				@include max-screen($xsmall) {
+					margin-top: 6rem;
+				}
+			}
+
+			&.consultoria:before,
+			&.projectos:before {
+				position: absolute;
+				content: "";
+				top: 0;
+				left: -6.5rem;
+				width: 48%;
+				max-width: 25.8rem;
+				height: 100%;
+				background-image: url('../imgs/service-gloves.png');
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: bottom left;
+			}
+
+			&.nearshore {
+				background-color: darken(#f08f65, 2%);
+				position: relative;
+
+				.box--title {
+					position: absolute;
+					bottom: 0;
+					padding: 5.3rem 4.8rem;
+				}
+			}
+
+			&.nearshore:before {
+				position: absolute;
+				content: "";
+				top: -5rem;
+				right: -7.5rem;
+				max-width: 58.7rem;
+				width: 95%;
+				height: 100%;
+				background-image: url('../imgs/service-shore.png');
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: top right;
+			}
+
+			&.consultoria {
+				background-color: darken(#ffce7c, 2%);
+				position: relative;
+			}
+
+			&.projectos {
+				background-color: darken(#ceb6fd, 2%);
+				margin-top: 3.5rem;
+				position: relative;
+			}
+		}
+
+		.service--note {
+			font-family: 'IBM Plex Mono';
+			font-size: 1.2rem;
+			max-width: 30.3rem;
+			position: relative;
+			padding-left: 6.5rem;
+			margin: 8rem 0 0 8rem;
+		}
+
+		.service--note::before {
+			position: absolute;
+			content: "";
+			width: 5.5rem;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-image: url('../imgs/service-hand-icon@2x.jpg');
+			background-repeat: no-repeat;
+			background-position: top left;
+			background-size: contain;
+		}
+	}
+
+	.manifesto {
+		background-color: #371028;
+		padding-top: 15rem;
+		color: $white;
+
+		.manifesto--title {
+			font-family: 'Sharp Grotesk Medium 25';
+			font-size: 10rem;
+			color: $white;
+			letter-spacing: -0.2rem;
+			line-height: 9.5rem;
+			padding: 5rem 0 7.5rem;
+
+			@include max-screen($xsmall) {
+				font-size: 10vw;
+				line-height: 7rem;
+				padding: 2rem 0 4.5rem;
+			}
+
+			sup {
+				font-size: 2.5rem;
+				top: -5.8rem;
+
+				@include max-screen($xsmall) {
+					font-size: 3vw;
+					top: -3.5rem;
+				}
+			}
+
+			span {
+				color: $tang;
+			}
+		}
+
+		.manifesto--details {
+			display: flex;
+
+			@include max-screen($xsmall) {
+				flex-wrap: wrap;
+			}
+
+			padding-top: 7.5rem;
+			padding-bottom: 7.5rem;
+
+			.manifesto--text {
+				font-family: 'Sharp Grotesk Medium 20';
+				font-weight: normal;
+				font-size: 4.5rem;
+				min-width: 60rem;
+
+				@include max-screen($medium) {
+					font-size: 3.5rem;
+					min-width: 50rem;
+				}
+
+				@include max-screen($xsmall) {
+					min-width: 80vw;
+					max-width: 80vw;
+				}
+
+				span {
+					color: $tang;
+					display: block;
+
+					sup {
+						font-size: 5rem;
+						top: -0.5rem;
+						left: -1rem;
+					}
+				}
+			}
+
+			.menifesto--img {
+				padding-left: 10rem;
+
+				@include max-screen($medium) {
+					padding-left: 5rem;
+				}
+
+				@include max-screen($xsmall) {
+					padding-top: 5rem;
+				}
+
+				img {
+					max-width: 43.7rem;
+
+					@include max-screen($medium) {
+						max-width: 33.7rem;
+					}
+				}
+			}
+		}
+	}
+
+	.sectors {
+		background-color: $tang;
+		padding: 15rem 0;
+		border-bottom: 1px solid #371028;
+
+		@include max-screen($small) {
+			padding: 8rem 0;
+		}
+
+		.sectors-title {
+			font-family: 'Sharp Grotesk Medium 25';
+			font-size: 10rem;
+			color: $white;
+			letter-spacing: -0.2rem;
+			line-height: 9.5rem;
+			padding: 5rem 0 15rem;
+
+			@include max-screen($xsmall) {
+				font-size: 10vw;
+				line-height: 7rem;
+				padding: 2rem 0 4.5rem;
+			}
+
+			sup {
+				font-size: 2.5rem;
+				top: -5.8rem;
+
+				@include max-screen($xsmall) {
+					font-size: 3vw;
+					top: -3.5rem;
+				}
+			}
+
+			span {
+				color: $purple;
+			}
+		}
+
+		.sectors-box {
+			margin-bottom: 10rem;
+
+			.note {
+				font-family: 'IBM Plex Sans';
+				font-size: 1.7rem;
+				color: $purple;
+				margin-top: 10rem;
+				max-width: 43.6rem;
+
+				strong {
+					font-weight: 600;
+				}
+			}
+
+			&.top-offset {
+				.sectors-box--title {
+					margin-top: -1.5rem;
+				}
+			}
+
+			.sectors-box--title {
+				font-family: 'IBM Plex Sans';
+				font-weight: 600;
+				color: $purple;
+				font-size: 3rem;
+				margin: 2.5rem 0;
+			}
+
+			.sectors-box--list {
+				li {
+					font-family: 'IBM Plex Sans';
+					font-weight: normal;
+					font-size: 1.7rem;
+					letter-spacing: -0.1rem;
+					color: $purple;
+				}
+			}
+		}
+
+		&.setores {
+			background-color: #f5e8e4;
+
+			.sectors-title {
+				color: $tang;
+			}
+
+			.sectors-icons {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 2rem;
+				margin-bottom: 14.2rem;
+
+				@include max-screen($small) {
+					margin-bottom: 3vh;
+				}
+
+				svg {
+					max-width: 13rem;
+				}
+
+				img {
+					max-width: 12rem;
+				}
+
+				p {
+					font-family: 'IBM Plex Mono';
+					font-weight: normal;
+					font-size: 1.5rem;
+					color: $purple;
+					display: block;
+					padding-top: 5rem;
+				}
+			}
+		}
+	}
+
+	.main-footer {
+		padding-top: 23rem;
+		padding-bottom: 12rem;
+
+		.footer-slogan {
+			font-family: 'Sharp Grotesk SmBold 20';
+			font-size: 11.2rem;
+			color: $purple;
+			letter-spacing: -0.5rem;
+			line-height: 11.5rem;
+
+			@include max-screen($xsmall) {
+				font-size: 10rem;
+				line-height: 8.8rem;
+			}
+
+			@include max-screen($xxsmall) {
+				font-size: 8rem;
+				line-height: 7rem;
+			}
+
+			.word-next {
+				display: block;
+				position: relative;
+				margin-top: -0.5rem;
+
+				@include max-screen($xsmall) {
+					margin-top: 0;
+				}
+
+				img {
+					max-width: 30rem;
+					display: inline-block;
+					position: absolute;
+					margin-left: -4rem;
+					margin-top: -1rem;
+					z-index: 2;
+
+					@include max-screen($xsmall) {
+						max-width: 22rem;
+						margin-left: -3rem;
+						margin-top: -1rem;
+					}
+
+					@include max-screen($xxsmall) {
+						max-width: 18rem;
+						margin-left: -2.5rem;
+					}
+				}
+
+				.word-t {
+					position: relative;
+					left: 14rem;
+
+					@include max-screen($xsmall) {
+						left: 10rem;
+					}
+
+					@include max-screen($xxsmall) {
+						left: 8.5rem;
+					}
+				}
+			}
+
+			.word-future {
+				line-height: 14rem;
+
+				@include max-screen($xsmall) {
+					line-height: 10rem;
+				}
+
+				@include max-screen($xxsmall) {
+					line-height: 9rem;
+				}
+			}
+		}
+
+		address p {
+			font-family: 'IBM Plex Mono';
+			font-size: 1.2rem;
+			line-height: 1.8rem;
+			font-weight: 300;
+			color: $purple;
+			padding: 2rem 0 5.5rem;
+
+			@include max-screen($small) {
+				font-size: 1.8rem;
+				line-height: 3rem;
+			}
+
+			@include max-screen($xsmall) {
+				font-size: 2.5vw;
+			}
+		}
+
+		.contact {
+			padding: 5.5rem 0 6rem;
+
+			a {
+				font-family: 'Sharp Grotesk Medium 20';
+				font-size: 5rem;
+				color: $tang;
+				letter-spacing: -0.2rem;
+
+				@include max-screen($xsmall) {
+					font-size: 6.5vw;
+				}
+			}
+		}
+
+		.social {
+			a {
+				font-family: 'Sharp Grotesk Medium 20';
+				font-size: 3.4rem;
+				line-height: 4rem;
+				opacity: 0.5;
+				color: $tang;
+				letter-spacing: -0.2rem;
+			}
+		}
+	}
+}
 
 // Media Queries
 @include screen($medium, $xxlarge, $orientation: false) {}

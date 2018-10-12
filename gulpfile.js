@@ -348,7 +348,6 @@ gulp.task('concat-vendor-js', function () {
 				'node_modules/tippy.js/dist/tippy.all.min.js',
 				'node_modules/slick-carousel/slick/slick.js',
 				'node_modules/countup.js/dist/countUp.min.js',
-				'node_modules/inobounce/inobounce.min.js',
 				'node_modules/pizzicato/distr/Pizzicato.min.js',
 				'node_modules/three/build/three.min.js',
 				'node_modules/jquery-mousewheel/jquery.mousewheel.js',

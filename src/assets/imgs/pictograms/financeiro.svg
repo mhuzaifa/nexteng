@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 132 132" style="enable-background:new 0 0 132 132;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#EECEC2;}
+	.st1{fill:#CC9180;}
+	.st2{fill:#A97D6E;}
+	.st3{fill:#E5A58E;}
+	.st4{fill:#411430;}
+	.st5{fill:#FFCA7C;}
+	.st6{fill:#B68276;}
+	.st7{fill:#FFB59C;}
+</style>
+<circle class="st0" cx="65.6" cy="65.8" r="64.9"/>
+<circle class="st1" cx="64.7" cy="65.8" r="46.3"/>
+<path class="st2" d="M34.4,79.1c0-24.1,19.6-43.7,43.7-43.7c10.8,0,20.7,3.9,28.3,10.4c-7.8-14.5-23.1-24.4-40.8-24.4
+	c-25.6,0-46.3,20.7-46.3,46.3c0,19.1,11.6,35.5,28.1,42.6C39.4,102.3,34.4,91.3,34.4,79.1z"/>
+<path class="st3" d="M65.6,116.3c-27.9,0-50.5-22.7-50.5-50.5s22.7-50.5,50.5-50.5s50.5,22.7,50.5,50.5S93.4,116.3,65.6,116.3z
+	 M65.6,23.7c-23.2,0-42,18.9-42,42s18.9,42,42,42s42-18.9,42-42S88.8,23.7,65.6,23.7z"/>
+<g>
+	<rect x="89.8" y="58.1" transform="matrix(0.5864 0.81 -0.81 0.5864 104.1305 -48.5394)" class="st4" width="19.5" height="39.1"/>
+	<circle class="st3" cx="99.6" cy="77.7" r="4.7"/>
+</g>
+<polygon class="st5" points="66.3,97.4 43.3,97.4 47.4,83.3 62.2,83.3 "/>
+<g>
+	<g>
+		
+			<rect x="71.3" y="45.5" transform="matrix(0.8984 0.4392 -0.4392 0.8984 36.8122 -28.9852)" class="st4" width="19.5" height="39.1"/>
+		<path class="st1" d="M80.9,43.2l17.6,8.6L81.2,86.9l-17.6-8.6L80.9,43.2 M80.4,42L80,42.8L62.8,77.9l-0.4,0.8l0.8,0.4l17.6,8.6
+			l0.8,0.4l0.4-0.8l17.2-35.1l0.4-0.8L98.8,51l-17.6-8.6L80.4,42L80.4,42z"/>
+	</g>
+	<circle class="st3" cx="81.1" cy="65.1" r="4.7"/>
+</g>
+<polygon class="st5" points="91.7,97.4 68.7,97.4 72.9,83.3 87.6,83.3 "/>
+<polygon class="st5" points="78.9,81.2 55.8,81.2 60,67.1 74.7,67.1 "/>
+<g>
+	<g>
+		<ellipse class="st6" cx="43.3" cy="65.8" rx="16.8" ry="49.3"/>
+		<rect x="31.8" y="16.4" class="st6" width="11.5" height="98.7"/>
+		<ellipse class="st3" cx="31.8" cy="65.8" rx="16.8" ry="49.3"/>
+	</g>
+	<g>
+		<ellipse class="st6" cx="28.6" cy="65.8" rx="5.4" ry="16"/>
+		<g>
+			<rect x="19.3" y="54.5" class="st1" width="7.1" height="22.6"/>
+			<ellipse class="st1" cx="26.4" cy="65.8" rx="3.8" ry="11.3"/>
+			<ellipse class="st7" cx="19.3" cy="65.8" rx="3.8" ry="11.3"/>
+		</g>
+	</g>
+</g>
+</svg>

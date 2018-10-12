@@ -23,8 +23,8 @@ MAIN SASS CONFIGURATION
 1. COLORS
 — — — — — — — — — — — - — — — — — — — — — — — - — — — — — — — — — — — - */
 
-$purple: #4C0D3A;
-$tang: #FFA289;
+$purple: #431435;
+$tang: darken(#f4a68e, 3%);
 $white: #ffffff;
 $black: #000000;
 
@@ -87,7 +87,7 @@ TYPOGRAPHY
 
 -----------------------------------------------------------------------*/
 
-//Theinhardt Font 
+//Theinhardt Font
 @font-face {
   font-family: 'theinhardtregular_italic';
   src: url('/public/fonts/theinhardt-regularita-webfont.eot');
@@ -211,12 +211,13 @@ body {
   width: 100%;
   min-height: 100%;
   height: auto;
-  font-family: '#', Helvetica, Arial, sans-serif;
-  color: #ffffff;
-  background-color: #000000;
+  font-family: 'Sharp Grotesk Medium 20', Helvetica, Arial, sans-serif;
+  color: $black;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
+  font-size: 100%;
+  line-height: normal;
 }
 
 html.fixed-all,
@@ -255,7 +256,6 @@ NOTE: .page-main - if i use translatez menu not fixes on chrome! use will change
   -webkit-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
-  overflow: hidden;
   /* needed when animate elements outside the document*/
 
   //opacity: 0;
