@@ -4,12 +4,13 @@
   <span class="scroll-handler">
   </span>
   <div class="items-wrapper">
-    <div class="scroll-item active-intro"> <a href="/#intro"><span class="scroll-anchor"></span> <span class="link-text">Introdução</span></a></div>
-    <div class="scroll-item"> <a href="/#ser-next"><span class="scroll-anchor"></span><span class="link-text">Ser Nex t</span></a></div>
-    <div class="scroll-item"> <a href="/#manifesto"><span class="scroll-anchor"></span><span class="link-text">Manifesto</span></a></div>
-    <div class="scroll-item"> <a href="/#areas"><span class="scroll-anchor"></span><span class="link-text">Áreas de
-          Atuação</span></a></div>
-    <div class="scroll-item"> <a href="/#setores"><span class="scroll-anchor"></span><span class="link-text">Setores</span></a></div>
-    <div class="scroll-item"> <a href="/#contactos"><span class="scroll-anchor"></span><span class="link-text">Contactos</span></a></div>
+    <div class="scroll-item active-intro" data-target="#intro"> <span class="scroll-anchor"></span> <span class="link-text">Introdução</span></div>
+    <div class="scroll-item" data-target="#ser-next"> <span class="scroll-anchor"></span><span class="link-text">Ser
+        Nex t</span></div>
+    <div class="scroll-item" data-target="#manifesto""> <span class=" scroll-anchor"></span><span class="link-text">Manifesto</span></div>
+    <div class="scroll-item" data-target="#areas"><span class="scroll-anchor"></span><span class="link-text">Áreas de
+        Atuação</span></div>
+    <div class="scroll-item" data-target="#setores"> <span class="scroll-anchor"></span><span class="link-text">Setores</span></div>
+    <div class="scroll-item" data-target="#contactos"><span class="scroll-anchor"></span><span class="link-text">Contactos</span></div>
   </div>
 </div>

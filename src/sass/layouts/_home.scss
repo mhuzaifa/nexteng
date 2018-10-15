@@ -71,7 +71,6 @@ html {
 		align-items: center;
 		height: 100vh;
 		left: 6vw;
-		z-index: 9999;
 
 		.scroll-wrapper {
 			position: relative;
@@ -153,7 +152,7 @@ html {
 	}
 
 	.menu-light .scroll-item .link-text,
-	.menu-full.manif .scroll-item .link-text {
+	.manifesto .menu-full .scroll-item .link-text {
 		font-size: 9px;
 		position: relative;
 		padding: 5px 12px;
@@ -168,12 +167,12 @@ html {
 		border-color: transparent $purple;
 	}
 
-	.menu-full.manif .scroll-item .link-text:after {
+	.manifesto .menu-full .scroll-item .link-text:after {
 		border-color: transparent $white;
 	}
 
 	.menu-light .scroll-item .link-text:after,
-	.menu-full.manif .scroll-item .link-text:after {
+	.manifesto .menu-full .scroll-item .link-text:after {
 		content: '';
 		position: absolute;
 		border-style: solid;
@@ -190,13 +189,19 @@ html {
 		color: $white;
 	}
 
-	.menu-full.manif .scroll-item .link-text {
+	.manifesto .menu-full .scroll-item .link-text {
 		background-color: $white;
 		color: $purple;
 	}
 
+	.menu-full .scroll-item .scroll-anchor:hover {
+		cursor: pointer;
+		background-color: $white;
+	}
+
+	.menu-full .scroll-item .link-text,
 	.menu-light .scroll-anchor:hover,
-	.menu-full.manif .scroll-anchor:hover {
+	.manifesto .menu-full .scroll-anchor:hover {
 		cursor: pointer;
 	}
 
@@ -389,7 +394,7 @@ html {
 				width: 48%;
 				max-width: 25.8rem;
 				height: 100%;
-				background-image: url('../imgs/service-gloves.png');
+				// background-image: url('../imgs/service-gloves.png');
 				background-repeat: no-repeat;
 				background-size: contain;
 				background-position: bottom left;
@@ -549,6 +554,8 @@ html {
 		}
 	}
 
+
+
 	.sectors {
 		background-color: $tang;
 		padding: 15rem 0;
@@ -665,6 +672,8 @@ html {
 			}
 		}
 	}
+
+	.sticky {}
 
 	.main-footer {
 		padding-top: 23rem;
