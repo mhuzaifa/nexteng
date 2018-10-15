@@ -140,13 +140,12 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
               </p>
             </div>
           </div>
-
         </article>
 
         <!-- MANIFESTO  -->
         <div class="manifesto-wrapper" id="manifesto">
           <article class="manifesto">
-            <nav class="menu menu-full manif">
+            <nav class="menu menu-full">
               <?php include 'menu.php';?>
             </nav>
 
@@ -166,7 +165,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
 
 
             <div class="row expanded">
-              <div class="xxlarge-7 xxlarge-offset-2 xlarge-5 xlarge-offset-2 medium-8 medium-offset-1 xsmall-10 xsmall-offset-1 columns">
+              <div class="xxlarge-7 xxlarge-offset-2 xlarge-6 xlarge-offset-2 medium-8 medium-offset-1 xsmall-10 xsmall-offset-1 columns">
                 <h3 class="manifesto--title">
                   Your Nex t<sup>&copy;</sup> <span>Manifesto</span>.
                 </h3>
@@ -199,6 +198,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
               <nav class="menu menu-light">
                 <?php include 'menu.php';?>
               </nav>
+
               <div class="row expanded">
                 <div class="xxlarge-6 xxlarge-offset-2 xlarge-6 xlarge-offset-2 medium-8 medium-offset-1 xsmall-10 xsmall-offset-1 columns">
                   <h3 class="sectors-title">
@@ -288,13 +288,13 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
           </div>
 
           <!--  SECTORS: Big Data -->
+
           <div class="big-data-wrapper">
-
-
             <article class="sectors big-data">
               <nav class="menu menu-light">
                 <?php include 'menu.php';?>
               </nav>
+
               <div class="row expanded">
                 <div class="xxlarge-6 xxlarge-offset-2 xlarge-5 xlarge-offset-2 medium-8 medium-offset-1 xsmall-10 xsmall-offset-1 columns">
                   <h3 class="sectors-title">
@@ -338,15 +338,17 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
                   </div>
                 </div>
               </div>
+
             </article>
           </div>
-          <div class="rpa-wrapper">
 
+          <div class="rpa-wrapper">
             <!--  SECTORS: RPA -->
             <article class="sectors rpa">
               <nav class="menu menu-light">
                 <?php include 'menu.php';?>
               </nav>
+
               <div class="row expanded">
                 <div class="xxlarge-6 xxlarge-offset-2 xlarge-6 xlarge-offset-2 medium-8 medium-offset-1 xsmall-10 xsmall-offset-1">
                   <h3 class="sectors-title">
@@ -379,7 +381,6 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
                 </div>
               </div>
             </article>
-
           </div>
 
         </div>

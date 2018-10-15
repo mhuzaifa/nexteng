@@ -269,7 +269,8 @@ function mainNavigation() {
 *********************************************************************************************/
 $(document).ready(function () {
   //** =Global objects
-  $_window = $(window),
+  $_document = $(document),
+    $_window = $(window),
     $_body = $("body"),
     $_html = $("html"),
     $_scrollContentWrapper = $(".scroll-content-wrapper"),
