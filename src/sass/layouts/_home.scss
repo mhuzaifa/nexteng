@@ -58,6 +58,18 @@ html {
 		box-sizing: border-box;
 	}
 
+	.logo-main {
+		width: 15rem;
+		position: fixed;
+
+		@include min-screen($medium) {
+			left: 7.5vw;
+		}
+
+		top: 10vh;
+		z-index: 10;
+	}
+
 	nav {
 		@include max-screen($small) {
 			display: none;
@@ -71,7 +83,6 @@ html {
 		align-items: center;
 		height: 100vh;
 		left: 6vw;
-		z-index: 9999;
 
 		.scroll-wrapper {
 			position: relative;
@@ -310,6 +321,8 @@ html {
 }
 
 .page-content {
+
+
 	.service {
 		padding: 18.8rem 0rem;
 
@@ -549,10 +562,23 @@ html {
 		}
 	}
 
+	.sectors-tang {
+
+		.info-wrapper,
+		.big-data-wrapper,
+		.rpa-wrapper {
+			position: sticky;
+			top: 0;
+		}
+
+		.info-wrapper {
+			top: -8vh
+		}
+	}
+
 	.sectors {
 		background-color: $tang;
-		padding: 15rem 0;
-		border-bottom: 1px solid #371028;
+		padding: 10rem 0;
 
 		@include max-screen($small) {
 			padding: 8rem 0;
