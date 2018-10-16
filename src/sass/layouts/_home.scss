@@ -2,7 +2,7 @@ html {
 	font-size: 62.5%;
 
 	@include max-screen($xxlarge) {
-		font-size: 82.5%;
+		font-size: 72.5%;
 	}
 
 	@include max-screen($xlarge) {
@@ -61,13 +61,31 @@ html {
 	.logo-main {
 		width: 15rem;
 		position: fixed;
+		font-size: 0;
+		cursor: pointer;
+		left: 6.5vw;
 
-		@include min-screen($medium) {
-			left: 7.5vw;
+		@include max-screen($medium) {
+			width: inherit;
+			max-width: 14rem;
+			left: -0.5rem;
+			transform: rotate(-90deg)
+		}
+
+		@include max-screen($small) {
+			left: -2rem;
+		}
+
+		@include max-screen($xsmall) {
+			left: -3rem;
 		}
 
 		top: 10vh;
 		z-index: 10;
+	}
+
+	.sectors-tang nav.menu.menu-light {
+		z-index: 2;
 	}
 
 	nav {
@@ -76,13 +94,16 @@ html {
 		}
 
 		top: 0;
-		left: 0;
 		position: fixed;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		height: 100vh;
 		left: 6vw;
+
+		@include max-screen($medium) {
+			left: 4vw;
+		}
 
 		.scroll-wrapper {
 			position: relative;
@@ -92,21 +113,21 @@ html {
 				position: absolute;
 				top: 0;
 				left: 0;
-				width: 1.5px;
+				width: 2px;
 				height: 100%;
 				background-color: #9e7491;
-				z-index: -2;
+				z-index: 1;
 			}
 
 			.scroll-handler {
 				position: absolute;
 				top: 0;
-				left: -5px;
+				left: -4.5px;
 				width: 10.5px;
 				height: 30px;
 				background-color: $white;
-				z-index: 9999999;
 				border-radius: 10px;
+				z-index: 5;
 			}
 		}
 
@@ -114,7 +135,7 @@ html {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-			height: 390px;
+			height: 300px;
 
 			div:last-child {
 				position: relative;
@@ -129,22 +150,28 @@ html {
 				height: 10px;
 				width: 10px;
 				background-color: $purple;
-				z-index: 2222;
-				border: 1.5px solid #9e7491;
+
+				border: 2px solid #9e7491;
 				border-radius: 50%;
 				display: inline-block;
 				left: -4px;
 				margin-top: 0;
 				position: absolute;
+				z-index: 1;
 			}
 
 			.link-text {
 				font-family: 'Sharp Grotesk Book 20';
+				font-weight: 600;
 				font-size: 12.5px;
 				letter-spacing: 0.5px;
 				color: $white;
 				left: 40px;
 				position: relative;
+
+				@include min-screen($xlarge) {
+					font-size: 15px;
+				}
 			}
 		}
 	}
@@ -281,6 +308,10 @@ html {
 			min-width: 62.8vw;
 			margin: 16vh 3.5vw 0;
 
+			@include min-screen($xxlarge) {
+				margin: 16vh 1vw 0;
+			}
+
 			.carousel--img {
 				position: absolute;
 				max-width: inherit;
@@ -291,6 +322,7 @@ html {
 
 			&.inspire {
 				.logo-container {
+				
 					position: relative;
 					left: 1.5rem;
 					top: 21.6rem;
@@ -298,7 +330,7 @@ html {
 
 					#tr_1_,
 					#tr {
-						transform: translate(2rem);
+						// transform: translate(2rem);
 					}
 				}
 
@@ -387,6 +419,10 @@ html {
 
 				@include min-screen($xxlarge) {
 					font-size: 5rem;
+				}
+
+				@include max-screen($medium) {
+					font-size: 4rem;
 				}
 			}
 
@@ -509,6 +545,8 @@ html {
 		}
 
 		.manifesto--details {
+			top: 0;
+			position: relative;
 			display: flex;
 
 			@include max-screen($xsmall) {
@@ -573,12 +611,50 @@ html {
 		.info-wrapper,
 		.big-data-wrapper,
 		.rpa-wrapper {
+			position: -webkit-sticky;
+			position: -moz-sticky;
+			position: -ms-sticky;
+			position: -o-sticky;
 			position: sticky;
 			top: 0;
 		}
 
 		.info-wrapper {
-			top: -8vh
+			top: -20rem;
+
+			@include max-screen($xsmall) {
+				top: -60rem;
+			}
+		}
+
+
+		.active-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: black;
+			opacity: 0;
+			z-index: 1;
+		}
+
+		/* .active-overlay:after {
+			content: '';
+			top: 0;
+			left: 0;
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.6) 100%);
+			background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.6) 100%);
+			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.6) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#26000000', endColorstr='#99000000', GradientType=0);
+		} */
+
+		.shadow {
+			box-shadow: 0px -50px 50px 0px #00000012;
 		}
 	}
 
@@ -598,6 +674,10 @@ html {
 			line-height: 9.5rem;
 			padding: 5rem 0 15rem;
 
+			@include min-screen($xxlarge) {
+				max-width: 63rem;
+			}
+
 			@include max-screen($xsmall) {
 				font-size: 10vw;
 				line-height: 7rem;
@@ -607,6 +687,7 @@ html {
 			sup {
 				font-size: 2.5rem;
 				top: -5.8rem;
+				position: relative;
 
 				@include max-screen($xsmall) {
 					font-size: 3vw;
@@ -703,6 +784,12 @@ html {
 	.main-footer {
 		padding-top: 23rem;
 		padding-bottom: 12rem;
+
+		@include max-screen($xsmall) {
+			min-height: 100vh;
+			background: white;
+
+		}
 
 		.footer-slogan {
 			font-family: 'Sharp Grotesk SmBold 20';

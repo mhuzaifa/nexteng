@@ -1,7 +1,12 @@
 function homePage() {
   /*Variables*/
-
+  var big_data_wrapper_offset_top = $('.big-data-wrapper').offset().top;
+  var rpa_wrapper_offset_top = $('.rpa-wrapper').offset().top;
   /*DOM variables*/
+  var $tWordLogo = $('.st1');
+  var $overlayInfoTech = $('.info-tech .active-overlay');
+  var $overlayBigData = $('.big-data .active-overlay');
+
   var $scrollHandler = $('.scroll-handler');
   var $hiddenMenuItems = $('.menu-light .scroll-item .link-text, .manifesto .menu-full .scroll-item .link-text');
   var $menuItemsOnHover = $('.menu-light .scroll-anchor, .manifesto .menu-full .scroll-anchor');
@@ -16,6 +21,7 @@ function homePage() {
     $('.setores').outerHeight();
 
   var init = function () {
+
     //$('.page-content').height($('.content').outerHeight());
 
     if (_customScroll == null) {
@@ -34,15 +40,6 @@ function homePage() {
       _customScroll.addListener(_page_scroll_listener);
     }
 
-    $('.sectors').scroll(function () {
-      var alpha = Math.min(0.5 + 0.4 * $(this).scrollTop() / 210, 0.9);
-      var channel = Math.round(alpha * 255);
-      $('.sectors').css('background-color', 'rgb(' + channel + ',' + channel + ',' + channel + ')');
-    });
-
-
-    /*inits*/
-
     //Events
     initEvents();
   };
@@ -58,9 +55,17 @@ function homePage() {
 
   /*page functions*/
 
-
   function initEvents() {
-    $_window.on('resize.homePage', resize);
+    $.doTimeout(2000, function () {
+      $_window.on('resize.homePage', $.debounce(500, resize));
+    });
+ 
+      
+    TweenMax.set($tWordLogo, { x: 0 });
+    TweenMax.to($tWordLogo, 1, { x: -100, delay: 0, ease: Power4.easeOut});
+
+    TweenMax.set($('.st0'), {x: 0 });
+    TweenMax.to($('.st0'), 1, { x: 0, ease: Power4.easeOut });
 
     navLinkScroll();
     absoluteItemsHeight();
@@ -70,6 +75,15 @@ function homePage() {
   /*Anchor Link Smooth Scroll*/
   function navLinkScroll() {
     $('.items-wrapper .scroll-item').on('click', function () {
+      console.log("logo")
+      var $this = $(this),
+        targetLink = $this.attr('data-target');
+      TweenLite.to($_body, 1, {
+        scrollTo: targetLink
+      });
+    });
+
+    $('.logo-main').on('click', function () {
       var $this = $(this),
         targetLink = $this.attr('data-target');
       TweenLite.to($_body, 1, {
@@ -85,6 +99,10 @@ function homePage() {
     $('.big-data-wrapper').height($('.big-data').outerHeight());
     $('.rpa-wrapper').height($('.rpa').outerHeight());
     $('.setores-wrapper').height($('.setores').outerHeight());
+
+    big_data_wrapper_offset_top = $('.big-data-wrapper').offset().top - _globalViewportH + $_body.scrollTop();
+
+    rpa_wrapper_offset_top = $('.rpa-wrapper').offset().top - _globalViewportH + $_body.scrollTop();
   }
 
   /*hover only nav links */
@@ -102,9 +120,11 @@ function homePage() {
   }
 
   function resize() {
+
     absoluteItemsHeight();
 
     menuHeight = $('.items-wrapper').height() + 13;
+
     bodyHeight =
       $('.header').outerHeight() +
       $('.content').outerHeight() +
@@ -113,14 +133,53 @@ function homePage() {
       $('.big-data').outerHeight() +
       $('.rpa').outerHeight() +
       $('.setores').outerHeight();
+
+    // location.reload();
   }
 
   function home_scroll_rAF(status) {
 
-    if (verge.inViewport($('.sectors'), -50) && !$('.sectors').hasClass('js-inviewport')) {
-      $('.sectors').addClass('js-inviewport');
+
+    if (verge.inViewport($('.big-data-wrapper'))) {
+
+      $('.switch').addClass('active-overlay');
+
+      var scaledOpacityInfoTech = scaleBetween(
+        $_body.scrollTop(), 0, 1,
+        big_data_wrapper_offset_top,
+        big_data_wrapper_offset_top + _globalViewportH
+      );
+
+      console.log(scaledOpacityInfoTech);
+
+      $overlayInfoTech.css({
+        opacity: function () {
+          opacity = scaledOpacityInfoTech;
+          return opacity;
+        }
+      });
+
+      /*  TweenMax.to($overlayInfoTech, 0.2, {
+         opacity: scaledOpacityInfoTech
+       }); */
 
     };
+
+    if (verge.inViewport($('.rpa-wrapper'))) {
+
+      $('.switch').addClass('active-overlay');
+
+      var scaledOpacityBigData = scaleBetween(
+        $_body.scrollTop(), 0, 0.8,
+        rpa_wrapper_offset_top,
+        rpa_wrapper_offset_top + _globalViewportH
+      );
+
+      TweenMax.to($overlayBigData, 0.2, {
+        opacity: scaledOpacityBigData
+      });
+
+    }
 
     var scaledTranslate = scaleBetween($_body.scrollTop(), 0, menuHeight, 0, bodyHeight);
 

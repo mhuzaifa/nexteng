@@ -257,7 +257,7 @@ NOTE: .page-main - if i use translatez menu not fixes on chrome! use will change
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
   /* needed when animate elements outside the document*/
-
+//overflow: hidden;
   //opacity: 0;
 }
 
