@@ -269,8 +269,7 @@ function mainNavigation() {
 *********************************************************************************************/
 $(document).ready(function () {
   //** =Global objects
-  $_document = $(document),
-    $_window = $(window),
+    $_window = $(window), 
     $_body = $("body"),
     $_html = $("html"),
     $_scrollContentWrapper = $(".scroll-content-wrapper"),
@@ -329,6 +328,9 @@ $(document).ready(function () {
     };
 
   _raf_loop_id = null;
+
+
+
 
   // VW/VH Unis fix for IOS
   // Usar esta CSS em todos os VH logo a seguir à medida VH (height: calc(var(--vh, 1vh) * 100);)

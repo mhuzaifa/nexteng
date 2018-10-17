@@ -262,6 +262,8 @@ var VirtualScroll = (function(document) {
     notify(e);
   }
 
+  
+
   var onTouchStart = function(e) {
     var t = (e.targetTouches) ? e.targetTouches[0] : e;
     touchStartX = t.pageX;

@@ -38,11 +38,11 @@ html {
 	.big-data-wrapper,
 	.rpa-wrapper,
 	.setores-wrapper {
-		position: relative;
+		// position: relative;
 	}
 
 	.header {
-		height: 100vh;
+		// height: 100vh;
 	}
 
 	.header,
@@ -52,24 +52,26 @@ html {
 	.big-data,
 	.rpa,
 	.setores {
-		position: absolute;
+		/* position: absolute;
 		width: 100%;
 		clip: rect(auto, auto, auto, auto);
-		box-sizing: border-box;
+		box-sizing: border-box; */
 	}
 
 	.logo-main {
+		opacity: 0;
 		width: 15rem;
 		position: fixed;
 		font-size: 0;
 		cursor: pointer;
 		left: 6.5vw;
+		
 
 		@include max-screen($medium) {
-			width: inherit;
+			width: 12rem;
 			max-width: 14rem;
 			left: -0.5rem;
-			transform: rotate(-90deg)
+			transform: rotate(-90deg);
 		}
 
 		@include max-screen($small) {
@@ -81,14 +83,22 @@ html {
 		}
 
 		top: 10vh;
-		z-index: 10;
+		z-index: 9999;
 	}
 
-	.sectors-tang nav.menu.menu-light {
-		z-index: 2;
+	.logo-main.light {
+		fill: $purple;
+		opacity: 1;
+	}
+	.logo-main.nav-bg-purple {
+		opacity: 1;
+		fill: #fff;
+
 	}
 
-	nav {
+
+	.menu {
+		visibility: hidden;
 		@include max-screen($small) {
 			display: none;
 		}
@@ -108,14 +118,12 @@ html {
 		.scroll-wrapper {
 			position: relative;
 
-
 			.scroll-bar {
 				position: absolute;
 				top: 0;
 				left: 0;
 				width: 2px;
 				height: 100%;
-				background-color: #9e7491;
 				z-index: 1;
 			}
 
@@ -125,7 +133,6 @@ html {
 				left: -4.5px;
 				width: 10.5px;
 				height: 30px;
-				background-color: $white;
 				border-radius: 10px;
 				z-index: 5;
 			}
@@ -145,106 +152,77 @@ html {
 
 		.scroll-item {
 			line-height: 0;
+			cursor: pointer;
 
 			.scroll-anchor {
 				height: 10px;
 				width: 10px;
-				background-color: $purple;
-
-				border: 2px solid #9e7491;
 				border-radius: 50%;
 				display: inline-block;
 				left: -4px;
-				margin-top: 0;
-				position: absolute;
+				top: 0;
+				position: relative;
 				z-index: 1;
+				border: 2px solid #9e7491;
 			}
+			
 
 			.link-text {
 				font-family: 'Sharp Grotesk Book 20';
 				font-weight: 600;
-				font-size: 12.5px;
 				letter-spacing: 0.5px;
-				color: $white;
 				left: 40px;
 				position: relative;
+				
+			}
+			&:last-child .scroll-anchor {
+				top: 3px !important;
+			}
+		}
+	}
 
+	.menu.nav-full-top {
+		visibility: visible;
+		.scroll-wrapper {
+			.scroll-bar {
+				background-color: #9e7491;
+			}
+			.scroll-handler { 
+				background-color: $white;
+			}
+		}
+		.scroll-item {
+			.scroll-anchor {
+				background-color: $purple;
+				border-color: #9e7491;
+	
+			}
+
+			.link-text {
+				font-size: 12.5px;
+				color: $white;
 				@include min-screen($xlarge) {
 					font-size: 15px;
 				}
 			}
 		}
-	}
 
-	.header .menu-full {
 		.scroll-item {
+			.link-text {
+				 
+			}
 			&:not(.active-intro) .link-text {
 				color: #9e7491;
 			}
-		}
-
-		.scroll-item {
 			&.active-intro .link-text {
 				color: $white;
 			}
 		}
 	}
 
-	.menu-light .scroll-item .link-text,
-	.manifesto .menu-full .scroll-item .link-text {
-		font-size: 9px;
-		position: relative;
-		padding: 5px 12px;
-		-webkit-border-radius: 2px;
-		-moz-border-radius: 2px;
-		border-radius: 2px;
-		left: 20px;
-		top: 5px;
-	}
-
-	.menu-light .scroll-item .link-text:after {
-		border-color: transparent $purple;
-	}
-
-	.manifesto .menu-full .scroll-item .link-text:after {
-		border-color: transparent $white;
-	}
-
-	.menu-light .scroll-item .link-text:after,
-	.manifesto .menu-full .scroll-item .link-text:after {
-		content: '';
-		position: absolute;
-		border-style: solid;
-		border-width: 0 15px 8px 0;
-		display: block;
-		width: 0;
-		z-index: 1;
-		left: -12px;
-		top: 0px;
-	}
-
-	.menu-light .scroll-item .link-text {
-		background-color: $purple;
-		color: $white;
-	}
-
-	.manifesto .menu-full .scroll-item .link-text {
-		background-color: $white;
-		color: $purple;
-	}
-
-	.menu-full .scroll-item .scroll-anchor:hover {
-		cursor: pointer;
-		background-color: $white;
-	}
-
-	.menu-full .scroll-item .link-text,
-	.menu-light .scroll-anchor:hover,
-	.manifesto .menu-full .scroll-anchor:hover {
-		cursor: pointer;
-	}
-
-	.menu-light {
+	.menu.light {
+		visibility: visible;
+		z-index: 9999;
 		.scroll-wrapper {
 			.scroll-bar {
 				background-color: $purple;
@@ -257,30 +235,96 @@ html {
 
 			.scroll-item {
 				.scroll-anchor {
-					border-color: $purple;
-					background: white;
+					border-color:$purple;
+					background-color: white;
 
 					&:hover {
-						background: $purple;
+						background-color: $purple;
+					}
+				}
+				.link-text {
+					background-color: $purple;
+					color: $white;
+					font-size: 12px;
+					padding: 5px 10px;
+					top: 10px;
+					left: 30px;
+					position: relative;
+					&:after {
+						content: '';
+						position: absolute;
+						border-style: solid;
+						border-width: 0 15px 8px 0;
+						display: block;
+						width: 0;
+						z-index: 1;
+						left: -12px;
+						top: 0px;
+						border-color: transparent $purple;
+						
 					}
 				}
 			}
 		}
+	}
 
-		.scroll-item {
-			.scroll-anchor:hover {}
+	.menu.nav-bg-white {
+		.scroll-item .link-text {
+			&::after {
+				border-color: transparent $purple;
+			}
+		}
+	}
+  
+	.menu.nav-bg-purple {
+		.scroll-wrapper {
 
-			a {}
+			.scroll-bar,
+			.scroll-handler {
+				background-color: $white;
+			}
+
+			.scroll-item {
+				.scroll-anchor {
+					border-color: $white;
+					background-color: $purple;
+					&:hover {
+						background-color: $white;
+					}
+				}
+
+				.link-text {
+					background-color: $white;
+					color: $purple;
+
+					&::after {
+						border-color: transparent $white;
+					}
+				}
+			}
+
 		}
 	}
 
-	.sectors-tang .scroll-wrapper .scroll-item .scroll-anchor {
-		background: $tang;
+	.menu.nav-bg-tang {
+		.scroll-wrapper {
+			.scroll-item {
+				.scroll-anchor {
+					background: $tang;
+				}
+			}
+		}
+	}
+	.menu.nav-bg-tang-lighter {
+		.scroll-wrapper {
+			.scroll-item {
+				.scroll-anchor {
+					background: #f5e8e4;
+				}
+			}
+		}
 	}
 
-	.setores .scroll-wrapper .scroll-item .scroll-anchor {
-		background: #f5e8e4;
-	}
 
 
 	/*******************/
@@ -322,7 +366,7 @@ html {
 
 			&.inspire {
 				.logo-container {
-				
+
 					position: relative;
 					left: 1.5rem;
 					top: 21.6rem;
@@ -606,28 +650,8 @@ html {
 		}
 	}
 
-	.sectors-tang {
-
-		.info-wrapper,
-		.big-data-wrapper,
-		.rpa-wrapper {
-			position: -webkit-sticky;
-			position: -moz-sticky;
-			position: -ms-sticky;
-			position: -o-sticky;
-			position: sticky;
-			top: 0;
-		}
-
-		.info-wrapper {
-			top: -20rem;
-
-			@include max-screen($xsmall) {
-				top: -60rem;
-			}
-		}
-
-
+	.nav-bg-tang {
+/* 
 		.active-overlay {
 			position: absolute;
 			top: 0;
@@ -637,7 +661,7 @@ html {
 			background: black;
 			opacity: 0;
 			z-index: 1;
-		}
+		} */
 
 		/* .active-overlay:after {
 			content: '';
@@ -657,6 +681,10 @@ html {
 			box-shadow: 0px -50px 50px 0px #00000012;
 		}
 	}
+	.sticky-container {
+	 
+		  
+	}
 
 	.sectors {
 		background-color: $tang;
@@ -665,6 +693,7 @@ html {
 		@include max-screen($small) {
 			padding: 8rem 0;
 		}
+
 
 		.sectors-title {
 			font-family: 'Sharp Grotesk Medium 25';
@@ -697,6 +726,11 @@ html {
 
 			span {
 				color: $purple;
+				display: inline-block;
+			}
+
+			.text-white {
+				color: $white;
 			}
 		}
 
@@ -779,16 +813,14 @@ html {
 		}
 	}
 
-	.sticky {}
-
+	
 	.main-footer {
 		padding-top: 23rem;
 		padding-bottom: 12rem;
-
+		background: white;
+		position: relative;
 		@include max-screen($xsmall) {
 			min-height: 100vh;
-			background: white;
-
 		}
 
 		.footer-slogan {
@@ -905,9 +937,16 @@ html {
 				opacity: 0.5;
 				color: $tang;
 				letter-spacing: -0.2rem;
+				transition: 0.2s;
+
+				&:hover {
+					opacity: 1;
+				}
 			}
 		}
 	}
+
+	
 }
 
 // Media Queries

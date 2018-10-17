@@ -31,7 +31,7 @@
 
 <?php if (defined('ENVIRONMENT')) : ?>
 <?php if (ENVIRONMENT == 'development' ): ?>
-<script src="/public/scripts/buro-workers.js"></script>
+<script src="/public/scripts/buro-workers.js"></script> 
 <script src="/public/scripts/main-engine.js"></script>
 <?php else: ?>
 <script src="/public/scripts/buro-workers.min.js"></script>
