@@ -29,21 +29,27 @@ $(document).ready(function () {
   );
 
 })
-
-
+ 
 function homePage() {
 
   /*Variables*/
   var big_data_wrapper_offset_top = $('.big-data').offset().top;
   var rpa_wrapper_offset_top = $('.rpa').offset().top;
+  var setores_wrapper_offset_top = $('.setores').offset().top;
 
   /*DOM variables*/
   var $tWordLogo = $('.st1');
+
+  var $stickyContainer = $('.sticky-container'); 
+  var $bigData = $('.big-data');
+  var $rpa = $('.rpa');
+  var $setores = $('.setores');
+
   var $overlayInfoTech = $('.info-tech .active-overlay');
   var $overlayBigData = $('.big-data .active-overlay');
+  var $overlayRpa = $('.rpa .active-overlay');
 
   var $scrollHandler = $('.menu .scroll-handler');
-
   var menuHeight = $('.menu .items-wrapper').outerHeight() + 15;
 
 
@@ -85,8 +91,9 @@ function homePage() {
 
   /*page functions*/
 
-  animations()
+  animations();
   navLinkScroll();
+  stickyInit();
   
   function initEvents() {
 
@@ -94,15 +101,18 @@ function homePage() {
 
   }
 
-  $('.sticky-container').stickyStack({
-		containerElement: '.sticky-container',
-		stackingElement: 'article',
-		boxShadow: '0 -3px 20px rgba(0, 0, 0, 0.25)'
-	});
+  function stickyInit() {
+    $stickyContainer.stickyStack({
+      containerElement: '.sticky-container',
+      stackingElement: 'article',
+      boxShadow: '-1px 0 150px rgba(0, 0, 0, 0.20)'
+    });
+  }
+
   /*Anchor Link Smooth Scroll*/
+
   function navLinkScroll() {
     $('.items-wrapper .scroll-item').on('click', function () {
-      console.log("logo")
       var $this = $(this),
         targetLink = $this.attr('data-target');
       TweenLite.to($_window, 1, {
@@ -120,10 +130,9 @@ function homePage() {
   }
 
   function resize() {
+    
+  } 
 
-    var menuHeight = $('.menu .items-wrapper').outerHeight();
-
-  }
 
   function animations() {
     TweenMax.to($tWordLogo, 1, {
@@ -144,34 +153,45 @@ function homePage() {
 
   function home_scroll_rAF(status) {
 
-    /*    if (verge.inViewport($('.big-data'))) {
+       if (verge.inViewport($bigData)) {
 
-         $('.switch').addClass('active-overlay');
-
-         var scaledOpacityInfoTech = scaleBetween(
-           $_window.scrollTop(), 0, 1,
-           big_data_wrapper_offset_top,
-           big_data_wrapper_offset_top + _globalViewportH
-         );
-
-         console.log(scaledOpacityInfoTech);
-
-         $overlayInfoTech.css({
-           opacity: function () {
-             opacity = scaledOpacityInfoTech;
-             return opacity;
-           }
-         });
-
+         var scaledOpacityInfoTech = scaleBetween($_window.scrollTop(), 0.8, -0.1, big_data_wrapper_offset_top,
+         big_data_wrapper_offset_top - $_window.height());
+         
+         TweenMax.to($overlayInfoTech, 0, {
+          opacity: scaledOpacityInfoTech
+        });
 
        };
 
-       if (verge.inViewport($('.rpa'))) {
+       if (verge.inViewport($rpa)) {
+
+         var scaledOpacityInfoTech = scaleBetween($_window.scrollTop(), 0.8, -0.1, rpa_wrapper_offset_top,
+         rpa_wrapper_offset_top - $_window.height());
+
+         TweenMax.to($overlayBigData, 0.5, {
+          opacity: scaledOpacityInfoTech
+        });
+
+       };
+
+       if (verge.inViewport($setores)) {
+
+         var scaledOpacityInfoTech = scaleBetween($_window.scrollTop(), 0.8, -0.1, setores_wrapper_offset_top,
+         setores_wrapper_offset_top - $_window.height());
+
+         TweenMax.to($overlayRpa, 0.5, {
+          opacity: scaledOpacityInfoTech
+        });
+
+       };
+
+       /* if (verge.inViewport($('.rpa'))) {
 
          $('.switch').addClass('active-overlay');
 
          var scaledOpacityBigData = scaleBetween(
-           $_window.scrollTop(), 0, 0.8,
+           $_body.scrollTop(), 0, 0.8,
            rpa_wrapper_offset_top,
            rpa_wrapper_offset_top + _globalViewportH
          );
@@ -180,9 +200,8 @@ function homePage() {
            opacity: scaledOpacityBigData
          });
 
-       } */
-
-    console.log($_window.scrollTop());
+       }  */
+ 
 
     var scaledTranslate = scaleBetween($_window.scrollTop(), 0, menuHeight, 0, $_body.height());
 
@@ -190,8 +209,6 @@ function homePage() {
       y: scaledTranslate,
       ease: Power4.easeOut
     });
-
-
 
   }
 

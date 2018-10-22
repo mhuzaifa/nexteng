@@ -213,7 +213,7 @@ body {
   height: auto;
   font-family: 'Sharp Grotesk Medium 20', Helvetica, Arial, sans-serif;
   color: $black;
-  overflow-x: hidden;
+  //overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
   font-size: 100%;
@@ -257,7 +257,7 @@ NOTE: .page-main - if i use translatez menu not fixes on chrome! use will change
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
   /* needed when animate elements outside the document*/
-  overflow: hidden;
+  //overflow: hidden;
   //opacity: 0;
 }
 

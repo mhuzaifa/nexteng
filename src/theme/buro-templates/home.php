@@ -28,8 +28,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
 
 ?>
 
-<!-- ============= CONTENT ============= -->
-
+  
 <div class="page-main page-current">
   <div class="page-toload home-page" data-bodyclass="home">
     <!--HERE IS THE FIXED MENU WHITE-->
@@ -175,9 +174,10 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
 
         <!--  SECTORS: Info Tech -->
         <div data-jq-clipthru="nav-bg-tang light" id="areas">
-          <div class="sticky-container" >
+          <div class="sticky-container">
+            <article style="padding:0" class="sectors"></article>
             <article class="sectors info-tech" id="infoTech">
-              <div class="switch active-overlay">
+              <div class="active-overlay">
               </div>
 
               <div class="row expanded">
@@ -272,7 +272,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
 
             <article class="sectors big-data" data-jq-clipthru="">
 
-              <div class="switch active-overlay">
+              <div class="active-overlay">
               </div>
 
               <div class="row expanded">
@@ -323,6 +323,8 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
 
             <!--  SECTORS: RPA -->
             <article class="sectors rpa sticky"  data-jq-clipthru="">
+            <div class="active-overlay">
+              </div>
 
               <div class="row expanded">
                 <div class="xxlarge-5 xxlarge-offset-2 xlarge-6 xlarge-offset-2 medium-8 medium-offset-1 xsmall-10 xsmall-offset-1">
@@ -356,7 +358,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
                 </div>
               </div>
             </article>
-        
+            </div>
             <!--  SECTORS: ATIVIDADE -->
             <article class="sectors setores" id="setores" data-jq-clipthru="nav-bg-tang-lighter light">
 
@@ -420,15 +422,14 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
               </div>
 
             </article>
-          </div>
-        </div>
-
+         
+        </div> 
+      
         <!-- ============= FOOTER ============= -->
         <article class="main-footer" id="contactos" data-jq-clipthru="nav-bg-white light">
           <div class="xxlarge-10 xxlarge-offset-2 medium-offset-1 columns">
             <h4 class="footer-slogan">
-              Shaping the <span class="word-next">Nex<picture>
-                  <source srcset="/public/imgs/robot.png 1x, /public/imgs/robot@2x.png 2x"><img src="/public/imgs/robot.png"
+              Shaping the <span class="word-next">Nex<picture><source srcset="/public/imgs/robot.png 1x, /public/imgs/robot@2x.png 2x"><img src="/public/imgs/robot.png"
                     alt=""></picture><span class="word-t">t</span></span><span class="word-future">Future.</span>
             </h4>
             <address>
@@ -439,15 +440,14 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
             </address>
             <div class="contact">
               <a href="mailto:your@nextengineering.com">your@nextengineering.com</a>
-              <p></p>
               <a href="tel:351213749294">+351.213.749.294</a>
             </div>
             <div class="social">
               <ul>
-                <li><a href="">twitter</a></li>
-                <li><a href="">linkedin</a></li>
+                <!-- <li><a href="">twitter</a></li> -->
+                <li><a target="_blank" href="https://www.linkedin.com/company/nxt-engineering/">linkedin</a></li><!-- 
                 <li><a href="">instagram</a></li>
-                <li><a href="">facebook</a></li>
+                <li><a href="">facebook</a></li> -->
               </ul>
             </div>
           </div>

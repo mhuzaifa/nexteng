@@ -65,12 +65,13 @@ html {
 		font-size: 0;
 		cursor: pointer;
 		left: 6.5vw;
+		height: 5rem;
 		
 
 		@include max-screen($medium) {
 			width: 12rem;
 			max-width: 14rem;
-			left: -0.5rem;
+			left: 8px;
 			transform: rotate(-90deg);
 		}
 
@@ -110,6 +111,7 @@ html {
 		align-items: center;
 		height: 100vh;
 		left: 6vw;
+		z-index: 555;
 
 		@include max-screen($medium) {
 			left: 4vw;
@@ -650,8 +652,8 @@ html {
 		}
 	}
 
-	.nav-bg-tang {
-/* 
+	.sticky-container {
+
 		.active-overlay {
 			position: absolute;
 			top: 0;
@@ -661,7 +663,7 @@ html {
 			background: black;
 			opacity: 0;
 			z-index: 1;
-		} */
+		} 
 
 		/* .active-overlay:after {
 			content: '';
@@ -688,11 +690,14 @@ html {
 
 	.sectors {
 		background-color: $tang;
-		padding: 10rem 0;
+		padding: 7rem 0 5rem;
 
 		@include max-screen($small) {
 			padding: 8rem 0;
 		}
+		/* position: -webkit-sticky;
+		position: sticky;
+		top: 0; */
 
 
 		.sectors-title {
@@ -922,6 +927,7 @@ html {
 				font-size: 5rem;
 				color: $tang;
 				letter-spacing: -0.2rem;
+				display:block;
 
 				@include max-screen($xsmall) {
 					font-size: 6.5vw;
@@ -946,9 +952,18 @@ html {
 		}
 	}
 
-	
 }
 
+_:-ms-lang(x), .home-page .page-header .carousel-content.inspire .logo-container { 
+	top: 140px;
+ }
+_:-ms-lang(x), .home-page .page-header .carousel-content.inspire .carousel--slogan { 
+	top: 210px;
+ }
+
+
+
+  
 // Media Queries
 @include screen($medium, $xxlarge, $orientation: false) {}
 
