@@ -17,6 +17,7 @@ NOTES:
 :: js-no-transPage = when I want a domain link with no transition ajax animation
 --------------------------------------------------------------------------------------------*/
 $(document).ready(function () {
+  
   //** outdatedbrowser.com
   // Must be the first to be call or in older browsers IE6,7 will have weird js erros on my code, and the plugin will not work
   outdatedBrowser({

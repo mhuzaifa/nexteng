@@ -101,7 +101,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
           <div class="row expanded">
             <div class="xxlarge-10 xxlarge-offset-2 xlarge-10 xlarge-offset-2 medium-10 medium-offset-1 xsmall-10 xsmall-offset-1 columns">
               <h3 class="service--title">
-                Ser Nex😍t<sup>&copy;</sup> é ser maleável.
+                Ser Nex t<sup>&copy;</sup> é ser maleável.
                 Acreditamos que a fluidez
                 guia o conhecimento até
                 à inovação.
@@ -153,20 +153,50 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
             </div>
           </div>
           <div class="row expanded">
-            <div class="xxlarge-8 xxlarge-offset-2 xlarge-10 xlarge-offset-2 medium-8 medium-offset-1 xsmall-6 xsmall-offset-1 columns">
-              <div class="manifesto--details">
-                <p class="manifesto--text">
-                  <span><sup>1</sup>Prospera</span>
-                  O crescimento está sempre ao teu alcance.
-                  Ao partilhar, criamos espaço para novas ideias.
-                  Celebra o sucesso com todos.
-                </p>
-                <div class="menifesto--img">
-                  <picture>
-                    <source srcset="/public/imgs/prospera.png 1x, /public/imgs/prospera@2x.png 2x"><img src="/public/imgs/prospera.png"
-                      alt=""></picture>
-                </div>
+            <div class="xxlarge-8 xxlarge-offset-2 xlarge-8 xlarge-offset-2 medium-8 medium-offset-1 xsmall-6 xsmall-offset-1 columns">
+              <div class="scrollable-wrapper">
+                <div class="manifesto--details">
+                  <p class="manifesto--text">
+                    <span><sup>1</sup>Prospera</span>
+                    O crescimento está sempre ao teu alcance.
+                    Ao partilhar, criamos espaço para novas ideias.
+                    Celebra o sucesso com todos.
+                  </p>
+                  <div class="menifesto--img">
+                    <picture>
+                      <source srcset="/public/imgs/prospera.png 1x, /public/imgs/prospera@2x.png 2x"><img src="/public/imgs/prospera.png"
+                        alt=""></picture>
+                  </div>
 
+                </div>
+                <div class="manifesto--details">
+                  <p class="manifesto--text">
+                    <span><sup>1</sup>Prospera</span>
+                    O crescimento está sempre ao teu alcance.
+                    Ao partilhar, criamos espaço para novas ideias.
+                    Celebra o sucesso com todos.
+                  </p>
+                  <div class="menifesto--img">
+                    <picture>
+                      <source srcset="/public/imgs/prospera.png 1x, /public/imgs/prospera@2x.png 2x"><img src="/public/imgs/prospera.png"
+                        alt=""></picture>
+                  </div>
+
+                </div>
+                <div class="manifesto--details">
+                  <p class="manifesto--text">
+                    <span><sup>1</sup>Prospera</span>
+                    O crescimento está sempre ao teu alcance.
+                    Ao partilhar, criamos espaço para novas ideias.
+                    Celebra o sucesso com todos.
+                  </p>
+                  <div class="menifesto--img">
+                    <picture>
+                      <source srcset="/public/imgs/prospera.png 1x, /public/imgs/prospera@2x.png 2x"><img src="/public/imgs/prospera.png"
+                        alt=""></picture>
+                  </div>
+
+                </div>
               </div>
             </div>
           </div>
@@ -174,8 +204,9 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
 
         <!--  SECTORS: Info Tech -->
         <div data-jq-clipthru="nav-bg-tang light" id="areas">
+        
           <div class="sticky-container">
-            <article style="padding:0" class="sectors"></article>
+            <article class="sectors"></article>
             <article class="sectors info-tech" id="infoTech">
               <div class="active-overlay">
               </div>

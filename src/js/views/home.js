@@ -19,12 +19,13 @@ $(document).ready(function () {
   var $linkText = $('nav.light .link-text');
 
   $linkText.hide();
+  
   $menuItemsOnHover.hover(
     function () {
-      $(this).next().fadeTo(1, 1);
+      $(this).next().fadeIn(150);
     },
     function () {
-      $(this).next().fadeTo(1, 0);
+      $(this).next().fadeOut(150);
     }
   );
 
@@ -44,6 +45,7 @@ function homePage() {
   var $bigData = $('.big-data');
   var $rpa = $('.rpa');
   var $setores = $('.setores');
+  var $menuWrapper = $('.menu .items-wrapper');
 
   var $overlayInfoTech = $('.info-tech .active-overlay');
   var $overlayBigData = $('.big-data .active-overlay');
@@ -75,7 +77,6 @@ function homePage() {
 
     /*inits*/
 
-
     //Events
     initEvents();
   }
@@ -97,7 +98,8 @@ function homePage() {
   
   function initEvents() {
 
-    $_window.on('resize.homePage', resize);
+
+    $_window.on('resize.homePage', $.debounce(500,resize));
 
   }
 
@@ -130,11 +132,12 @@ function homePage() {
   }
 
   function resize() {
-    
+    location.reload();
   } 
 
 
   function animations() {
+
     TweenMax.to($tWordLogo, 1, {
       x: -100,
       delay: 0,
@@ -202,19 +205,18 @@ function homePage() {
 
        }  */
  
+    scrollingHandler()
+    }
 
-    var scaledTranslate = scaleBetween($_window.scrollTop(), 0, menuHeight, 0, $_body.height());
+ 
+    function scrollingHandler() {
+      var scaledTranslate = scaleBetween($_window.scrollTop(), 0, menuHeight, 0, $_body.height());
+      TweenMax.to($scrollHandler, 0.5, {y: scaledTranslate,ease: Power4.easeOut}); 
+    }
+    function scaleBetween(unscaledNum, minAllowed, maxAllowed, min, max) {
+      return (maxAllowed - minAllowed) * (unscaledNum - min) / (max - min) + minAllowed;
+    }
 
-    TweenMax.to($scrollHandler, 0.5, {
-      y: scaledTranslate,
-      ease: Power4.easeOut
-    });
-
-  }
-
-  function scaleBetween(unscaledNum, minAllowed, maxAllowed, min, max) {
-    return (maxAllowed - minAllowed) * (unscaledNum - min) / (max - min) + minAllowed;
-  }
     
   return {
     init: init,

@@ -177,6 +177,14 @@ html {
 				position: relative;
 				
 			}
+			&:nth-child(4) {
+				top: -18px;
+				position: relative;
+			}
+			&:nth-child(5) {
+				position: relative;
+				top: 10px;
+			}
 			&:last-child .scroll-anchor {
 				top: 3px !important;
 			}
@@ -197,7 +205,7 @@ html {
 			.scroll-anchor {
 				background-color: $purple;
 				border-color: #9e7491;
-	
+
 			}
 
 			.link-text {
@@ -215,6 +223,10 @@ html {
 			}
 			&:not(.active-intro) .link-text {
 				color: #9e7491;
+				transition: 0.3s;
+				&:hover {
+					color: $white;
+				}
 			}
 			&.active-intro .link-text {
 				color: $white;
@@ -239,9 +251,11 @@ html {
 				.scroll-anchor {
 					border-color:$purple;
 					background-color: white;
+					transition: 0.3s;
 
 					&:hover {
 						background-color: $purple;
+						transform: scale(1.2)
 					}
 				}
 				.link-text {
@@ -454,7 +468,7 @@ html {
 
 			.box--title {
 				font-family: 'Sharp Grotesk Medium 25';
-				font-size: 5rem;
+				font-size: 2.5vw;
 				color: $purple;
 				letter-spacing: -2px;
 				padding: 5.3rem 4.8rem;
@@ -589,7 +603,11 @@ html {
 				color: $tang;
 			}
 		}
-
+		.scrollable-wrapper {
+			max-height: 795px;
+			overflow: hidden;
+			padding: 0 1rem;
+		}
 		.manifesto--details {
 			top: 0;
 			position: relative;
@@ -921,13 +939,15 @@ html {
 
 		.contact {
 			padding: 5.5rem 0 6rem;
-
+			overflow: hidden;
 			a {
 				font-family: 'Sharp Grotesk Medium 20';
 				font-size: 5rem;
 				color: $tang;
 				letter-spacing: -0.2rem;
 				display:block;
+				float: left;
+    			clear: left;
 
 				@include max-screen($xsmall) {
 					font-size: 6.5vw;
@@ -953,6 +973,7 @@ html {
 	}
 
 }
+
 
 _:-ms-lang(x), .home-page .page-header .carousel-content.inspire .logo-container { 
 	top: 140px;
