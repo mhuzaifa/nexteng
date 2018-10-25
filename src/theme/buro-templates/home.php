@@ -28,7 +28,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
 
 ?>
 
-  
+
 <div class="page-main page-current">
   <div class="page-toload home-page" data-bodyclass="home">
     <!--HERE IS THE FIXED MENU WHITE-->
@@ -43,7 +43,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
     <nav class="menu">
       <?php include 'menu.php';?>
     </nav>
-    
+
     <header class="page-header header-purple" id="intro" data-jq-clipthru="nav-full-top">
       <article class="carousel-wrapper">
         <div class="carousel-content inspire">
@@ -86,13 +86,13 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
       </article>
     </header>
     <h1 data-target="#intro" class="logo-main"> Next
-            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 150 40">
-              <path d="M9.9 16.2v22.3H1V1.3h8.9l13.6 22v-22h8.9v37.2h-8.7L9.9 16.2zM61.1 36.5c-2.4 1.9-5.8 2.8-10.2 2.8-5.2 0-9.1-1.4-11.6-4.1-2.5-2.7-3.7-6.4-3.7-11v-.9c0-1.6.2-3.1.5-4.5s.8-2.7 1.5-3.8c1.3-2.3 3.1-4.1 5.4-5.4 2.3-1.2 5-1.9 8.2-1.9 1.8 0 3.4.2 4.8.5 1.5.3 2.7.9 3.8 1.6 2.2 1.4 3.9 3.2 4.9 5.5 1.1 2.3 1.6 4.8 1.6 7.5v3.4H44.9c.2 1.9.9 3.3 1.9 4.2 1 .9 2.5 1.4 4.3 1.4 1.3 0 2.4-.3 3.1-.8.8-.5 1.3-1.2 1.7-2.1h10c-.8 3.2-2.4 5.7-4.8 7.6zM47 16.3c-1 .9-1.7 2.2-2 4h11.9c-.2-1.7-.8-3-1.7-3.9-.9-.9-2.3-1.4-4-1.4-1.8-.1-3.2.4-4.2 1.3z"
-                class="svg-logo" />
-              <path d="M80.5 30L75 38.5H63.9L75 22.8 64.9 8.4h10.7l4.9 7.6 4.9-7.6H96L86 22.7l10.7 15.8H86L80.5 30zM141.7 38.5H137c-1.5 0-2.9-.1-4-.3-1.2-.2-2.2-.5-3-.9-1.6-.8-2.8-2.2-3.4-4-.6-1.9-.9-4.3-.9-7.5v-9.6h-5.1V8.4c.6 0 1.1 0 1.5-.1.4-.1.9-.1 1.4-.2 1-.1 1.7-.5 2.1-1 .4-.5.7-1.4.9-2.7.1-.6.1-1.3.2-2.1.1-.7.1-1 .1-1.6h7.8v7.1h7.2v8.4h-7.2V24c0 .9 0 1.6.1 2.3.1.6.2 1.2.3 1.6.3.8.8 1.3 1.5 1.6.7.2 1.9.4 3.4.4h1.9v8.6zM143.7 5.8c-.6-.5-.9-1.2-.9-2.2v-.2c0-.3 0-.6.1-.9s.2-.5.3-.7c.3-.5.6-.8 1.1-1.1.5-.3 1-.4 1.6-.4.3 0 .6 0 .8.1.3.1.5.1.7.3.5.2.8.6 1.1 1.1.3.5.4 1 .4 1.6v.2c0 .3 0 .6-.1.9-.1.3-.2.5-.3.7-.3.4-.6.8-1.1 1-.5.2-1 .3-1.5.3-.8 0-1.6-.2-2.2-.7zm4-.4c.5-.4.7-1 .7-1.9v-.1c0-.8-.2-1.4-.7-1.9-.5-.4-1.1-.7-1.8-.7s-1.3.2-1.8.7c-.5.5-.7 1.1-.7 1.9v.1c0 .8.2 1.4.7 1.9.5.4 1.1.6 1.8.6.8 0 1.4-.2 1.8-.6zm-2.4-1.6V5h-.5V1.8h1.3c.4 0 .8.1.9.3.2.2.3.4.3.7 0 .2-.1.4-.2.5-.1.1-.3.2-.5.3.2 0 .3.1.4.2.1.1.1.3.1.5V5h-.6v-.1-.5c0-.2 0-.3-.1-.4-.1-.1-.3-.1-.5-.1h-.6zm1.3-.6c.1-.1.2-.2.2-.4s-.1-.3-.2-.4c-.1-.1-.3-.1-.5-.1h-.7v1.1h.7c.2 0 .4-.1.5-.2z"
-                class="svg-logo" />
-            </svg>
-      </h1>
+      <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 150 40">
+        <path d="M9.9 16.2v22.3H1V1.3h8.9l13.6 22v-22h8.9v37.2h-8.7L9.9 16.2zM61.1 36.5c-2.4 1.9-5.8 2.8-10.2 2.8-5.2 0-9.1-1.4-11.6-4.1-2.5-2.7-3.7-6.4-3.7-11v-.9c0-1.6.2-3.1.5-4.5s.8-2.7 1.5-3.8c1.3-2.3 3.1-4.1 5.4-5.4 2.3-1.2 5-1.9 8.2-1.9 1.8 0 3.4.2 4.8.5 1.5.3 2.7.9 3.8 1.6 2.2 1.4 3.9 3.2 4.9 5.5 1.1 2.3 1.6 4.8 1.6 7.5v3.4H44.9c.2 1.9.9 3.3 1.9 4.2 1 .9 2.5 1.4 4.3 1.4 1.3 0 2.4-.3 3.1-.8.8-.5 1.3-1.2 1.7-2.1h10c-.8 3.2-2.4 5.7-4.8 7.6zM47 16.3c-1 .9-1.7 2.2-2 4h11.9c-.2-1.7-.8-3-1.7-3.9-.9-.9-2.3-1.4-4-1.4-1.8-.1-3.2.4-4.2 1.3z"
+          class="svg-logo" />
+        <path d="M80.5 30L75 38.5H63.9L75 22.8 64.9 8.4h10.7l4.9 7.6 4.9-7.6H96L86 22.7l10.7 15.8H86L80.5 30zM141.7 38.5H137c-1.5 0-2.9-.1-4-.3-1.2-.2-2.2-.5-3-.9-1.6-.8-2.8-2.2-3.4-4-.6-1.9-.9-4.3-.9-7.5v-9.6h-5.1V8.4c.6 0 1.1 0 1.5-.1.4-.1.9-.1 1.4-.2 1-.1 1.7-.5 2.1-1 .4-.5.7-1.4.9-2.7.1-.6.1-1.3.2-2.1.1-.7.1-1 .1-1.6h7.8v7.1h7.2v8.4h-7.2V24c0 .9 0 1.6.1 2.3.1.6.2 1.2.3 1.6.3.8.8 1.3 1.5 1.6.7.2 1.9.4 3.4.4h1.9v8.6zM143.7 5.8c-.6-.5-.9-1.2-.9-2.2v-.2c0-.3 0-.6.1-.9s.2-.5.3-.7c.3-.5.6-.8 1.1-1.1.5-.3 1-.4 1.6-.4.3 0 .6 0 .8.1.3.1.5.1.7.3.5.2.8.6 1.1 1.1.3.5.4 1 .4 1.6v.2c0 .3 0 .6-.1.9-.1.3-.2.5-.3.7-.3.4-.6.8-1.1 1-.5.2-1 .3-1.5.3-.8 0-1.6-.2-2.2-.7zm4-.4c.5-.4.7-1 .7-1.9v-.1c0-.8-.2-1.4-.7-1.9-.5-.4-1.1-.7-1.8-.7s-1.3.2-1.8.7c-.5.5-.7 1.1-.7 1.9v.1c0 .8.2 1.4.7 1.9.5.4 1.1.6 1.8.6.8 0 1.4-.2 1.8-.6zm-2.4-1.6V5h-.5V1.8h1.3c.4 0 .8.1.9.3.2.2.3.4.3.7 0 .2-.1.4-.2.5-.1.1-.3.2-.5.3.2 0 .3.1.4.2.1.1.1.3.1.5V5h-.6v-.1-.5c0-.2 0-.3-.1-.4-.1-.1-.3-.1-.5-.1h-.6zm1.3-.6c.1-.1.2-.2.2-.4s-.1-.3-.2-.4c-.1-.1-.3-.1-.5-.1h-.7v1.1h.7c.2 0 .4-.1.5-.2z"
+          class="svg-logo" />
+      </svg>
+    </h1>
     <main class="page-content" role="main">
       <div class="content">
 
@@ -150,63 +150,228 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
               <h3 class="manifesto--title">
                 Your Nex t<sup>&copy;</sup><br> <span>Manifesto<span class="text-white">.</span></span>
               </h3>
+              <div class="spacer"></div>
             </div>
           </div>
           <div class="row expanded">
-            <div class="xxlarge-8 xxlarge-offset-2 xlarge-8 xlarge-offset-2 medium-8 medium-offset-1 xsmall-6 xsmall-offset-1 columns">
+            <div class="xxlarge-8 xxlarge-offset-2 xlarge-8 xlarge-offset-2 medium-10 medium-offset-1 xsmall-10 xsmall-offset-1 columns">
+
+                      <div class="manifesto--details">
+                        <div class="row expanded">
+                          <div class="xxlarge-7 medium-7 xsmall-8 columns">
+                            <p class="manifesto--text">
+                              <span><sup>1</sup>Prospera</span>
+                              O crescimento está sempre ao teu alcance.
+                              Ao partilhar, criamos espaço para novas ideias.
+                              Celebra o sucesso com todos.
+                            </p>
+                          </div>
+                          <div class="xxlarge-4 xxlarge-offset-1 medium-4 medium-offset-1 xsmall-4 xsmall-offset-0 columns">
+                            <div class="menifesto--img">
+                              <picture>
+                                <source srcset="/public/imgs/prospera.png 1x, /public/imgs/prospera@2x.png 2x"><img src="/public/imgs/prospera.png"
+                                  alt=""></picture>
+                            </div>
+                          </div>
+                        </div>
+                      </div> 
+
+                      <div class="manifesto--details">
+                        <div class="row expanded">
+                          <div class="xxlarge-7 medium-7 xsmall-8 columns">
+                            <p class="manifesto--text">
+                              <span><sup>2</sup>Curiosidade</span>
+                              Recorre ao inesperado. Intriga-te tanto pela tecnologia como pela história da pessoa à tua frente.
+                            </p>
+                          </div>
+                          <div class="xxlarge-4 xxlarge-offset-1 medium-4 medium-offset-1 xsmall-4 xsmall-offset-0 columns">
+                            <div class="menifesto--img">
+                           
+                            </div>
+                          </div>
+                        </div>
+
+                    </div> 
+
+                      <div class="manifesto--details">
+                        <div class="row expanded">
+                          <div class="xxlarge-7 medium-7 xsmall-8 columns">
+                            <p class="manifesto--text">
+                              <span><sup>3</sup>Altruísmo</span>
+                              Coloca-te no lugar do outro. Aceita a diversidade de expectativas. Ao ouvir, pensamos; ao reflectir, propomos.
+                            </p>
+                          </div>
+                          <div class="xxlarge-4 xxlarge-offset-1 medium-4 medium-offset-1 xsmall-4 xsmall-offset-0 columns">
+                            <div class="menifesto--img">
+                           
+                            </div>
+                          </div>
+                        </div>
+
+                    </div>  
+
+                      <div class="manifesto--details">
+                        <div class="row expanded">
+                          <div class="xxlarge-7 medium-7 xsmall-8 columns">
+                            <p class="manifesto--text">
+                              <span><sup>4</sup>Carácter</span>
+                              Inspira-te a ti mesmo, inspira os outros.
+                            </p>
+                          </div>
+                          <div class="xxlarge-4 xxlarge-offset-1 medium-4 medium-offset-1 xsmall-4 xsmall-offset-0 columns">
+                            <div class="menifesto--img">
+                           
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+
+
+                      <div class="manifesto--details">
+                        <div class="row expanded">
+                          <div class="xxlarge-7 medium-7 xsmall-8 columns">
+                            <p class="manifesto--text">
+                              <span><sup>5</sup>Plasticidade</span>
+                              Aprende e melhora; adapta-te e chega onde não imaginavas.
+                            </p>
+                          </div>
+                          <div class="xxlarge-4 xxlarge-offset-1 medium-4 medium-offset-1 xsmall-4 xsmall-offset-0 columns">
+                            <div class="menifesto--img">
+                           
+                            </div>
+                          </div>
+                        </div>
+
+                    
               <div class="scrollable-wrapper">
-                <div class="manifesto--details">
-                  <p class="manifesto--text">
-                    <span><sup>1</sup>Prospera</span>
-                    O crescimento está sempre ao teu alcance.
-                    Ao partilhar, criamos espaço para novas ideias.
-                    Celebra o sucesso com todos.
-                  </p>
-                  <div class="menifesto--img">
-                    <picture>
-                      <source srcset="/public/imgs/prospera.png 1x, /public/imgs/prospera@2x.png 2x"><img src="/public/imgs/prospera.png"
-                        alt=""></picture>
-                  </div>
 
-                </div>
-                <div class="manifesto--details">
-                  <p class="manifesto--text">
-                    <span><sup>1</sup>Prospera</span>
-                    O crescimento está sempre ao teu alcance.
-                    Ao partilhar, criamos espaço para novas ideias.
-                    Celebra o sucesso com todos.
-                  </p>
-                  <div class="menifesto--img">
-                    <picture>
-                      <source srcset="/public/imgs/prospera.png 1x, /public/imgs/prospera@2x.png 2x"><img src="/public/imgs/prospera.png"
-                        alt=""></picture>
-                  </div>
+              </div>
 
-                </div>
-                <div class="manifesto--details">
-                  <p class="manifesto--text">
-                    <span><sup>1</sup>Prospera</span>
-                    O crescimento está sempre ao teu alcance.
-                    Ao partilhar, criamos espaço para novas ideias.
-                    Celebra o sucesso com todos.
-                  </p>
-                  <div class="menifesto--img">
-                    <picture>
-                      <source srcset="/public/imgs/prospera.png 1x, /public/imgs/prospera@2x.png 2x"><img src="/public/imgs/prospera.png"
-                        alt=""></picture>
-                  </div>
+<!-- onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';" -->
+              <div class="swiper-container" style="display:none">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide color-1">
+                    <div class="manifesto--details">
+                      <div class="row expanded">
+                        <div class="xxlarge-7 medium-7 xsmall-8 columns">
+                          <p class="manifesto--text">
+                            <span><sup>1</sup>Prospera</span>
+                            O crescimento está sempre ao teu alcance.
+                            Ao partilhar, criamos espaço para novas ideias.
+                            Celebra o sucesso com todos.
+                          </p>
+                        </div>
+                        <div class="xxlarge-4 xxlarge-offset-1 medium-4 medium-offset-1 xsmall-4 xsmall-offset-0 columns">
+                          <div class="menifesto--img">
+                            <picture>
+                              <source srcset="/public/imgs/prospera.png 1x, /public/imgs/prospera@2x.png 2x"><img src="/public/imgs/prospera.png"
+                                alt=""></picture>
+                          </div>
+                        </div>
+                      </div>
 
+                    </div>
+                  </div>
+                  <div class="swiper-slide color-2">
+                    <div class="manifesto--details">
+                      <div class="row expanded">
+                        <div class="xxlarge-7 medium-7 xsmall-8 columns">
+                          <p class="manifesto--text">
+                            <span><sup>2</sup>Prospera</span>
+                            O crescimento está sempre ao teu alcance.
+                            Ao partilhar, criamos espaço para novas ideias.
+                            Celebra o sucesso com todos.
+                          </p>
+                        </div>
+                        <div class="xxlarge-4 xxlarge-offset-1 medium-4 medium-offset-1 xsmall-4 xsmall-offset-0 columns">
+                          <div class="menifesto--img">
+                            <picture>
+                              <source srcset="/public/imgs/prospera.png 1x, /public/imgs/prospera@2x.png 2x"><img src="/public/imgs/prospera.png"
+                                alt=""></picture>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="swiper-slide color-3">
+                    <div class="manifesto--details">
+                      <div class="row expanded">
+                        <div class="xxlarge-7 medium-7 xsmall-8 columns">
+                          <p class="manifesto--text">
+                            <span><sup>3</sup>Prospera</span>
+                            O crescimento está sempre ao teu alcance.
+                            Ao partilhar, criamos espaço para novas ideias.
+                            Celebra o sucesso com todos.
+                          </p>
+                        </div>
+                        <div class="xxlarge-4 xxlarge-offset-1 medium-4 medium-offset-1 xsmall-4 xsmall-offset-0 columns">
+                          <div class="menifesto--img">
+                            <picture>
+                              <source srcset="/public/imgs/prospera.png 1x, /public/imgs/prospera@2x.png 2x"><img src="/public/imgs/prospera.png"
+                                alt=""></picture>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="swiper-slide color-4">
+                    <div class="manifesto--details">
+                      <div class="row expanded">
+                        <div class="xxlarge-7 medium-7 xsmall-8 columns">
+                          <p class="manifesto--text">
+                            <span><sup>4</sup>Prospera</span>
+                            O crescimento está sempre ao teu alcance.
+                            Ao partilhar, criamos espaço para novas ideias.
+                            Celebra o sucesso com todos.
+                          </p>
+                        </div>
+                        <div class="xxlarge-4 xxlarge-offset-1 medium-4 medium-offset-1 xsmall-4 xsmall-offset-0 columns">
+                          <div class="menifesto--img">
+                            <picture>
+                              <source srcset="/public/imgs/prospera.png 1x, /public/imgs/prospera@2x.png 2x"><img src="/public/imgs/prospera.png"
+                                alt=""></picture>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="swiper-slide color-5">
+                    <div class="manifesto--details">
+                      <div class="row expanded">
+                        <div class="xxlarge-7 medium-7 xsmall-8 columns">
+                          <p class="manifesto--text">
+                            <span><sup>5</sup>Prospera</span>
+                            O crescimento está sempre ao teu alcance.
+                            Ao partilhar, criamos espaço para novas ideias.
+                            Celebra o sucesso com todos.
+                          </p>
+                        </div>
+                        <div class="xxlarge-4 xxlarge-offset-1 medium-4 medium-offset-1 xsmall-4 xsmall-offset-0 columns">
+                          <div class="menifesto--img">
+                            <picture>
+                              <source srcset="/public/imgs/prospera.png 1x, /public/imgs/prospera@2x.png 2x"><img src="/public/imgs/prospera.png"
+                                alt=""></picture>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
                 </div>
               </div>
+
+
             </div>
           </div>
         </article>
 
         <!--  SECTORS: Info Tech -->
         <div data-jq-clipthru="nav-bg-tang light" id="areas">
-        
-          <div class="sticky-container">
-            <article class="sectors"></article>
+
+          <div class="sticky-container nob">
             <article class="sectors info-tech" id="infoTech">
               <div class="active-overlay">
               </div>
@@ -223,7 +388,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
               <div class="row expanded">
                 <div class="xxlarge-8 xxlarge-offset-2 xlarge-8 xlarge-offset-2 medium-10 medium-offset-1 xsmall-10 xsmall-offset-1">
                   <div class="row expanded">
-                    <div class="xxlarge-3 xlarge-3 medium-3 xsmall-10 columns">
+                    <div class="xxlarge-3 xlarge-3 medium-3 xsmall-5 columns">
                       <div class="sectors-box">
                         <h5 class="sectors-box--title">
                           Desenvolvimento
@@ -248,7 +413,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
                         </ul>
                       </div>
                     </div>
-                    <div class="xxlarge-3 xxlarge-offset-1 xlarge-3 xlarge-offset-1 medium-3 medium-offset-1 xsmall-10 xsmall-offset-0 columns">
+                    <div class="xxlarge-3 xxlarge-offset-1 xlarge-3 xlarge-offset-1 medium-3 medium-offset-1 xsmall-5 xsmall-offset-1 columns">
                       <div class="sectors-box">
                         <h5 class="sectors-box--title">
                           Infraestruturas
@@ -278,7 +443,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
                         </ul>
                       </div>
                     </div>
-                    <div class="xxlarge-3 xxlarge-offset-1 xlarge-3 xlarge-offset-1 medium-3 medium-offset-1 xsmall-10 xsmall-offset-0 columns">
+                    <div class="xxlarge-3 xxlarge-offset-1 xlarge-3 xlarge-offset-1 medium-3 medium-offset-1 xsmall-5 xsmall-offset-0 columns">
                       <div class="sectors-box top-offset">
                         <h5 class="sectors-box--title">
                           Business <br>
@@ -317,7 +482,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
               <div class="row expanded">
                 <div class="xxlarge-8 xxlarge-offset-2 xlarge-8 xlarge-offset-2 medium-10 medium-offset-1 xsmall-10 xsmall-offset-1">
                   <div class="row expanded">
-                    <div class="xxlarge-3 xlarge-3 medium-3 xsmall-10 columns">
+                    <div class="xxlarge-3 xlarge-3 medium-3 xsmall-5 columns">
                       <div class="sectors-box">
                         <h5 class="sectors-box--title">
                           Marketing
@@ -332,7 +497,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
                         </ul>
                       </div>
                     </div>
-                    <div class="xxlarge-3 xxlarge-offset-1 xlarge-3 xlarge-offset-1 medium-3 medium-offset-1 xsmall-10 xsmall-offset-0 columns">
+                    <div class="xxlarge-3 xxlarge-offset-1 xlarge-3 xlarge-offset-1 medium-3 medium-offset-1 xsmall-5 xsmall-offset-1 columns">
                       <div class="sectors-box">
                         <h5 class="sectors-box--title">
                           Data Science/
@@ -353,12 +518,12 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
             </article>
 
             <!--  SECTORS: RPA -->
-            <article class="sectors rpa sticky"  data-jq-clipthru="">
-            <div class="active-overlay">
+            <article class="sectors rpa sticky" data-jq-clipthru="">
+              <div class="active-overlay">
               </div>
 
               <div class="row expanded">
-                <div class="xxlarge-5 xxlarge-offset-2 xlarge-6 xlarge-offset-2 medium-8 medium-offset-1 xsmall-10 xsmall-offset-1">
+                <div class="xxlarge-5 xxlarge-offset-2 xlarge-6 xlarge-offset-2 medium-8 medium-offset-1 xsmall-10 xsmall-offset-1 columns">
                   <h3 class="sectors-title">
                     The Nex t<sup>&copy;</sup> <br>
                     <span>RPA</span>*
@@ -366,7 +531,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
                 </div>
               </div>
               <div class="row expanded">
-                <div class="xxlarge-8 xxlarge-offset-2 xlarge-8 xlarge-offset-2 medium-10 medium-offset-1 xsmall-10 xsmall-offset-1">
+                <div class="xxlarge-8 xxlarge-offset-2 xlarge-8 xlarge-offset-2 medium-10 medium-offset-1 xsmall-10 xsmall-offset-1 columns">
                   <div class="row expanded">
                     <div class="sectors-box">
                       <h5 class="sectors-box--title">
@@ -389,78 +554,79 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
                 </div>
               </div>
             </article>
-            </div>
-            <!--  SECTORS: ATIVIDADE -->
-            <article class="sectors setores" id="setores" data-jq-clipthru="nav-bg-tang-lighter light">
+          </div>
+          <!--  SECTORS: ATIVIDADE -->
+          <article class="sectors setores" id="setores" data-jq-clipthru="nav-bg-tang-lighter light">
 
 
-              <div class="row expanded">
-                <div class="xxlarge-5 xxlarge-offset-2 xlarge-5 xlarge-offset-2 medium-8 medium-offset-1 xsmall-10 xsmall-offset-1 columns">
-                  <h3 class="sectors-title">
-                    Nex t<sup>&copy;</sup> <br>
-                    <span>Sectors</span>
-                  </h3>
-                </div>
+            <div class="row expanded">
+              <div class="xxlarge-5 xxlarge-offset-2 xlarge-5 xlarge-offset-2 medium-8 medium-offset-1 xsmall-10 xsmall-offset-1 columns">
+                <h3 class="sectors-title">
+                  Nex t<sup>&copy;</sup> <br>
+                  <span>Sectors</span>
+                </h3>
               </div>
-              <div class="row expanded">
-                <div class="xxlarge-8 xxlarge-offset-2 xlarge-8 xlarge-offset-2 medium-8 medium-offset-1 xsmall-10 xsmall-offset-0">
-                  <div class="row expanded">
-                    <div class="xxlarge-3 xsmall-5 xsmall-offset-1 columns">
-                      <div class="sectors-icons">
-                        <img src="public/imgs/pictograms/financeiro.svg" alt="">
-                        <p>Financeiro</p>
-                      </div>
-                    </div>
-                    <div class="xxlarge-3 xsmall-5 xsmall-offset-1 columns">
-                      <div class="sectors-icons">
-                        <img src="public/imgs/pictograms/telecomunicacoes.svg" alt="">
-                        <p>Telecomunicações</p>
-                      </div>
-                    </div>
-                    <div class="xxlarge-3 xsmall-5 xsmall-offset-1 columns">
-                      <div class="sectors-icons">
-                        <img src="public/imgs/pictograms/retalho.svg" alt="">
-                        <p>Retalho</p>
-                      </div>
-                    </div>
-                    <div class="xxlarge-3 xsmall-5 xsmall-offset-1 columns">
-                      <div class="sectors-icons">
-                        <img src="public/imgs/pictograms/saude.svg" alt="">
-                        <p>Saúde</p>
-                      </div>
-                    </div>
-                    <div class="xxlarge-3 xsmall-5 xsmall-offset-1 columns">
-                      <div class="sectors-icons">
-                        <img src="public/imgs/pictograms/publico.svg" alt="">
-                        <p>Sector Público</p>
-                      </div>
-                    </div>
-                    <div class="xxlarge-3 xsmall-5 xsmall-offset-1 columns">
-                      <div class="sectors-icons">
-                        <img src="public/imgs/pictograms/servicos.svg" alt="">
-                        <p>Serviços</p>
-                      </div>
-                    </div>
-                    <div class="xxlarge-3 xsmall-5 xsmall-offset-1 columns">
-                      <div class="sectors-icons">
-                        <img src="public/imgs/pictograms/industria.svg" alt="">
-                        <p>Indústria</p>
-                      </div>
+            </div>
+            <div class="row expanded">
+              <div class="xxlarge-8 xxlarge-offset-2 xlarge-8 xlarge-offset-2 medium-8 medium-offset-1 xsmall-10 xsmall-offset-0">
+                <div class="row expanded">
+                  <div class="xxlarge-3 xsmall-5 xsmall-offset-1 columns">
+                    <div class="sectors-icons">
+                      <img src="public/imgs/pictograms/financeiro.svg" alt="">
+                      <p>Financeiro</p>
                     </div>
                   </div>
-
+                  <div class="xxlarge-3 xsmall-5 xsmall-offset-1 columns">
+                    <div class="sectors-icons">
+                      <img src="public/imgs/pictograms/telecomunicacoes.svg" alt="">
+                      <p>Telecomunicações</p>
+                    </div>
+                  </div>
+                  <div class="xxlarge-3 xsmall-5 xsmall-offset-1 columns">
+                    <div class="sectors-icons">
+                      <img src="public/imgs/pictograms/retalho.svg" alt="">
+                      <p>Retalho</p>
+                    </div>
+                  </div>
+                  <div class="xxlarge-3 xsmall-5 xsmall-offset-1 columns">
+                    <div class="sectors-icons">
+                      <img src="public/imgs/pictograms/saude.svg" alt="">
+                      <p>Saúde</p>
+                    </div>
+                  </div>
+                  <div class="xxlarge-3 xsmall-5 xsmall-offset-1 columns">
+                    <div class="sectors-icons">
+                      <img src="public/imgs/pictograms/publico.svg" alt="">
+                      <p>Sector Público</p>
+                    </div>
+                  </div>
+                  <div class="xxlarge-3 xsmall-5 xsmall-offset-1 columns">
+                    <div class="sectors-icons">
+                      <img src="public/imgs/pictograms/servicos.svg" alt="">
+                      <p>Serviços</p>
+                    </div>
+                  </div>
+                  <div class="xxlarge-3 xsmall-5 xsmall-offset-1 columns">
+                    <div class="sectors-icons">
+                      <img src="public/imgs/pictograms/industria.svg" alt="">
+                      <p>Indústria</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-            </article>
-         
-        </div> 
-      
+              </div>
+            </div>
+
+          </article>
+
+        </div>
+
         <!-- ============= FOOTER ============= -->
         <article class="main-footer" id="contactos" data-jq-clipthru="nav-bg-white light">
           <div class="xxlarge-10 xxlarge-offset-2 medium-offset-1 columns">
             <h4 class="footer-slogan">
-              Shaping the <span class="word-next">Nex<picture><source srcset="/public/imgs/robot.png 1x, /public/imgs/robot@2x.png 2x"><img src="/public/imgs/robot.png"
+              Shaping the <span class="word-next">Nex<picture>
+                  <source srcset="/public/imgs/robot.png 1x, /public/imgs/robot@2x.png 2x"><img src="/public/imgs/robot.png"
                     alt=""></picture><span class="word-t">t</span></span><span class="word-future">Future.</span>
             </h4>
             <address>
@@ -476,7 +642,9 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
             <div class="social">
               <ul>
                 <!-- <li><a href="">twitter</a></li> -->
-                <li><a target="_blank" href="https://www.linkedin.com/company/nxt-engineering/">linkedin</a></li><!-- 
+                <li><a target="_blank" href="https://www.linkedin.com/company/nxt-engineering/">linkedin</a></li>
+                <li><a target="_blank" href="https://www.itjobs.pt/emprego?company=4943">IT Jobs</a></li>
+                <!-- 
                 <li><a href="">instagram</a></li>
                 <li><a href="">facebook</a></li> -->
               </ul>

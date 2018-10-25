@@ -354,10 +354,11 @@ gulp.task('concat-vendor-js', function () {
 				'src/js/jq-clipthru/jquery-ui-1.10.4.custom.min.js',
 				'src/js/jq-clipthru/jq-clipthru.min.js',
 				'src/js/jq-clipthru/jquery.stickystack.min.js',
+				'src/js/jq-clipthru/swiper.min.js',
 				'src/js/defaults/mapbox.js',
 				'src/js/defaults/burocratik-default.js',
-			])
-		.pipe(sourcemaps.init())
+			]) 
+		.pipe(sourcemaps.init()) 
 		.pipe(concat('buro-workers.js'))
 		.pipe(sourcemaps.write('/'))
 		.pipe(gulp.dest('build/wordpress/public/scripts'))

@@ -34,6 +34,7 @@ $(document).ready(function () {
 function homePage() {
 
   /*Variables*/
+  var swiper;
   var big_data_wrapper_offset_top = $('.big-data').offset().top;
   var rpa_wrapper_offset_top = $('.rpa').offset().top;
   var setores_wrapper_offset_top = $('.setores').offset().top;
@@ -53,6 +54,9 @@ function homePage() {
 
   var $scrollHandler = $('.menu .scroll-handler');
   var menuHeight = $('.menu .items-wrapper').outerHeight() + 15;
+
+  var manifestoTitleOffset = $('.manifesto').offset().top;
+  var infoTechOffset = $('.info-tech').offset().top;
 
 
 
@@ -76,7 +80,15 @@ function homePage() {
     console.log("home page");
 
     /*inits*/
+    if(!$_body.hasClass("mobile")) {
+      $stickyContainer.stickyStack({
+        containerElement: '.sticky-container',
+        stackingElement: 'article',
+        boxShadow: '-1px 0 150px rgba(0, 0, 0, 0.20)'
+      }); 
+    };
 
+    
     //Events
     initEvents();
   }
@@ -91,25 +103,19 @@ function homePage() {
   };
 
   /*page functions*/
-
   animations();
   navLinkScroll();
-  stickyInit();
   
   function initEvents() {
 
-
-    $_window.on('resize.homePage', $.debounce(500,resize));
-
-  }
-
-  function stickyInit() {
-    $stickyContainer.stickyStack({
-      containerElement: '.sticky-container',
-      stackingElement: 'article',
-      boxShadow: '-1px 0 150px rgba(0, 0, 0, 0.20)'
+    $.doTimeout(2000, function () {
+      $_window.on('resize.homePage', $.debounce(500, resize));
+    });
+    window.addEventListener("orientationchange", function() {
+      location.reload();
     });
   }
+
 
   /*Anchor Link Smooth Scroll*/
 
@@ -132,9 +138,12 @@ function homePage() {
   }
 
   function resize() {
-    location.reload();
-  } 
 
+    if(!$_body.hasClass("mobile")) {
+      location.reload();
+    }
+    
+  } 
 
   function animations() {
 
@@ -154,58 +163,58 @@ function homePage() {
 
   }
 
+
   function home_scroll_rAF(status) {
 
-       if (verge.inViewport($bigData)) {
+    var $manifestoTitle = $('.manifesto--title'),
+    manifestoTitleHeight = $('.manifesto--title').outerHeight(),
+    $spacer = $('.spacer'),
+    windowScrollTop = $_window.scrollTop();
 
-         var scaledOpacityInfoTech = scaleBetween($_window.scrollTop(), 0.8, -0.1, big_data_wrapper_offset_top,
-         big_data_wrapper_offset_top - $_window.height());
-         
-         TweenMax.to($overlayInfoTech, 0, {
-          opacity: scaledOpacityInfoTech
-        });
+    if (windowScrollTop >= manifestoTitleOffset) {
+      $manifestoTitle.addClass('fixed-title');
+      $spacer.outerHeight(manifestoTitleHeight);
+    } else {
+      $('.fixed-title').removeClass('fixed-title');
+      $spacer.css('height','0');
+    }
 
-       };
+     if (verge.inViewport($bigData)) {
 
-       if (verge.inViewport($rpa)) {
+       var scaledOpacityInfoTech = scaleBetween($_window.scrollTop(), 0.5, -0.4, big_data_wrapper_offset_top,
+       big_data_wrapper_offset_top - $_window.height());
+       
+       TweenMax.to($overlayInfoTech, 0, {
+        opacity: scaledOpacityInfoTech
+      });
 
-         var scaledOpacityInfoTech = scaleBetween($_window.scrollTop(), 0.8, -0.1, rpa_wrapper_offset_top,
-         rpa_wrapper_offset_top - $_window.height());
+     };
 
-         TweenMax.to($overlayBigData, 0.5, {
-          opacity: scaledOpacityInfoTech
-        });
+     if (verge.inViewport($rpa)) {
 
-       };
+       var scaledOpacityInfoTech = scaleBetween($_window.scrollTop(), 0.5, -0.5,  rpa_wrapper_offset_top,
+       rpa_wrapper_offset_top - $_window.height());
 
-       if (verge.inViewport($setores)) {
+       TweenMax.to($overlayBigData, 0.5, {
+        opacity: scaledOpacityInfoTech
+      });
 
-         var scaledOpacityInfoTech = scaleBetween($_window.scrollTop(), 0.8, -0.1, setores_wrapper_offset_top,
-         setores_wrapper_offset_top - $_window.height());
+     };
 
-         TweenMax.to($overlayRpa, 0.5, {
-          opacity: scaledOpacityInfoTech
-        });
+     if (verge.inViewport($setores)) {
 
-       };
+       var scaledOpacityInfoTech = scaleBetween($_window.scrollTop(), 0.5, -0.5, setores_wrapper_offset_top,
+       setores_wrapper_offset_top - $_window.height());
 
-       /* if (verge.inViewport($('.rpa'))) {
+       TweenMax.to($overlayRpa, 0.5, {
+        opacity: scaledOpacityInfoTech
+      });
 
-         $('.switch').addClass('active-overlay');
-
-         var scaledOpacityBigData = scaleBetween(
-           $_body.scrollTop(), 0, 0.8,
-           rpa_wrapper_offset_top,
-           rpa_wrapper_offset_top + _globalViewportH
-         );
-
-         TweenMax.to($overlayBigData, 0.2, {
-           opacity: scaledOpacityBigData
-         });
-
-       }  */
+     };
  
-    scrollingHandler()
+ 
+    scrollingHandler();
+
     }
 
  
@@ -213,6 +222,7 @@ function homePage() {
       var scaledTranslate = scaleBetween($_window.scrollTop(), 0, menuHeight, 0, $_body.height());
       TweenMax.to($scrollHandler, 0.5, {y: scaledTranslate,ease: Power4.easeOut}); 
     }
+    
     function scaleBetween(unscaledNum, minAllowed, maxAllowed, min, max) {
       return (maxAllowed - minAllowed) * (unscaledNum - min) / (max - min) + minAllowed;
     }

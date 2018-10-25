@@ -24,39 +24,57 @@ html {
 	@include max-screen($xsmall) {
 		font-size: 32.5%;
 	}
+
+	@include max-screen($xxsmall) {
+		font-size: 28.5%;
+	}
 }
 
-// Body Level
+// Body Level 
+.mobile {
+	.page-main {
+		overflow: inherit;
+		overflow-x: inherit;
+	}
+	.sticky-container {
+		article {
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+			
+			&.info-tech {
+				
+				
+				@include max-screen($medium) {
+					@include landscape() {
+						top: -28rem;
+					}
+				}
+
+				@include max-screen($small) {
+					@include landscape() {
+						top: -90rem;
+					}
+				}
+				@include max-screen($xsmall) {
+					top: -5rem;
+				}
+			}
+			&.big-data {
+				@include max-screen($small) {
+					@include landscape() {
+						top: -15rem;
+					}
+				}
+			}
+		}
+		
+	}
+}
 .home {
 
 	/*******************/
 	/*NAVIGATION STARTS*/
-	header,
-	main,
-	.manifesto-wrapper,
-	.info-wrapper,
-	.big-data-wrapper,
-	.rpa-wrapper,
-	.setores-wrapper {
-		// position: relative;
-	}
-
-	.header {
-		// height: 100vh;
-	}
-
-	.header,
-	.content,
-	.manifesto,
-	.info-tech,
-	.big-data,
-	.rpa,
-	.setores {
-		/* position: absolute;
-		width: 100%;
-		clip: rect(auto, auto, auto, auto);
-		box-sizing: border-box; */
-	}
 
 	.logo-main {
 		opacity: 0;
@@ -80,7 +98,7 @@ html {
 		}
 
 		@include max-screen($xsmall) {
-			left: -3rem;
+			left: -2rem;
 		}
 
 		top: 10vh;
@@ -177,14 +195,6 @@ html {
 				position: relative;
 				
 			}
-			&:nth-child(4) {
-				top: -18px;
-				position: relative;
-			}
-			&:nth-child(5) {
-				position: relative;
-				top: 10px;
-			}
 			&:last-child .scroll-anchor {
 				top: 3px !important;
 			}
@@ -207,7 +217,6 @@ html {
 				border-color: #9e7491;
 
 			}
-
 			.link-text {
 				font-size: 12.5px;
 				color: $white;
@@ -279,6 +288,20 @@ html {
 						border-color: transparent $purple;
 						
 					}
+				}
+
+				&:nth-child(3) {
+					top: -12px;
+					position: relative;
+				}
+				&:nth-child(4) {
+					top: 2px;
+					position: relative;
+				
+				}
+				&:nth-child(5) {
+					top: 28px;
+					position: relative;
 				}
 			}
 		}
@@ -371,6 +394,11 @@ html {
 			@include min-screen($xxlarge) {
 				margin: 16vh 1vw 0;
 			}
+			@include max-screen($small) {	
+				@include landscape() {
+					margin: 10vh 3.5vw 0;
+				}
+			}
 
 			.carousel--img {
 				position: absolute;
@@ -378,6 +406,12 @@ html {
 				top: 0;
 				left: 4.5rem;
 				width: 110rem;
+				
+				@include max-screen($small) {	
+					@include landscape() {
+						width: 90rem;
+					}
+				}
 			}
 
 			&.inspire {
@@ -387,6 +421,12 @@ html {
 					left: 1.5rem;
 					top: 21.6rem;
 					max-width: 52rem;
+					@include max-screen($small) {	
+						@include landscape() {
+							top: 18rem;
+							max-width: 40rem;
+						}
+					}
 
 					#tr_1_,
 					#tr {
@@ -396,7 +436,7 @@ html {
 
 				.carousel--slogan {
 					font-family: 'Sharp Grotesk Medium 25';
-					font-size: 5.5rem;
+					font-size: 3.5vw;
 					top: 36.2rem;
 					letter-spacing: -1px;
 					position: relative;
@@ -411,6 +451,10 @@ html {
 					@include max-screen($small) {
 						font-size: 5vw;
 						margin-right: 5vw;
+						@include landscape() {
+							font-size: 5vh;
+							top: 23rem;
+						}
 					}
 				}
 			}
@@ -442,6 +486,11 @@ html {
 			@include max-screen($xlarge) {
 				max-width: 920px;
 			}
+			@include max-screen($xsmall) {
+				font-size: 5rem;
+				padding-top: 5rem;
+				line-height: 35px;
+			}
 
 			line-height: 6.7rem;
 
@@ -468,13 +517,13 @@ html {
 
 			.box--title {
 				font-family: 'Sharp Grotesk Medium 25';
-				font-size: 2.5vw;
+				font-size: 2.8vw;
 				color: $purple;
 				letter-spacing: -2px;
 				padding: 5.3rem 4.8rem;
 
 				@include min-screen($maxlarge) {
-					font-size: 4rem;
+					font-size: 4.5rem;
 				}
 
 				@include min-screen($xxlarge) {
@@ -483,6 +532,9 @@ html {
 
 				@include max-screen($medium) {
 					font-size: 4rem;
+				}
+				@include max-screen($xsmall) {
+					font-size: 7.5vw;
 				}
 			}
 
@@ -533,6 +585,9 @@ html {
 				background-repeat: no-repeat;
 				background-size: contain;
 				background-position: top right;
+				@include max-screen($xsmall) {
+					right: -5.5rem;
+				}
 			}
 
 			&.consultoria {
@@ -554,6 +609,9 @@ html {
 			position: relative;
 			padding-left: 6.5rem;
 			margin: 8rem 0 0 8rem;
+			@include max-screen($xsmall) {
+				font-size: 1.5rem;
+			}
 		}
 
 		.service--note::before {
@@ -572,8 +630,27 @@ html {
 
 	.manifesto {
 		background-color: #371028;
-		padding-top: 15rem;
+		padding-top: 10rem;
+		padding-bottom: 1px;
 		color: $white;
+		z-index: -1;
+		
+		.fixed-title {
+			position: fixed;
+			top: 10rem;
+			width: 100%;
+			z-index: 1;
+			&:before {
+				position: absolute;
+				content: '';
+				background: #380f28;
+				height: 100%;
+				width: 100%;
+				top: -10rem;
+				z-index: -1;
+				left: 0;
+			}
+		}
 
 		.manifesto--title {
 			font-family: 'Sharp Grotesk Medium 25';
@@ -582,10 +659,15 @@ html {
 			letter-spacing: -0.2rem;
 			line-height: 9.5rem;
 			padding: 5rem 0 7.5rem;
+			background: rgb(55,16,40);
+			background: -moz-linear-gradient(0deg, rgba(55,16,40,0) 0%, rgba(55,16,40,0.8435749299719888) 30%, rgba(55,16,40,1) 68%);
+			background: -webkit-linear-gradient(0deg, rgba(55,16,40,0) 0%, rgba(55,16,40,0.8435749299719888) 30%, rgba(55,16,40,1) 68%);
+			background: linear-gradient(0deg, rgba(55,16,40,0) 0%, rgba(55,16,40,0.8435749299719888) 30%, rgba(55,16,40,1) 68%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#371028",endColorstr="#371028",GradientType=1);
 
 			@include max-screen($xsmall) {
 				font-size: 10vw;
-				line-height: 7rem;
+				line-height: 40px;
 				padding: 2rem 0 4.5rem;
 			}
 
@@ -604,36 +686,130 @@ html {
 			}
 		}
 		.scrollable-wrapper {
-			max-height: 795px;
 			overflow: hidden;
 			padding: 0 1rem;
 		}
-		.manifesto--details {
-			top: 0;
-			position: relative;
+		.swiper-container {
+			width: 100%;
+			
+			margin-left: auto;
+			margin-right: auto;
+			overflow: hidden;
+			@include min-screen($xlarge) {
+				max-height: 750px;
+			}
+			@include max-screen($xlarge) {
+				max-height: 700px;
+			}
+			@include max-screen($large) {
+				max-height: 600px;
+			}
+			@include max-screen($medium) {
+				max-height: 450px;
+			}
+		}
+		.swiper-wrapper {
+			//overflow: hidden;
+		}
+
+		.swiper-slide {
+			/* Center slide text vertically */
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
 			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			align-items: center;
+			&.swiper-slide-active {
+				margin-bottom: 10vw;
+				margin-top: 100px;
+				
+				@include min-screen($xxlarge) {
+					margin-bottom: 100px;
+				}
+				@include min-screen($xxlarge) {
+					margin-bottom: 100px;
+				}
+				@include max-screen($large) {
+					margin-bottom: 100px;
+				}
+				@include max-screen($medium) {
+					margin-bottom: 80px;
+				}
+
+			}
+			&:not(.swiper-slide-active)::after{
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				content: '';
+				
+				background: -moz-linear-gradient(top, rgba(55,16,40,0.70) 0%, rgba(55,16,40,1) 79%, rgba(55,16,40,1) 100%);
+				background: -webkit-linear-gradient(top, rgba(55,16,40,0.70) 0%,rgba(55,16,40,1) 79%,rgba(55,16,40,1) 100%);
+				background: linear-gradient(to bottom, rgba(55,16,40,0.70) 0%,rgba(55,16,40,1) 79%,rgba(55,16,40,1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#38371028', endColorstr='#371028',GradientType=0 );
+			
+				left: 0;
+				top:-40px;
+			}
+			
+			&.swiper-slide-next {
+				.manifesto--details {
+					//top: 50px;
+				}
+			}
+			&.swiper-slide-prev {
+				margin-top: -50px;
+			}
+			&.swiper-slide-next:after {
+				
+				
+			}
+						
+		}
+
+		.manifesto--details {
+			
+			position: relative;
+			margin: 5rem 0;
+			display: block;
+			z-index: 0;
+			//display: flex;
 
 			@include max-screen($xsmall) {
-				flex-wrap: wrap;
+				//flex-wrap: wrap;
 			}
-
+/* 
 			padding-top: 7.5rem;
 			padding-bottom: 7.5rem;
-
+ */
 			.manifesto--text {
 				font-family: 'Sharp Grotesk Medium 20';
 				font-weight: normal;
 				font-size: 4.5rem;
-				min-width: 60rem;
+				//min-width: 60rem;
 
 				@include max-screen($medium) {
 					font-size: 3.5rem;
-					min-width: 50rem;
+					
+					//min-width: 50rem;
 				}
 
 				@include max-screen($xsmall) {
-					min-width: 80vw;
-					max-width: 80vw;
+					font-size: 3rem;
+					//min-width: 80vw;
+					//max-width: 80vw;
+				}
+				@include max-screen($xxsmall) {
+					font-size: 2rem;
+					//min-width: 80vw;
+					//max-width: 80vw;
 				}
 
 				span {
@@ -644,33 +820,50 @@ html {
 						font-size: 5rem;
 						top: -0.5rem;
 						left: -1rem;
+						@include max-screen($xxsmall) {
+							font-size: 2.5rem;
+							left: -0.5rem;
+							//min-width: 80vw;
+							//max-width: 80vw;
+						}
+						@include max-screen($xsmall) {
+							font-size: 3rem;
+							left: -0.5rem;
+						}
 					}
+					
 				}
 			}
 
 			.menifesto--img {
-				padding-left: 10rem;
+				//padding-left: 5rem;
+				max-width: 100%;
 
 				@include max-screen($medium) {
-					padding-left: 5rem;
+					//padding-left: 5rem;
 				}
 
 				@include max-screen($xsmall) {
-					padding-top: 5rem;
+					//padding-top: 5rem;
 				}
 
 				img {
-					max-width: 43.7rem;
+					//max-width: 43.7rem;
 
 					@include max-screen($medium) {
-						max-width: 33.7rem;
+						//max-width: 33.7rem;
 					}
 				}
 			}
 		}
+
+	
 	}
 
 	.sticky-container {
+
+		position: relative;
+		z-index: 1;
 
 		.active-overlay {
 			position: absolute;
@@ -708,7 +901,7 @@ html {
 
 	.sectors {
 		background-color: $tang;
-		padding: 7rem 0 5rem;
+		padding: 10rem 0 5rem;
 
 		@include max-screen($small) {
 			padding: 8rem 0;
@@ -732,7 +925,7 @@ html {
 
 			@include max-screen($xsmall) {
 				font-size: 10vw;
-				line-height: 7rem;
+				line-height: 38px;
 				padding: 2rem 0 4.5rem;
 			}
 
@@ -759,7 +952,9 @@ html {
 
 		.sectors-box {
 			margin-bottom: 10rem;
-
+			@include max-screen($xsmall) {
+				margin-bottom: 5rem;
+			}
 			.note {
 				font-family: 'IBM Plex Sans';
 				font-size: 1.7rem;
@@ -836,31 +1031,31 @@ html {
 		}
 	}
 
-	
 	.main-footer {
 		padding-top: 23rem;
 		padding-bottom: 12rem;
 		background: white;
 		position: relative;
 		@include max-screen($xsmall) {
-			min-height: 100vh;
+			//min-height: 100vh;
 		}
 
 		.footer-slogan {
 			font-family: 'Sharp Grotesk SmBold 20';
 			font-size: 11.2rem;
 			color: $purple;
-			letter-spacing: -0.5rem;
+			letter-spacing: -0.6rem;
 			line-height: 11.5rem;
-
+			
+		
 			@include max-screen($xsmall) {
 				font-size: 10rem;
-				line-height: 8.8rem;
+				line-height: 9rem;
 			}
 
 			@include max-screen($xxsmall) {
-				font-size: 8rem;
-				line-height: 7rem;
+				letter-spacing: -0.5rem;
+				line-height: 7.5rem; 
 			}
 
 			.word-next {
@@ -869,71 +1064,68 @@ html {
 				margin-top: -0.5rem;
 
 				@include max-screen($xsmall) {
-					margin-top: 0;
+					margin-top: -0.1rem;
 				}
 
 				img {
-					max-width: 30rem;
+					max-width: 26rem;
 					display: inline-block;
 					position: absolute;
-					margin-left: -4rem;
-					margin-top: -1rem;
+					margin-left: -6rem;
+					margin-top: 0;
 					z-index: 2;
 
+					@include max-screen($xxlarge) {
+						width: 26rem;
+					}
 					@include max-screen($xsmall) {
-						max-width: 22rem;
-						margin-left: -3rem;
-						margin-top: -1rem;
+						max-width: 21rem;
+						margin-left: -4rem;
+						margin-top: 0;
 					}
 
 					@include max-screen($xxsmall) {
-						max-width: 18rem;
-						margin-left: -2.5rem;
+						max-width: 17.5rem;
 					}
 				}
 
 				.word-t {
 					position: relative;
 					left: 14rem;
-
 					@include max-screen($xsmall) {
-						left: 10rem;
+						left: 11rem;
 					}
 
 					@include max-screen($xxsmall) {
-						left: 8.5rem;
+						left: 9rem;
 					}
 				}
 			}
 
 			.word-future {
-				line-height: 14rem;
-
+				line-height: 10rem;
 				@include max-screen($xsmall) {
-					line-height: 10rem;
+					// line-height: 10rem;
 				}
 
 				@include max-screen($xxsmall) {
-					line-height: 9rem;
+					line-height: 8.1rem;
 				}
 			}
 		}
 
 		address p {
-			font-family: 'IBM Plex Mono';
-			font-size: 1.2rem;
-			line-height: 1.8rem;
-			font-weight: 300;
+			font-family: 'IBM Plex Sans';
+			font-size: 2rem;
+			line-height: 2.5rem;
+			font-weight: 500;
 			color: $purple;
 			padding: 2rem 0 5.5rem;
 
 			@include max-screen($small) {
-				font-size: 1.8rem;
-				line-height: 3rem;
 			}
 
 			@include max-screen($xsmall) {
-				font-size: 2.5vw;
 			}
 		}
 
@@ -950,7 +1142,7 @@ html {
     			clear: left;
 
 				@include max-screen($xsmall) {
-					font-size: 6.5vw;
+					font-size: 4rem;
 				}
 			}
 		}
