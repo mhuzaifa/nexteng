@@ -12,7 +12,7 @@ $(document).ready(function () {
     autoUpdate: true,
     autoUpdateInterval: 30,
     keepClonesInHTML: true
-  })
+  }) 
 
 
   var $menuItemsOnHover = $('nav.light .scroll-anchor');
@@ -34,7 +34,6 @@ $(document).ready(function () {
 function homePage() {
 
   /*Variables*/
-  var swiper;
   var big_data_wrapper_offset_top = $('.big-data').offset().top;
   var rpa_wrapper_offset_top = $('.rpa').offset().top;
   var setores_wrapper_offset_top = $('.setores').offset().top;
@@ -61,7 +60,6 @@ function homePage() {
 
 
   var init = function () {
-
     if (_customScroll == null) {
       /*Attach the event with a reference to kill after exit */
       _scrollRef = function () {
@@ -140,10 +138,10 @@ function homePage() {
   function resize() {
 
     if(!$_body.hasClass("mobile")) {
-      location.reload();
+     location.reload();
     }
     
-  } 
+  }  
 
   function animations() {
 

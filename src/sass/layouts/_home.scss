@@ -53,7 +53,7 @@ html {
 
 				@include max-screen($small) {
 					@include landscape() {
-						top: -90rem;
+						top: -92rem;
 					}
 				}
 				@include max-screen($xsmall) {
@@ -63,7 +63,7 @@ html {
 			&.big-data {
 				@include max-screen($small) {
 					@include landscape() {
-						top: -15rem;
+						top: -25rem;
 					}
 				}
 			}
@@ -91,6 +91,10 @@ html {
 			max-width: 14rem;
 			left: 8px;
 			transform: rotate(-90deg);
+			@include landscape {
+				left: 0rem !important;
+				top: 10rem !important;
+			}
 		}
 
 		@include max-screen($small) {
@@ -106,7 +110,7 @@ html {
 	}
 
 	.logo-main.light {
-		fill: $purple;
+		fill: $purple-light;
 		opacity: 1;
 	}
 	.logo-main.nav-bg-purple {
@@ -114,7 +118,7 @@ html {
 		fill: #fff;
 
 	}
-
+ 
 
 	.menu {
 		visibility: hidden;
@@ -213,7 +217,7 @@ html {
 		}
 		.scroll-item {
 			.scroll-anchor {
-				background-color: $purple;
+				background-color: $purple-light;
 				border-color: #9e7491;
 
 			}
@@ -248,30 +252,31 @@ html {
 		z-index: 9999;
 		.scroll-wrapper {
 			.scroll-bar {
-				background-color: $purple;
+				background-color: $purple-light;
 				opacity: 1;
 			}
 
 			.scroll-handler {
-				background-color: $purple;
+				background-color: $purple-light;
 			}
 
 			.scroll-item {
 				.scroll-anchor {
-					border-color:$purple;
+					border-color:$purple-light;
 					background-color: white;
 					transition: 0.3s;
 
 					&:hover {
-						background-color: $purple;
+						background-color: $purple-light;
 						transform: scale(1.2)
 					}
 				}
 				.link-text {
-					background-color: $purple;
+					background-color: $purple-light;
 					color: $white;
 					font-size: 12px;
-					padding: 5px 10px;
+					padding: 8px 15px;
+					border-radius: 4px;
 					top: 10px;
 					left: 30px;
 					position: relative;
@@ -285,7 +290,7 @@ html {
 						z-index: 1;
 						left: -12px;
 						top: 0px;
-						border-color: transparent $purple;
+						border-color: transparent $purple-light;
 						
 					}
 				}
@@ -310,7 +315,7 @@ html {
 	.menu.nav-bg-white {
 		.scroll-item .link-text {
 			&::after {
-				border-color: transparent $purple;
+				border-color: transparent $purple-light;
 			}
 		}
 	}
@@ -326,7 +331,7 @@ html {
 			.scroll-item {
 				.scroll-anchor {
 					border-color: $white;
-					background-color: $purple;
+					background-color: $purple-light;
 					&:hover {
 						background-color: $white;
 					}
@@ -334,7 +339,7 @@ html {
 
 				.link-text {
 					background-color: $white;
-					color: $purple;
+					color: $purple-light;
 
 					&::after {
 						border-color: transparent $white;
@@ -379,7 +384,7 @@ html {
 		}
 
 		&.header-purple {
-			background-image: linear-gradient(to right, $purple, $purple 70%, white 30%);
+			background-image: linear-gradient(to right, $purple-text, $purple-text 70%, white 30%);
 			height: 100vh;
 		}
 
@@ -447,29 +452,33 @@ html {
 					@include max-screen($medium) {
 						font-size: 4.5rem;
 					}
-
 					@include max-screen($small) {
 						font-size: 5vw;
 						margin-right: 5vw;
 						@include landscape() {
 							font-size: 5vh;
 							top: 23rem;
-						}
-					}
-				}
+						} 
+					} 
+				} 
 			}
 		}
 	}
-}
+} 
+ 
 
 .page-content {
 
 
 	.service {
-		padding: 18.8rem 0rem;
+		padding: 18.8rem 0 15rem;
+		background: $white;
 
-		@include max-screen($medium) {
-			padding: 10rem 0rem;
+		@include max-screen($small) {
+			padding: 8rem  0 5rem;
+			@include landscape {
+				padding: 5rem 0 2rem;
+			}
 		}
 
 		.service--title {
@@ -479,12 +488,19 @@ html {
 			padding-top: 18.4rem;
 			padding-bottom: 4.2rem;
 
+			
 			@include max-screen($xxlarge) {
 				max-width: 1220px;
 			}
 
 			@include max-screen($xlarge) {
 				max-width: 920px;
+			}
+			@include max-screen($small) {
+				@include landscape {
+					padding-top: 8.4rem;
+					padding-bottom: 2rem;
+				}
 			}
 			@include max-screen($xsmall) {
 				font-size: 5rem;
@@ -504,8 +520,11 @@ html {
 			font-family: 'Sharp Grotesk Medium 20';
 			font-size: 3rem;
 
-			@include max-screen($xsmall) {
-				margin-top: 6rem;
+			@include max-screen($small) {
+				margin-top: 5rem;
+				@include landscape {
+					margin-top: 5rem !important;
+				}
 			}
 		}
 
@@ -518,7 +537,7 @@ html {
 			.box--title {
 				font-family: 'Sharp Grotesk Medium 25';
 				font-size: 2.8vw;
-				color: $purple;
+				color: $purple-text;
 				letter-spacing: -2px;
 				padding: 5.3rem 4.8rem;
 
@@ -531,10 +550,15 @@ html {
 				}
 
 				@include max-screen($medium) {
-					font-size: 4rem;
+					font-size: 3.5rem;
+					@include landscape {
+						font-size: 4.5rem;
+					}
 				}
+				
 				@include max-screen($xsmall) {
 					font-size: 7.5vw;
+					
 				}
 			}
 
@@ -542,6 +566,9 @@ html {
 			&.nearshore {
 				margin-top: 16.8rem;
 
+				@include max-screen($small) {
+					margin-top: 6rem;
+				}
 				@include max-screen($xsmall) {
 					margin-top: 6rem;
 				}
@@ -563,7 +590,7 @@ html {
 			}
 
 			&.nearshore {
-				background-color: darken(#f08f65, 2%);
+				background-color: #fe8855;
 				position: relative;
 
 				.box--title {
@@ -591,7 +618,7 @@ html {
 			}
 
 			&.consultoria {
-				background-color: darken(#ffce7c, 2%);
+				background-color: #ffca6f;
 				position: relative;
 			}
 
@@ -629,21 +656,30 @@ html {
 	}
 
 	.manifesto {
-		background-color: #371028;
+		background-color: rgba(61,14,43,1);
 		padding-top: 10rem;
-		padding-bottom: 1px;
+		padding-bottom: 10rem;
 		color: $white;
-		z-index: -1;
-		
+		z-index: 0;
+		@include max-screen($medium) {
+			@include landscape {
+				top: 5rem;
+			}
+		}
 		.fixed-title {
 			position: fixed;
 			top: 10rem;
 			width: 100%;
 			z-index: 1;
+			@include max-screen($medium) {
+				@include landscape {
+					top: 5rem;
+				}
+			}
 			&:before {
 				position: absolute;
 				content: '';
-				background: #380f28;
+				background: rgba(61,14,43,1);
 				height: 100%;
 				width: 100%;
 				top: -10rem;
@@ -659,12 +695,15 @@ html {
 			letter-spacing: -0.2rem;
 			line-height: 9.5rem;
 			padding: 5rem 0 7.5rem;
-			background: rgb(55,16,40);
-			background: -moz-linear-gradient(0deg, rgba(55,16,40,0) 0%, rgba(55,16,40,0.8435749299719888) 30%, rgba(55,16,40,1) 68%);
-			background: -webkit-linear-gradient(0deg, rgba(55,16,40,0) 0%, rgba(55,16,40,0.8435749299719888) 30%, rgba(55,16,40,1) 68%);
-			background: linear-gradient(0deg, rgba(55,16,40,0) 0%, rgba(55,16,40,0.8435749299719888) 30%, rgba(55,16,40,1) 68%);
-			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#371028",endColorstr="#371028",GradientType=1);
+			background: rgb(61,14,43);
+background: -moz-linear-gradient(0deg, rgba(61,14,43,0) 0%, rgba(61,14,43,0.7175245098039216) 34%, rgba(61,14,43,1) 68%, rgba(61,14,43,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(61,14,43,0) 0%, rgba(61,14,43,0.7175245098039216) 34%, rgba(61,14,43,1) 68%, rgba(61,14,43,1) 100%);
+background: linear-gradient(0deg, rgba(61,14,43,0) 0%, rgba(61,14,43,0.7175245098039216) 34%, rgba(61,14,43,1) 68%, rgba(61,14,43,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endColorstr="#3d0e2b",GradientType=1);
 
+			@include max-screen($medium) {
+				font-size: 8rem;
+			}
 			@include max-screen($xsmall) {
 				font-size: 10vw;
 				line-height: 40px;
@@ -685,95 +724,6 @@ html {
 				color: $tang;
 			}
 		}
-		.scrollable-wrapper {
-			overflow: hidden;
-			padding: 0 1rem;
-		}
-		.swiper-container {
-			width: 100%;
-			
-			margin-left: auto;
-			margin-right: auto;
-			overflow: hidden;
-			@include min-screen($xlarge) {
-				max-height: 750px;
-			}
-			@include max-screen($xlarge) {
-				max-height: 700px;
-			}
-			@include max-screen($large) {
-				max-height: 600px;
-			}
-			@include max-screen($medium) {
-				max-height: 450px;
-			}
-		}
-		.swiper-wrapper {
-			//overflow: hidden;
-		}
-
-		.swiper-slide {
-			/* Center slide text vertically */
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: -webkit-flex;
-			display: flex;
-			-webkit-box-pack: center;
-			-ms-flex-pack: center;
-			-webkit-justify-content: center;
-			justify-content: center;
-			-webkit-box-align: center;
-			-ms-flex-align: center;
-			-webkit-align-items: center;
-			align-items: center;
-			&.swiper-slide-active {
-				margin-bottom: 10vw;
-				margin-top: 100px;
-				
-				@include min-screen($xxlarge) {
-					margin-bottom: 100px;
-				}
-				@include min-screen($xxlarge) {
-					margin-bottom: 100px;
-				}
-				@include max-screen($large) {
-					margin-bottom: 100px;
-				}
-				@include max-screen($medium) {
-					margin-bottom: 80px;
-				}
-
-			}
-			&:not(.swiper-slide-active)::after{
-				position: absolute;
-				height: 100%;
-				width: 100%;
-				content: '';
-				
-				background: -moz-linear-gradient(top, rgba(55,16,40,0.70) 0%, rgba(55,16,40,1) 79%, rgba(55,16,40,1) 100%);
-				background: -webkit-linear-gradient(top, rgba(55,16,40,0.70) 0%,rgba(55,16,40,1) 79%,rgba(55,16,40,1) 100%);
-				background: linear-gradient(to bottom, rgba(55,16,40,0.70) 0%,rgba(55,16,40,1) 79%,rgba(55,16,40,1) 100%);
-				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#38371028', endColorstr='#371028',GradientType=0 );
-			
-				left: 0;
-				top:-40px;
-			}
-			
-			&.swiper-slide-next {
-				.manifesto--details {
-					//top: 50px;
-				}
-			}
-			&.swiper-slide-prev {
-				margin-top: -50px;
-			}
-			&.swiper-slide-next:after {
-				
-				
-			}
-						
-		}
-
 		.manifesto--details {
 			
 			position: relative;
@@ -860,7 +810,7 @@ html {
 	
 	}
 
-	.sticky-container {
+	.sticky-container, .setores, .main-footer {
 
 		position: relative;
 		z-index: 1;
@@ -875,20 +825,6 @@ html {
 			opacity: 0;
 			z-index: 1;
 		} 
-
-		/* .active-overlay:after {
-			content: '';
-			top: 0;
-			left: 0;
-			display: block;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.6) 100%);
-			background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.6) 100%);
-			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.6) 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#26000000', endColorstr='#99000000', GradientType=0);
-		} */
 
 		.shadow {
 			box-shadow: 0px -50px 50px 0px #00000012;
@@ -906,10 +842,6 @@ html {
 		@include max-screen($small) {
 			padding: 8rem 0;
 		}
-		/* position: -webkit-sticky;
-		position: sticky;
-		top: 0; */
-
 
 		.sectors-title {
 			font-family: 'Sharp Grotesk Medium 25';
@@ -922,8 +854,15 @@ html {
 			@include min-screen($xxlarge) {
 				max-width: 63rem;
 			}
+			@include max-screen($medium) {
+				font-size: 9rem;
+				@include landscape {
+					padding: 5rem 0 8rem;
+				}
+			}
 
 			@include max-screen($xsmall) {
+				
 				font-size: 10vw;
 				line-height: 38px;
 				padding: 2rem 0 4.5rem;
@@ -941,7 +880,7 @@ html {
 			}
 
 			span {
-				color: $purple;
+				color: $purple-text;
 				display: inline-block;
 			}
 
@@ -958,7 +897,7 @@ html {
 			.note {
 				font-family: 'IBM Plex Sans';
 				font-size: 1.7rem;
-				color: $purple;
+				color: $purple-text;
 				margin-top: 10rem;
 				max-width: 43.6rem;
 
@@ -976,7 +915,7 @@ html {
 			.sectors-box--title {
 				font-family: 'IBM Plex Sans';
 				font-weight: 600;
-				color: $purple;
+				color: $purple-text;
 				font-size: 3rem;
 				margin: 2.5rem 0;
 			}
@@ -987,7 +926,7 @@ html {
 					font-weight: normal;
 					font-size: 1.7rem;
 					letter-spacing: -0.1rem;
-					color: $purple;
+					color: $purple-text;
 				}
 			}
 		}
@@ -1015,17 +954,21 @@ html {
 					max-width: 13rem;
 				}
 
-				img {
-					max-width: 12rem;
+				svg {
+					max-width: 15rem;
 				}
 
 				p {
 					font-family: 'IBM Plex Mono';
 					font-weight: normal;
 					font-size: 1.5rem;
-					color: $purple;
+					color: $purple-text;
 					display: block;
 					padding-top: 5rem;
+
+					@include max-screen($medium) {
+						font-size: 2rem;
+					}
 				}
 			}
 		}
@@ -1036,81 +979,102 @@ html {
 		padding-bottom: 12rem;
 		background: white;
 		position: relative;
-		@include max-screen($xsmall) {
-			//min-height: 100vh;
-		}
+		
 
 		.footer-slogan {
 			font-family: 'Sharp Grotesk SmBold 20';
-			font-size: 11.2rem;
-			color: $purple;
-			letter-spacing: -0.6rem;
-			line-height: 11.5rem;
-			
-		
-			@include max-screen($xsmall) {
-				font-size: 10rem;
-				line-height: 9rem;
+			font-size: 11.5rem;
+			color: $purple-light;
+			letter-spacing: -0.5rem;
+			line-height: 12rem;
+			position: relative;
+			z-index: 2;
+			@include max-screen($small) {
+				font-size: 8.5rem;
 			}
-
-			@include max-screen($xxsmall) {
-				letter-spacing: -0.5rem;
-				line-height: 7.5rem; 
+			@include max-screen($xsmall) {
+				line-height: 9rem;
+				letter-spacing: -0.4rem;
 			}
 
 			.word-next {
 				display: block;
 				position: relative;
-				margin-top: -0.5rem;
-
+				letter-spacing: 0;
+				margin-top: 0.4rem;
+				z-index: -1;
+				@include max-screen($small) {
+					margin-top: -0.7rem;
+					letter-spacing: -0.2rem;
+				}
 				@include max-screen($xsmall) {
-					margin-top: -0.1rem;
+					margin-top: -0.5rem;
+					letter-spacing: -0.2rem;
 				}
 
+				
 				img {
-					max-width: 26rem;
+					max-width: 30rem;
 					display: inline-block;
 					position: absolute;
-					margin-left: -6rem;
-					margin-top: 0;
+					margin-left: -7rem;
+					margin-top: -2rem;
 					z-index: 2;
 
 					@include max-screen($xxlarge) {
-						width: 26rem;
+						width: 30rem;
+					}
+					@include max-screen($small) {
+						max-width: 26rem;
+						margin-left: -6rem;
 					}
 					@include max-screen($xsmall) {
-						max-width: 21rem;
-						margin-left: -4rem;
-						margin-top: 0;
+						max-width: 18rem;
+						margin-left: -3.8rem;
+						margin-top: -1rem;
 					}
 
-					@include max-screen($xxsmall) {
-						max-width: 17.5rem;
+				}
+
+				sup {
+					font-family: 'Sharp Grotesk Book 20';
+					font-size: 4.5rem;
+					font-weight: 100;
+					top: -5rem;
+					left: 0.5rem;
+					position: relative;
+					@include max-screen($small) {
+						font-size: 3.5rem;
+						left: 0.2rem;
+						top: -4.5rem;
+					}
+					@include max-screen($xsmall) {
+						left: 0.2rem;
+						top: -3.5rem;
 					}
 				}
 
 				.word-t {
 					position: relative;
-					left: 14rem;
-					@include max-screen($xsmall) {
-						left: 11rem;
+					left: 17rem;
+					
+					@include max-screen($small) {
+						left: 14.5rem;
 					}
-
-					@include max-screen($xxsmall) {
-						left: 9rem;
+					@include max-screen($xsmall) {
+						left: 10.5rem;
 					}
 				}
 			}
 
 			.word-future {
-				line-height: 10rem;
-				@include max-screen($xsmall) {
-					// line-height: 10rem;
+				line-height: 13.5rem;
+				@include max-screen($small) {
+					line-height: 8rem;
+					top: -2rem;
+					position: relative;
 				}
-
-				@include max-screen($xxsmall) {
-					line-height: 8.1rem;
-				}
+	
 			}
 		}
 
@@ -1119,7 +1083,7 @@ html {
 			font-size: 2rem;
 			line-height: 2.5rem;
 			font-weight: 500;
-			color: $purple;
+			color: $purple-light;
 			padding: 2rem 0 5.5rem;
 
 			@include max-screen($small) {
@@ -1139,10 +1103,14 @@ html {
 				letter-spacing: -0.2rem;
 				display:block;
 				float: left;
-    			clear: left;
+				clear: left;
+				cursor: pointer;
 
 				@include max-screen($xsmall) {
 					font-size: 4rem;
+				}
+				&:hover {
+					opacity: 0.8;
 				}
 			}
 		}
