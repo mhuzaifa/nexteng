@@ -411,6 +411,9 @@ html {
 				top: 0;
 				left: 4.5rem;
 				width: 110rem;
+				img {
+					width: 110rem;
+				}
 				
 				@include max-screen($small) {	
 					@include landscape() {
