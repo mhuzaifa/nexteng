@@ -36,15 +36,16 @@ html {
 		overflow: inherit;
 		overflow-x: inherit;
 	}
+
 	.sticky-container {
 		article {
 			position: -webkit-sticky;
 			position: sticky;
 			top: 0;
-			
+
 			&.info-tech {
-				
-				
+
+
 				@include max-screen($medium) {
 					@include landscape() {
 						top: -28rem;
@@ -56,10 +57,12 @@ html {
 						top: -92rem;
 					}
 				}
+
 				@include max-screen($xsmall) {
 					top: -5rem;
 				}
 			}
+
 			&.big-data {
 				@include max-screen($small) {
 					@include landscape() {
@@ -68,9 +71,10 @@ html {
 				}
 			}
 		}
-		
+
 	}
 }
+
 .home {
 
 	/*******************/
@@ -84,13 +88,14 @@ html {
 		cursor: pointer;
 		left: 6.5vw;
 		height: 5rem;
-		
+
 
 		@include max-screen($medium) {
 			width: 12rem;
 			max-width: 14rem;
 			left: 8px;
 			transform: rotate(-90deg);
+
 			@include landscape {
 				left: 0rem !important;
 				top: 10rem !important;
@@ -113,15 +118,17 @@ html {
 		fill: $purple-light;
 		opacity: 1;
 	}
+
 	.logo-main.nav-bg-purple {
 		opacity: 1;
 		fill: #fff;
 
 	}
- 
+
 
 	.menu {
 		visibility: hidden;
+
 		@include max-screen($small) {
 			display: none;
 		}
@@ -189,7 +196,7 @@ html {
 				z-index: 1;
 				border: 2px solid #9e7491;
 			}
-			
+
 
 			.link-text {
 				font-family: 'Sharp Grotesk Book 20';
@@ -197,8 +204,9 @@ html {
 				letter-spacing: 0.5px;
 				left: 40px;
 				position: relative;
-				
+
 			}
+
 			&:last-child .scroll-anchor {
 				top: 3px !important;
 			}
@@ -207,23 +215,28 @@ html {
 
 	.menu.nav-full-top {
 		visibility: visible;
+
 		.scroll-wrapper {
 			.scroll-bar {
 				background-color: #9e7491;
 			}
-			.scroll-handler { 
+
+			.scroll-handler {
 				background-color: $white;
 			}
 		}
+
 		.scroll-item {
 			.scroll-anchor {
 				background-color: $purple-light;
 				border-color: #9e7491;
 
 			}
+
 			.link-text {
 				font-size: 12.5px;
 				color: $white;
+
 				@include min-screen($xlarge) {
 					font-size: 15px;
 				}
@@ -231,16 +244,17 @@ html {
 		}
 
 		.scroll-item {
-			.link-text {
-				 
-			}
+			.link-text {}
+
 			&:not(.active-intro) .link-text {
 				color: #9e7491;
 				transition: 0.3s;
+
 				&:hover {
 					color: $white;
 				}
 			}
+
 			&.active-intro .link-text {
 				color: $white;
 			}
@@ -250,6 +264,7 @@ html {
 	.menu.light {
 		visibility: visible;
 		z-index: 9999;
+
 		.scroll-wrapper {
 			.scroll-bar {
 				background-color: $purple-light;
@@ -262,7 +277,7 @@ html {
 
 			.scroll-item {
 				.scroll-anchor {
-					border-color:$purple-light;
+					border-color: $purple-light;
 					background-color: white;
 					transition: 0.3s;
 
@@ -271,6 +286,7 @@ html {
 						transform: scale(1.2)
 					}
 				}
+
 				.link-text {
 					background-color: $purple-light;
 					color: $white;
@@ -280,6 +296,7 @@ html {
 					top: 10px;
 					left: 30px;
 					position: relative;
+
 					&:after {
 						content: '';
 						position: absolute;
@@ -291,7 +308,7 @@ html {
 						left: -12px;
 						top: 0px;
 						border-color: transparent $purple-light;
-						
+
 					}
 				}
 
@@ -299,11 +316,13 @@ html {
 					top: -12px;
 					position: relative;
 				}
+
 				&:nth-child(4) {
 					top: 2px;
 					position: relative;
-				
+
 				}
+
 				&:nth-child(5) {
 					top: 28px;
 					position: relative;
@@ -319,7 +338,7 @@ html {
 			}
 		}
 	}
-  
+
 	.menu.nav-bg-purple {
 		.scroll-wrapper {
 
@@ -332,6 +351,7 @@ html {
 				.scroll-anchor {
 					border-color: $white;
 					background-color: $purple-light;
+
 					&:hover {
 						background-color: $white;
 					}
@@ -359,6 +379,7 @@ html {
 			}
 		}
 	}
+
 	.menu.nav-bg-tang-lighter {
 		.scroll-wrapper {
 			.scroll-item {
@@ -399,7 +420,8 @@ html {
 			@include min-screen($xxlarge) {
 				margin: 16vh 1vw 0;
 			}
-			@include max-screen($small) {	
+
+			@include max-screen($small) {
 				@include landscape() {
 					margin: 10vh 3.5vw 0;
 				}
@@ -411,11 +433,14 @@ html {
 				top: 0;
 				left: 4.5rem;
 				width: 110rem;
-				img {
-					width: 110rem;
+
+				@include min-screen($large) {
+					img {
+						width: 110rem;
+					}
 				}
-				
-				@include max-screen($small) {	
+
+				@include max-screen($small) {
 					@include landscape() {
 						width: 90rem;
 					}
@@ -429,7 +454,8 @@ html {
 					left: 1.5rem;
 					top: 21.6rem;
 					max-width: 52rem;
-					@include max-screen($small) {	
+
+					@include max-screen($small) {
 						@include landscape() {
 							top: 18rem;
 							max-width: 40rem;
@@ -444,8 +470,6 @@ html {
 
 				.carousel--slogan {
 					font-family: 'Sharp Grotesk Medium 25';
-					font-size: 3.5vw;
-					top: 36.2rem;
 					letter-spacing: -1px;
 					position: relative;
 					font-size: 5.5rem;
@@ -455,20 +479,36 @@ html {
 					@include max-screen($medium) {
 						font-size: 4.5rem;
 					}
+
 					@include max-screen($small) {
 						font-size: 5vw;
 						margin-right: 5vw;
+
 						@include landscape() {
 							font-size: 5vh;
 							top: 23rem;
-						} 
-					} 
-				} 
+						}
+					}
+				}
 			}
 		}
 	}
-} 
- 
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-device-width: 1025px),
+only screen and (min--moz-device-pixel-ratio: 2) and (min-device-width: 1025px),
+only screen and (-o-min-device-pixel-ratio: 2/1) and (min-device-width: 1025px),
+only screen and (min-device-pixel-ratio: 2) and (min-device-width: 1025px),
+only screen and (min-resolution: 192dpi) and (min-device-width: 1025px),
+only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
+	@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution:.001dpcm) {
+		.home-page .page-header .carousel-content.inspire .carousel--slogan {
+			font-size: 5rem;
+		}
+	}
+
+	/* MacBook-Retina-specific stuff here */
+}
 
 .page-content {
 
@@ -478,7 +518,8 @@ html {
 		background: $white;
 
 		@include max-screen($small) {
-			padding: 8rem  0 5rem;
+			padding: 8rem 0 5rem;
+
 			@include landscape {
 				padding: 5rem 0 2rem;
 			}
@@ -491,7 +532,7 @@ html {
 			padding-top: 18.4rem;
 			padding-bottom: 4.2rem;
 
-			
+
 			@include max-screen($xxlarge) {
 				max-width: 1220px;
 			}
@@ -499,12 +540,14 @@ html {
 			@include max-screen($xlarge) {
 				max-width: 920px;
 			}
+
 			@include max-screen($small) {
 				@include landscape {
 					padding-top: 8.4rem;
 					padding-bottom: 2rem;
 				}
 			}
+
 			@include max-screen($xsmall) {
 				font-size: 5rem;
 				padding-top: 5rem;
@@ -525,6 +568,7 @@ html {
 
 			@include max-screen($small) {
 				margin-top: 5rem;
+
 				@include landscape {
 					margin-top: 5rem !important;
 				}
@@ -554,14 +598,15 @@ html {
 
 				@include max-screen($medium) {
 					font-size: 3.5rem;
+
 					@include landscape {
 						font-size: 4.5rem;
 					}
 				}
-				
+
 				@include max-screen($xsmall) {
 					font-size: 7.5vw;
-					
+
 				}
 			}
 
@@ -572,6 +617,7 @@ html {
 				@include max-screen($small) {
 					margin-top: 6rem;
 				}
+
 				@include max-screen($xsmall) {
 					margin-top: 6rem;
 				}
@@ -615,6 +661,7 @@ html {
 				background-repeat: no-repeat;
 				background-size: contain;
 				background-position: top right;
+
 				@include max-screen($xsmall) {
 					right: -5.5rem;
 				}
@@ -639,6 +686,7 @@ html {
 			position: relative;
 			padding-left: 6.5rem;
 			margin: 8rem 0 0 8rem;
+
 			@include max-screen($xsmall) {
 				font-size: 1.5rem;
 			}
@@ -659,31 +707,35 @@ html {
 	}
 
 	.manifesto {
-		background-color: rgba(61,14,43,1);
+		background-color: rgba(61, 14, 43, 1);
 		padding-top: 10rem;
 		padding-bottom: 10rem;
 		color: $white;
 		z-index: 0;
+
 		@include max-screen($medium) {
 			@include landscape {
 				top: 5rem;
 			}
 		}
+
 		.fixed-title {
 			position: fixed;
 			top: 10rem;
 			width: 100%;
 			z-index: 1;
+
 			@include max-screen($medium) {
 				@include landscape {
 					top: 5rem;
 				}
 			}
+
 			&:before {
 				position: absolute;
 				content: '';
-				background: rgba(61,14,43,1);
-				height: 100%;
+				background: rgba(61, 14, 43, 1);
+				height: 15rem;
 				width: 100%;
 				top: -10rem;
 				z-index: -1;
@@ -698,15 +750,16 @@ html {
 			letter-spacing: -0.2rem;
 			line-height: 9.5rem;
 			padding: 5rem 0 7.5rem;
-			background: rgb(61,14,43);
-background: -moz-linear-gradient(0deg, rgba(61,14,43,0) 0%, rgba(61,14,43,0.7175245098039216) 34%, rgba(61,14,43,1) 68%, rgba(61,14,43,1) 100%);
-background: -webkit-linear-gradient(0deg, rgba(61,14,43,0) 0%, rgba(61,14,43,0.7175245098039216) 34%, rgba(61,14,43,1) 68%, rgba(61,14,43,1) 100%);
-background: linear-gradient(0deg, rgba(61,14,43,0) 0%, rgba(61,14,43,0.7175245098039216) 34%, rgba(61,14,43,1) 68%, rgba(61,14,43,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endColorstr="#3d0e2b",GradientType=1);
+			background: rgb(61, 14, 43);
+			background: -moz-linear-gradient(0deg, rgba(61, 14, 43, 0) 0%, rgba(61, 14, 43, 0.88) 36%, rgba(61, 14, 43, 1) 68%, rgba(61, 14, 43, 1) 100%);
+			background: -webkit-linear-gradient(0deg, rgba(61, 14, 43, 0) 0%, rgba(61, 14, 43, 0.88) 36%, rgba(61, 14, 43, 1) 68%, rgba(61, 14, 43, 1) 100%);
+			background: linear-gradient(0deg, rgba(61, 14, 43, 0) 0%, rgba(61, 14, 43, 0.88) 36%, rgba(61, 14, 43, 1) 68%, rgba(61, 14, 43, 1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b", endColorstr="#3d0e2b", GradientType=1);
 
 			@include max-screen($medium) {
 				font-size: 8rem;
 			}
+
 			@include max-screen($xsmall) {
 				font-size: 10vw;
 				line-height: 40px;
@@ -727,8 +780,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endCo
 				color: $tang;
 			}
 		}
+
 		.manifesto--details {
-			
+
 			position: relative;
 			margin: 5rem 0;
 			display: block;
@@ -738,7 +792,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endCo
 			@include max-screen($xsmall) {
 				//flex-wrap: wrap;
 			}
-/* 
+
+			/* 
 			padding-top: 7.5rem;
 			padding-bottom: 7.5rem;
  */
@@ -750,7 +805,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endCo
 
 				@include max-screen($medium) {
 					font-size: 3.5rem;
-					
+
 					//min-width: 50rem;
 				}
 
@@ -759,6 +814,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endCo
 					//min-width: 80vw;
 					//max-width: 80vw;
 				}
+
 				@include max-screen($xxsmall) {
 					font-size: 2rem;
 					//min-width: 80vw;
@@ -773,18 +829,20 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endCo
 						font-size: 5rem;
 						top: -0.5rem;
 						left: -1rem;
+
 						@include max-screen($xxsmall) {
 							font-size: 2.5rem;
 							left: -0.5rem;
 							//min-width: 80vw;
 							//max-width: 80vw;
 						}
+
 						@include max-screen($xsmall) {
 							font-size: 3rem;
 							left: -0.5rem;
 						}
 					}
-					
+
 				}
 			}
 
@@ -810,10 +868,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endCo
 			}
 		}
 
-	
+
 	}
 
-	.sticky-container, .setores, .main-footer {
+	.sticky-container,
+	.setores,
+	.main-footer {
 
 		position: relative;
 		z-index: 1;
@@ -827,16 +887,14 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endCo
 			background: black;
 			opacity: 0;
 			z-index: 1;
-		} 
+		}
 
 		.shadow {
 			box-shadow: 0px -50px 50px 0px #00000012;
 		}
 	}
-	.sticky-container {
-	 
-		  
-	}
+
+	.sticky-container {}
 
 	.sectors {
 		background-color: $tang;
@@ -857,15 +915,17 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endCo
 			@include min-screen($xxlarge) {
 				max-width: 63rem;
 			}
+
 			@include max-screen($medium) {
 				font-size: 9rem;
+
 				@include landscape {
 					padding: 5rem 0 8rem;
 				}
 			}
 
 			@include max-screen($xsmall) {
-				
+
 				font-size: 10vw;
 				line-height: 38px;
 				padding: 2rem 0 4.5rem;
@@ -894,9 +954,11 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endCo
 
 		.sectors-box {
 			margin-bottom: 10rem;
+
 			@include max-screen($xsmall) {
 				margin-bottom: 5rem;
 			}
+
 			.note {
 				font-family: 'IBM Plex Sans';
 				font-size: 1.7rem;
@@ -982,7 +1044,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endCo
 		padding-bottom: 12rem;
 		background: white;
 		position: relative;
-		
+
 
 		.footer-slogan {
 			font-family: 'Sharp Grotesk SmBold 20';
@@ -992,9 +1054,11 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endCo
 			line-height: 12rem;
 			position: relative;
 			z-index: 2;
+
 			@include max-screen($small) {
 				font-size: 8.5rem;
 			}
+
 			@include max-screen($xsmall) {
 				line-height: 9rem;
 				letter-spacing: -0.4rem;
@@ -1006,16 +1070,18 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endCo
 				letter-spacing: 0;
 				margin-top: 0.4rem;
 				z-index: -1;
+
 				@include max-screen($small) {
 					margin-top: -0.7rem;
 					letter-spacing: -0.2rem;
 				}
+
 				@include max-screen($xsmall) {
 					margin-top: -0.5rem;
 					letter-spacing: -0.2rem;
 				}
 
-				
+
 				img {
 					max-width: 30rem;
 					display: inline-block;
@@ -1027,10 +1093,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endCo
 					@include max-screen($xxlarge) {
 						width: 30rem;
 					}
+
 					@include max-screen($small) {
 						max-width: 26rem;
 						margin-left: -6rem;
 					}
+
 					@include max-screen($xsmall) {
 						max-width: 18rem;
 						margin-left: -3.8rem;
@@ -1046,11 +1114,13 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endCo
 					top: -5rem;
 					left: 0.5rem;
 					position: relative;
+
 					@include max-screen($small) {
 						font-size: 3.5rem;
 						left: 0.2rem;
 						top: -4.5rem;
 					}
+
 					@include max-screen($xsmall) {
 						left: 0.2rem;
 						top: -3.5rem;
@@ -1060,10 +1130,11 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endCo
 				.word-t {
 					position: relative;
 					left: 17rem;
-					
+
 					@include max-screen($small) {
 						left: 14.5rem;
 					}
+
 					@include max-screen($xsmall) {
 						left: 10.5rem;
 					}
@@ -1072,12 +1143,13 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endCo
 
 			.word-future {
 				line-height: 13.5rem;
+
 				@include max-screen($small) {
 					line-height: 8rem;
 					top: -2rem;
 					position: relative;
 				}
-	
+
 			}
 		}
 
@@ -1089,22 +1161,21 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endCo
 			color: $purple-light;
 			padding: 2rem 0 5.5rem;
 
-			@include max-screen($small) {
-			}
+			@include max-screen($small) {}
 
-			@include max-screen($xsmall) {
-			}
+			@include max-screen($xsmall) {}
 		}
 
 		.contact {
 			padding: 5.5rem 0 6rem;
 			overflow: hidden;
+
 			a {
 				font-family: 'Sharp Grotesk Medium 20';
 				font-size: 5rem;
 				color: $tang;
 				letter-spacing: -0.2rem;
-				display:block;
+				display: block;
 				float: left;
 				clear: left;
 				cursor: pointer;
@@ -1112,6 +1183,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endCo
 				@include max-screen($xsmall) {
 					font-size: 4rem;
 				}
+
 				&:hover {
 					opacity: 0.8;
 				}
@@ -1138,16 +1210,19 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b",endCo
 }
 
 
-_:-ms-lang(x), .home-page .page-header .carousel-content.inspire .logo-container { 
+_:-ms-lang(x),
+.home-page .page-header .carousel-content.inspire .logo-container {
 	top: 140px;
- }
-_:-ms-lang(x), .home-page .page-header .carousel-content.inspire .carousel--slogan { 
+}
+
+_:-ms-lang(x),
+.home-page .page-header .carousel-content.inspire .carousel--slogan {
 	top: 210px;
- }
+}
 
 
 
-  
+
 // Media Queries
 @include screen($medium, $xxlarge, $orientation: false) {}
 
