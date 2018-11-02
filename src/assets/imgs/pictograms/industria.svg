@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illucdrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 142 113" style="enable-background:new 0 0 142 113;" xml:space="preserve">
+	 viewBox="0 0 142 113" cdyle="enable-background:new 0 0 142 113;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#C58F7E;}
-	.st1{fill:#B68276;}
-	.st2{fill:#E5A58E;}
-	.st3{fill:#FFB59C;}
-	.st4{fill:#411430;}
-	.st5{fill:#FFCA7C;}
+	.cd0{fill:#C58F7E;}
+	.cd1{fill:#B68276;}
+	.cd2{fill:#E5A58E;}
+	.cd3{fill:#FFB59C;}
+	.cd4{fill:#411430;}
+	.cd5{fill:#FFCA7C;}
 </style>
-<rect x="40.2" y="7.5" class="st0" width="22.2" height="7.2"/>
-<path class="st1" d="M105.5,31c0.8,1.9,3.1,14.7,3.1,14.7L81.3,79.7l-6.7-8.2L105.5,31z"/>
-<polygon class="st0" points="74.5,71.5 58.9,54.6 105.8,11.2 115.5,21.8 "/>
-<rect x="50.2" y="105.5" class="st2" width="76.2" height="6.5"/>
-<rect x="77.9" y="87.2" class="st0" width="20.7" height="18.3"/>
-<rect x="72.5" y="92.7" class="st1" width="31.5" height="8.2"/>
-<rect x="78.7" y="92.7" class="st0" width="9.6" height="8.2"/>
-<rect x="88.3" y="92.7" class="st2" width="9.6" height="8.2"/>
-<rect x="97.5" y="92.7" class="st3" width="6.5" height="8.2"/>
-<path class="st2" d="M83.9,73.3L67.6,57c-5.1-5.1-13.3-5.1-18.4,0s-5.1,13.3,0,18.4l12.1,12h45.5V73.3H83.9z"/>
+<rect x="40.2" y="7.5" class="cd0" width="22.2" height="7.2"/>
+<path class="cd1" d="M105.5,31c0.8,1.9,3.1,14.7,3.1,14.7L81.3,79.7l-6.7-8.2L105.5,31z"/>
+<polygon class="cd0" points="74.5,71.5 58.9,54.6 105.8,11.2 115.5,21.8 "/>
+<rect x="50.2" y="105.5" class="cd2" width="76.2" height="6.5"/>
+<rect x="77.9" y="87.2" class="cd0" width="20.7" height="18.3"/>
+<rect x="72.5" y="92.7" class="cd1" width="31.5" height="8.2"/>
+<rect x="78.7" y="92.7" class="cd0" width="9.6" height="8.2"/>
+<rect x="88.3" y="92.7" class="cd2" width="9.6" height="8.2"/>
+<rect x="97.5" y="92.7" class="cd3" width="6.5" height="8.2"/>
+<path class="cd2" d="M83.9,73.3L67.6,57c-5.1-5.1-13.3-5.1-18.4,0s-5.1,13.3,0,18.4l12.1,12h45.5V73.3H83.9z"/>
 <g>
-	<circle class="st4" cx="58.3" cy="66.2" r="4.5"/>
+	<circle class="cd4" cx="58.3" cy="66.2" r="4.5"/>
 </g>
-<rect x="53.3" y="65.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -29.6975 60.6081)" class="st2" width="10.1" height="1.4"/>
-<path class="st2" d="M58.9,19.3h45.3l4,2.4h7.3v-2.4v-5c0-6.6-5.4-12-12-12H58.9V19.3z"/>
-<rect x="67.8" y="2.5" class="st5" width="2.7" height="16.8"/>
-<circle class="st3" cx="104.2" cy="11.6" r="11.3"/>
+<rect x="53.3" y="65.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -29.6975 60.6081)" class="cd2" width="10.1" height="1.4"/>
+<path class="cd2" d="M58.9,19.3h45.3l4,2.4h7.3v-2.4v-5c0-6.6-5.4-12-12-12H58.9V19.3z"/>
+<rect x="67.8" y="2.5" class="cd5" width="2.7" height="16.8"/>
+<circle class="cd3" cx="104.2" cy="11.6" r="11.3"/>
 <g>
-	<circle class="st4" cx="104.2" cy="11.6" r="5.3"/>
+	<circle class="cd4" cx="104.2" cy="11.6" r="5.3"/>
 </g>
-<rect x="98.3" y="10.8" transform="matrix(0.7071 0.7071 -0.7071 0.7071 38.7388 -70.3031)" class="st3" width="11.9" height="1.7"/>
-<rect x="29" y="8.9" transform="matrix(-0.7216 -0.6923 0.6923 -0.7216 59.8528 50.7869)" class="st2" width="22.4" height="9"/>
+<rect x="98.3" y="10.8" transform="matrix(0.7071 0.7071 -0.7071 0.7071 38.7388 -70.3031)" class="cd3" width="11.9" height="1.7"/>
+<rect x="29" y="8.9" transform="matrix(-0.7216 -0.6923 0.6923 -0.7216 59.8528 50.7869)" class="cd2" width="22.4" height="9"/>
 <g>
-	<polygon class="st4" points="13.9,28.2 16.6,30.8 28.7,18.2 35.8,25 23.7,37.6 26.4,40.2 34.2,35.7 45.1,24.3 29,8.9 18,20.2 	"/>
+	<polygon class="cd4" points="13.9,28.2 16.6,30.8 28.7,18.2 35.8,25 23.7,37.6 26.4,40.2 34.2,35.7 45.1,24.3 29,8.9 18,20.2 	"/>
 </g>
-<rect x="77.9" y="87.3" class="st1" width="20.7" height="2.6"/>
-<rect x="77.9" y="100.9" class="st1" width="20.7" height="2.6"/>
+<rect x="77.9" y="87.3" class="cd1" width="20.7" height="2.6"/>
+<rect x="77.9" y="100.9" class="cd1" width="20.7" height="2.6"/>
 </svg>

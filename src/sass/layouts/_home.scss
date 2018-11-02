@@ -44,8 +44,6 @@ html {
 			top: 0;
 
 			&.info-tech {
-
-
 				@include max-screen($medium) {
 					@include landscape() {
 						top: -28rem;
@@ -58,6 +56,7 @@ html {
 					}
 				}
 
+				
 				@include max-screen($xsmall) {
 					top: -5rem;
 				}
@@ -89,6 +88,11 @@ html {
 		left: 6.5vw;
 		height: 5rem;
 
+		svg {
+			will-change: transform;
+			transition: 0.2s;
+		}
+
 
 		@include max-screen($medium) {
 			width: 12rem;
@@ -111,18 +115,176 @@ html {
 		}
 
 		top: 10vh;
+		&:hover svg {
+			opacity: 0.9;
+		}
+	}
+
+	.logo-main.dark-logo,
+	.logo-main.footer-clip {
+		fill: $purple-light;
+		opacity: 1;
 		z-index: 9999;
 	}
 
-	.logo-main.light {
-		fill: $purple-light;
-		opacity: 1;
+
+	.circle-container {
+		visibility: hidden;
+		height: 130px;
+		width: 130px;
+		top: 1.5rem;
+		position: fixed;
+		z-index: 130;
+		@include max-screen($xsmall) {
+			height: 100px;
+			width: 100px;
+		}
+
+		.circle-wrapper {
+			position: relative;
+			width: auto;
+			padding-bottom: 100%;
+			overflow: hidden;
+			display: block;
+			cursor: pointer;
+
+			.rotrating-text {
+				font-family: 'IBM Plex Mono', Arial;
+				font-size: 18px;
+				font-weight: 600;
+				letter-spacing: -0.5px;
+			}
+
+			svg#round {
+				position: absolute;
+				left: -35px;
+				top: -35px;
+				width: 200px;
+				height: auto;
+				// animation: rotate 10s infinite linear;
+				@include max-screen($xsmall) {
+					width: 170px;
+				}
+			}
+
+			@keyframes rotate {
+				from {
+					transform: rotate(0);
+				}
+
+				to {
+					transform: rotate(360deg);
+				}
+			}
+			&:hover svg#round {
+				// animation-play-state: paused;
+			}
+		}
+
+		#base {
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			.im {
+				font-family: 'IBM Plex Mono', Arial;
+				font-size: 19px;
+				font-weight: 800;
+				text-transform: uppercase;
+
+			}
+		}
 	}
 
-	.logo-main.nav-bg-purple {
-		opacity: 1;
-		fill: #fff;
+	.circle-container.apply-top-right,
+	.circle-container.apply-service {
+		visibility: visible;
+		right: 12rem;
+		left: auto;
+		@include max-screen($medium) {
+			right: 4rem;
+		}
+		@include max-screen($xsmall) {
+			right: 1rem;;
+		}
 
+		.circle-wrapper { 
+			top: 8rem;
+		}
+
+		.im,
+		.rotrating-text {
+			fill: $purple-text;
+		}
+	}
+
+
+	.circle-container.apply-manifesto {
+	
+		@include min-screen($medium) {
+			visibility: visible;
+			left: 12rem;
+			z-index: 1;
+
+			.im,
+			.rotrating-text {
+				fill: $tang;
+			}
+
+			.circle-wrapper { 
+				top: 8rem;
+			}
+		}
+
+		@include min-screen($xlarge) {
+			left: 15rem;
+		}
+
+		@include min-screen($maxlarge) {
+			left: 20rem;
+		}
+		@include max-screen(1200px) {
+			left: 9rem;
+		}
+		@include max-screen($medium) {
+			visibility: visible;
+			left: auto;
+			right: 4rem;
+			.im,
+			.rotrating-text {
+				fill: $tang;
+			}
+
+			.circle-wrapper { 
+				top: 8rem;
+			}
+		}
+		@include max-screen($xsmall) {
+			right: 0.5rem;
+		}
+	
+	}
+
+	.circle-container.apply-tang-right {
+		visibility: visible;
+		right: 12rem;
+		left: auto;
+
+		@include max-screen($medium) {
+			right: 4rem;
+		}
+
+		.im,
+		.rotrating-text {
+			fill: #3d0e2b;
+		}
+
+		.circle-wrapper {
+			top: 8rem;
+		}
+		@include max-screen($xsmall) {
+			right: 0.5rem;
+		}
 	}
 
 
@@ -148,6 +310,7 @@ html {
 
 		.scroll-wrapper {
 			position: relative;
+			will-change: transform;
 
 			.scroll-bar {
 				position: absolute;
@@ -312,19 +475,23 @@ html {
 					}
 				}
 
+				&:nth-child(2) {
+					top: -16px;
+					position: relative;
+				}
+
 				&:nth-child(3) {
-					top: -12px;
+					top: -18px;
 					position: relative;
 				}
 
 				&:nth-child(4) {
-					top: 2px;
+					top: -9px;
 					position: relative;
-
 				}
 
 				&:nth-child(5) {
-					top: 28px;
+					top: 23px;
 					position: relative;
 				}
 			}
@@ -390,10 +557,9 @@ html {
 		}
 	}
 
-
-
 	/*******************/
 	/*NAVIGATION ENDS HERE*/
+
 }
 
 // Page Level
@@ -431,8 +597,15 @@ html {
 				position: absolute;
 				max-width: inherit;
 				top: 0;
-				left: 4.5rem;
 				width: 110rem;
+				will-change: transform;
+				animation: animate-offset 1.5s forwards;
+
+				@keyframes animate-offset {
+					100% {
+						transform: translateX(4.5rem);
+					}
+				}
 
 				@include min-screen($large) {
 					img {
@@ -462,10 +635,16 @@ html {
 						}
 					}
 
-					#tr_1_,
-					#tr {
-						// transform: translate(2rem);
+					/* .st1 {
+						animation: animate-tword 1.5s forwards;
+						will-change: transform;
 					}
+					@keyframes animate-tword {
+						100% {	transform: translateX(-10rem);
+								-webkit-transform: translateX(-10rem);
+								-ms-transform: translateX(-10rem);
+						}
+					}  */
 				}
 
 				.carousel--slogan {
@@ -528,9 +707,13 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 		.service--title {
 			font-family: 'Sharp Grotesk Medium 25';
 			font-size: 5.5rem;
+			line-height: 6.8rem;
 			letter-spacing: -1px;
 			padding-top: 18.4rem;
 			padding-bottom: 4.2rem;
+
+			transform: translateY(20px);
+			opacity: 0;
 
 
 			@include max-screen($xxlarge) {
@@ -553,9 +736,6 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				padding-top: 5rem;
 				line-height: 35px;
 			}
-
-			line-height: 6.7rem;
-
 			sup {
 				font-size: 1.6rem;
 				top: -3.5rem;
@@ -565,6 +745,9 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 		.service--subtitle {
 			font-family: 'Sharp Grotesk Medium 20';
 			font-size: 3rem;
+
+			transform: translateY(20px);
+			opacity: 0;
 
 			@include max-screen($small) {
 				margin-top: 5rem;
@@ -623,7 +806,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				}
 			}
 
-			&.consultoria:before,
+			/* &.consultoria:before,
 			&.projectos:before {
 				position: absolute;
 				content: "";
@@ -636,20 +819,27 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				background-repeat: no-repeat;
 				background-size: contain;
 				background-position: bottom left;
-			}
+			} */
 
 			&.nearshore {
 				background-color: #fe8855;
 				position: relative;
-
+				img {
+					max-width: 45rem;
+					position: absolute;
+					top: -5rem;
+					right: -5rem;
+					backface-visibility: hidden;
+				}
 				.box--title {
 					position: absolute;
 					bottom: 0;
 					padding: 5.3rem 4.8rem;
+
 				}
 			}
 
-			&.nearshore:before {
+			/* &.nearshore:after {
 				position: absolute;
 				content: "";
 				top: -5rem;
@@ -661,12 +851,23 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				background-repeat: no-repeat;
 				background-size: contain;
 				background-position: top right;
-
+				// animation: bounce 2s infinite alternate;
 				@include max-screen($xsmall) {
 					right: -5.5rem;
 				}
-			}
+			} */
 
+			@keyframes bounce {
+				0% {
+				transform: translateY(0px);
+				}
+				50% {
+				transform: translateY(15px);
+				}
+				100% {
+				transform: translateY(-10px);
+				}
+			}
 			&.consultoria {
 				background-color: #ffca6f;
 				position: relative;
@@ -719,11 +920,17 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 			}
 		}
 
+		.spacer {
+			will-change: height;
+		}
+
 		.fixed-title {
 			position: fixed;
 			top: 10rem;
 			width: 100%;
 			z-index: 1;
+
+
 
 			@include max-screen($medium) {
 				@include landscape {
@@ -744,17 +951,26 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 		}
 
 		.manifesto--title {
+			opacity: 0;
+			transform: translateY(20px);
+			
 			font-family: 'Sharp Grotesk Medium 25';
 			font-size: 10rem;
 			color: $white;
+			backface-visibility: hidden;
 			letter-spacing: -0.2rem;
 			line-height: 9.5rem;
+	
 			padding: 5rem 0 7.5rem;
 			background: rgb(61, 14, 43);
 			background: -moz-linear-gradient(0deg, rgba(61, 14, 43, 0) 0%, rgba(61, 14, 43, 0.88) 36%, rgba(61, 14, 43, 1) 68%, rgba(61, 14, 43, 1) 100%);
 			background: -webkit-linear-gradient(0deg, rgba(61, 14, 43, 0) 0%, rgba(61, 14, 43, 0.88) 36%, rgba(61, 14, 43, 1) 68%, rgba(61, 14, 43, 1) 100%);
 			background: linear-gradient(0deg, rgba(61, 14, 43, 0) 0%, rgba(61, 14, 43, 0.88) 36%, rgba(61, 14, 43, 1) 68%, rgba(61, 14, 43, 1) 100%);
 			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0e2b", endColorstr="#3d0e2b", GradientType=1);
+
+
+			margin-left: -2rem;
+			padding-left: 2rem;
 
 			@include max-screen($medium) {
 				font-size: 8rem;
@@ -784,7 +1000,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 		.manifesto--details {
 
 			position: relative;
-			margin: 5rem 0;
+			margin: 5rem 0 5rem -0.9rem;
 			display: block;
 			z-index: 0;
 			//display: flex;
@@ -801,6 +1017,8 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				font-family: 'Sharp Grotesk Medium 20';
 				font-weight: normal;
 				font-size: 4.5rem;
+				opacity: 0;
+				transform: translateY(20px);
 				//min-width: 60rem;
 
 				@include max-screen($medium) {
@@ -824,11 +1042,12 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				span {
 					color: $tang;
 					display: block;
+					margin-left: -1.5rem;
 
 					sup {
 						font-size: 5rem;
 						top: -0.5rem;
-						left: -1rem;
+						left: -0.5rem;
 
 						@include max-screen($xxsmall) {
 							font-size: 2.5rem;
@@ -846,24 +1065,15 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				}
 			}
 
-			.menifesto--img {
-				//padding-left: 5rem;
-				max-width: 100%;
-
-				@include max-screen($medium) {
-					//padding-left: 5rem;
+			.manifesto--img {
+				position: relative;
+				.duplicated {
+					position: absolute;
+					top: 0;
 				}
-
-				@include max-screen($xsmall) {
-					//padding-top: 5rem;
-				}
-
-				img {
-					//max-width: 43.7rem;
-
-					@include max-screen($medium) {
-						//max-width: 33.7rem;
-					}
+				.manifesto-picture img {
+					position: absolute;
+					min-width: 30.1rem;
 				}
 			}
 		}
@@ -887,6 +1097,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 			background: black;
 			opacity: 0;
 			z-index: 1;
+			will-change: opacity;
 		}
 
 		.shadow {
@@ -899,12 +1110,16 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 	.sectors {
 		background-color: $tang;
 		padding: 10rem 0 5rem;
+		backface-visibility: hidden;
 
 		@include max-screen($small) {
 			padding: 8rem 0;
 		}
 
 		.sectors-title {
+			opacity: 0;
+			transform: translateY(10rem);
+
 			font-family: 'Sharp Grotesk Medium 25';
 			font-size: 10rem;
 			color: $white;
@@ -1031,7 +1246,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 					display: block;
 					padding-top: 5rem;
 
-					@include max-screen($medium) {
+					@include max-screen($small) {
 						font-size: 2rem;
 					}
 				}
@@ -1044,7 +1259,6 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 		padding-bottom: 12rem;
 		background: white;
 		position: relative;
-
 
 		.footer-slogan {
 			font-family: 'Sharp Grotesk SmBold 20';
@@ -1180,7 +1394,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				clear: left;
 				cursor: pointer;
 
-				@include max-screen($xsmall) {
+				@include max-screen($small) {
 					font-size: 4rem;
 				}
 
@@ -1202,6 +1416,85 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 
 				&:hover {
 					opacity: 1;
+				}
+			}
+		}
+
+		.circle-container-footer {
+			height: 130px;
+			width: 130px;
+			top: auto;
+			position: absolute;
+			z-index: 130;
+			bottom: 10rem;
+			right: 12rem;
+		
+			@include max-screen($medium) {
+				right: 4rem;
+			}
+
+			@include max-screen($xsmall) {
+				height: 100px;
+				width: 100px;
+				right: 1rem;
+				bottom: 8rem;
+			}
+
+			.circle-wrapper {
+				position: relative;
+				width: auto;
+				padding-bottom: 100%;
+				overflow: hidden;
+				display: block;
+				cursor: pointer;
+
+				.rotrating-text {
+					font-family: 'IBM Plex Mono', Arial;
+					font-size: 18px;
+					font-weight: 500;
+					letter-spacing: -0.5px;
+					fill: $purple-text;
+				}
+
+				svg#round {
+					position: absolute;
+					left: -35px;
+					top: -35px;
+					width: 200px;
+					height: auto;
+					backface-visibility: hidden;
+					// animation: rotate 10s infinite linear;
+					@include max-screen($xsmall) {
+						width: 170px;
+					}
+				}
+
+				@keyframes rotate {
+					from {
+						transform: rotate(0);
+					}
+
+					to {
+						transform: rotate(360deg);
+					}
+				}
+				&:hover svg#round {
+					// animation-play-state: paused;
+				}
+			}
+
+			#base {
+				position: absolute;
+				left: 0;
+				top: 0;
+
+				.im {
+					font-family: 'IBM Plex Mono', Arial;
+					font-size: 19px;
+					font-weight: 800;
+					text-transform: uppercase;
+					fill: $purple-text;
+
 				}
 			}
 		}

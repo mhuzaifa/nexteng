@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illughrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 142 113" style="enable-background:new 0 0 142 113;" xml:space="preserve">
+	 viewBox="0 0 142 113" ghyle="enable-background:new 0 0 142 113;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FFCA7C;}
-	.st1{fill:#B68276;}
-	.st2{fill:#411430;}
-	.st3{fill:#EC8B65;}
-	.st4{fill:#D4744E;}
-	.st5{fill:#F5B454;}
-	.st6{fill:#4D1838;}
+	.gh0{fill:#FFCA7C;}
+	.gh1{fill:#B68276;}
+	.gh2{fill:#411430;}
+	.gh3{fill:#EC8B65;}
+	.gh4{fill:#D4744E;}
+	.gh5{fill:#F5B454;}
+	.gh6{fill:#4D1838;}
 </style>
-<path class="st0" d="M128.6,88H12.3C10.5,88,9,86.5,9,84.8V5.9c0-1.8,1.5-3.3,3.3-3.3h116.4c1.8,0,3.3,1.5,3.3,3.3v78.8
-	C131.9,86.5,130.4,88,128.6,88z"/>
-<path class="st1" d="M131.9,5.9c0-1.8-1.5-3.3-3.3-3.3H12.3C10.5,2.7,9,4.1,9,5.9v5.9h122.9V5.9z"/>
-<circle class="st2" cx="14.4" cy="7.6" r="2.1"/>
-<circle class="st2" cx="21.6" cy="7.6" r="2.1"/>
-<circle class="st2" cx="28.9" cy="7.6" r="2.1"/>
-<rect x="51.9" y="5.5" class="st2" width="37.2" height="4.2"/>
-<polygon class="st3" points="96.8,72.8 45.8,72.8 45.9,51.8 46,30.9 95.2,30.9 96,51.8 "/>
-<polygon class="st4" points="46,30.9 55.4,28.1 85.9,28.1 95.2,30.9 "/>
-<circle class="st2" cx="60.4" cy="40.3" r="2.5"/>
-<circle class="st2" cx="80" cy="40.3" r="2.5"/>
-<path class="st0" d="M70.3,54c-6.6,0-10.7-5.1-10.7-13.4c0-0.6,0.4-1,1-1s1,0.4,1,1c0,5.5,2.3,11.4,8.7,11.4c6.1,0,8.7-3.4,8.7-11.4
-	c0-0.6,0.4-1,1-1s1,0.4,1,1C81,46.4,79.9,54,70.3,54z"/>
-<polygon class="st5" points="109.8,87.9 103,87.9 98.7,66.2 116.5,87.9 "/>
-<polygon class="st6" points="124.8,98.1 131.9,94.1 101,62.7 112.1,105.4 119.2,101.3 125.3,112 130.9,108.8 "/>
+<path class="gh0" d="M125.4,89.3H15.5c-1.7,0-3.1-1.4-3.1-3V11.7c0-1.7,1.4-3.1,3.1-3.1h110c1.7,0,3.1,1.4,3.1,3.1v74.4
+	C128.5,87.9,127.1,89.3,125.4,89.3z"/>
+<path class="gh1" d="M128.5,11.7c0-1.7-1.4-3.1-3.1-3.1H15.5c-1.7,0.1-3.1,1.4-3.1,3.1v5.6h116.1V11.7z"/>
+<circle class="gh2" cx="17.5" cy="13.3" r="2"/>
+<circle class="gh2" cx="24.3" cy="13.3" r="2"/>
+<circle class="gh2" cx="31.2" cy="13.3" r="2"/>
+<rect x="52.9" y="11.4" class="gh2" width="35.1" height="4"/>
+<polygon class="gh3" points="95.3,74.9 47.2,74.9 47.3,55.1 47.4,35.4 93.8,35.4 94.6,55.1 "/>
+<polygon class="gh4" points="47.4,35.4 56.2,32.7 85,32.7 93.8,35.4 "/>
+<circle class="gh2" cx="61" cy="44.2" r="2.4"/>
+<circle class="gh2" cx="79.5" cy="44.2" r="2.4"/>
+<path class="gh0" d="M70.3,57.2c-6.2,0-10.1-4.8-10.1-12.7c0-0.6,0.4-0.9,0.9-0.9c0.6,0,0.9,0.4,0.9,0.9c0,5.2,2.2,10.8,8.2,10.8
+	c5.8,0,8.2-3.2,8.2-10.8c0-0.6,0.4-0.9,0.9-0.9c0.6,0,0.9,0.4,0.9,0.9C80.4,50,79.4,57.2,70.3,57.2z"/>
+<polygon class="gh5" points="107.6,89.2 101.2,89.2 97.1,68.7 114,89.2 "/>
+<polygon class="gh6" points="121.8,98.8 128.5,95.1 99.3,65.4 109.8,105.7 116.5,101.9 122.3,112 127.6,109 "/>
 </svg>

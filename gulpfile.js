@@ -29,6 +29,7 @@ const sass = require('gulp-sass');
 const notify = require('gulp-notify');
 const beep = require('beepbeep');
 const pump = require('pump');
+const autoprefixer = require('gulp-autoprefixer');
 
 /* -------------------------------------------------------------------------------------------------
 Theme Name
@@ -238,6 +239,7 @@ gulp.task('style-sass-concat', ['clean-sass'], function () {
 		.pipe(gulp.dest('src/concat'))
 });
 
+
 gulp.task('style-dev', ['style-sass-concat'], function () {
 	return gulp.src([
 			'src/concat/styles.scss',
@@ -248,6 +250,8 @@ gulp.task('style-dev', ['style-sass-concat'], function () {
 		.pipe(sourcemaps.init())
 		.pipe(sass())
 		.on('error', onError)
+		.pipe(autoprefixer())
+		.pipe(concat('styles.css'))
 		.pipe(sourcemaps.write('/'))
 		.pipe(gulp.dest('build/wordpress/public/scripts'))
 		//.pipe(browserSync.stream({ match: '**/*.css' }))
