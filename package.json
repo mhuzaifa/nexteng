@@ -75,5 +75,8 @@
 		"verge": "latest",
 		"viewport-units-buggyfill": "latest",
 		"wordpress": "^1.4.1"
+	},
+	"dependencies": {
+		"npm": "^6.4.1"
 	}
 }

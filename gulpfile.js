@@ -168,12 +168,12 @@ gulp.task('build-dev', [
 	'move-cssbrowserselector',
 	'move-jquery',
 	'uploads-folder',
-	'watch' 
+	'watch'
 
 ], () => {
 	connect.server({
 		base: 'build/wordpress',
-		port: '3021'
+		port: '3020'
 	}, () => {
 		browserSync({
 			proxy: "next.local"
@@ -194,7 +194,7 @@ gulp.task('copy-theme-dev', () => {
 		gulp.src('src/theme/**')
 			.pipe(gulp.dest('build/wordpress/wp-content/themes/' + themeName));
 	}
-});  
+});
 
 gulp.task('copy-fonts-dev', () => {
 	gulp.src('src/assets/fonts/**')
@@ -361,8 +361,8 @@ gulp.task('concat-vendor-js', function () {
 				'src/js/jq-clipthru/swiper.min.js',
 				'src/js/defaults/mapbox.js',
 				'src/js/defaults/burocratik-default.js',
-			]) 
-		.pipe(sourcemaps.init()) 
+			])
+		.pipe(sourcemaps.init())
 		.pipe(concat('buro-workers.js'))
 		.pipe(sourcemaps.write('/'))
 		.pipe(gulp.dest('build/wordpress/public/scripts'))

@@ -56,7 +56,7 @@ html {
 					}
 				}
 
-				
+
 				@include max-screen($xsmall) {
 					top: -5rem;
 				}
@@ -115,6 +115,7 @@ html {
 		}
 
 		top: 10vh;
+
 		&:hover svg {
 			opacity: 0.9;
 		}
@@ -135,6 +136,7 @@ html {
 		top: 1.5rem;
 		position: fixed;
 		z-index: 130;
+
 		@include max-screen($xsmall) {
 			height: 100px;
 			width: 100px;
@@ -161,6 +163,7 @@ html {
 				top: -35px;
 				width: 200px;
 				height: auto;
+
 				// animation: rotate 10s infinite linear;
 				@include max-screen($xsmall) {
 					width: 170px;
@@ -176,6 +179,7 @@ html {
 					transform: rotate(360deg);
 				}
 			}
+
 			&:hover svg#round {
 				// animation-play-state: paused;
 			}
@@ -201,14 +205,17 @@ html {
 		visibility: visible;
 		right: 12rem;
 		left: auto;
+
 		@include max-screen($medium) {
 			right: 4rem;
 		}
+
 		@include max-screen($xsmall) {
-			right: 1rem;;
+			right: 1rem;
+			;
 		}
 
-		.circle-wrapper { 
+		.circle-wrapper {
 			top: 8rem;
 		}
 
@@ -220,7 +227,7 @@ html {
 
 
 	.circle-container.apply-manifesto {
-	
+
 		@include min-screen($medium) {
 			visibility: visible;
 			left: 12rem;
@@ -231,7 +238,7 @@ html {
 				fill: $tang;
 			}
 
-			.circle-wrapper { 
+			.circle-wrapper {
 				top: 8rem;
 			}
 		}
@@ -243,26 +250,30 @@ html {
 		@include min-screen($maxlarge) {
 			left: 20rem;
 		}
+
 		@include max-screen(1200px) {
 			left: 9rem;
 		}
+
 		@include max-screen($medium) {
 			visibility: visible;
 			left: auto;
 			right: 4rem;
+
 			.im,
 			.rotrating-text {
 				fill: $tang;
 			}
 
-			.circle-wrapper { 
+			.circle-wrapper {
 				top: 8rem;
 			}
 		}
+
 		@include max-screen($xsmall) {
 			right: 0.5rem;
 		}
-	
+
 	}
 
 	.circle-container.apply-tang-right {
@@ -282,6 +293,7 @@ html {
 		.circle-wrapper {
 			top: 8rem;
 		}
+
 		@include max-screen($xsmall) {
 			right: 0.5rem;
 		}
@@ -736,6 +748,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				padding-top: 5rem;
 				line-height: 35px;
 			}
+
 			sup {
 				font-size: 1.6rem;
 				top: -3.5rem;
@@ -824,6 +837,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 			&.nearshore {
 				background-color: #fe8855;
 				position: relative;
+
 				img {
 					max-width: 45rem;
 					position: absolute;
@@ -831,6 +845,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 					right: -5rem;
 					backface-visibility: hidden;
 				}
+
 				.box--title {
 					position: absolute;
 					bottom: 0;
@@ -859,15 +874,18 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 
 			@keyframes bounce {
 				0% {
-				transform: translateY(0px);
+					transform: translateY(0px);
 				}
+
 				50% {
-				transform: translateY(15px);
+					transform: translateY(15px);
 				}
+
 				100% {
-				transform: translateY(-10px);
+					transform: translateY(-10px);
 				}
 			}
+
 			&.consultoria {
 				background-color: #ffca6f;
 				position: relative;
@@ -893,7 +911,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 			}
 		}
 
-		.service--note::before {
+		/* .service--note::before {
 			position: absolute;
 			content: "";
 			width: 5.5rem;
@@ -904,7 +922,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 			background-repeat: no-repeat;
 			background-position: top left;
 			background-size: contain;
-		}
+		} */
 	}
 
 	.manifesto {
@@ -953,14 +971,14 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 		.manifesto--title {
 			opacity: 0;
 			transform: translateY(20px);
-			
+
 			font-family: 'Sharp Grotesk Medium 25';
 			font-size: 10rem;
 			color: $white;
 			backface-visibility: hidden;
 			letter-spacing: -0.2rem;
 			line-height: 9.5rem;
-	
+
 			padding: 5rem 0 7.5rem;
 			background: rgb(61, 14, 43);
 			background: -moz-linear-gradient(0deg, rgba(61, 14, 43, 0) 0%, rgba(61, 14, 43, 0.88) 36%, rgba(61, 14, 43, 1) 68%, rgba(61, 14, 43, 1) 100%);
@@ -1067,13 +1085,17 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 
 			.manifesto--img {
 				position: relative;
-				.duplicated {
+				//
+
+				.rotation-fix {
 					position: absolute;
-					top: 0;
-				}
-				.manifesto-picture img {
-					position: absolute;
-					min-width: 30.1rem;
+					transform: rotate(-60deg);
+
+					.duplicated {
+						position: absolute;
+						top: 0;
+						opacity: 0;
+					}
 				}
 			}
 		}
@@ -1428,7 +1450,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 			z-index: 130;
 			bottom: 10rem;
 			right: 12rem;
-		
+
 			@include max-screen($medium) {
 				right: 4rem;
 			}
@@ -1463,6 +1485,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 					width: 200px;
 					height: auto;
 					backface-visibility: hidden;
+
 					// animation: rotate 10s infinite linear;
 					@include max-screen($xsmall) {
 						width: 170px;
@@ -1478,6 +1501,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 						transform: rotate(360deg);
 					}
 				}
+
 				&:hover svg#round {
 					// animation-play-state: paused;
 				}

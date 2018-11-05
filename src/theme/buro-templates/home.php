@@ -78,10 +78,10 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
         </div>
       </article>
     </header>
-   
+
     <main class="page-content" role="main">
       <div class="content">
-       
+
         <h1 class="logo-main" data-target="#intro"> Next
           <svg xmlns="http://www.w3.org/2000/svg" id="NextLogo" viewBox="0 0 150 40">
             <path d="M9.9 16.2v22.3H1V1.3h8.9l13.6 22v-22h8.9v37.2h-8.7L9.9 16.2zM61.1 36.5c-2.4 1.9-5.8 2.8-10.2 2.8-5.2 0-9.1-1.4-11.6-4.1-2.5-2.7-3.7-6.4-3.7-11v-.9c0-1.6.2-3.1.5-4.5s.8-2.7 1.5-3.8c1.3-2.3 3.1-4.1 5.4-5.4 2.3-1.2 5-1.9 8.2-1.9 1.8 0 3.4.2 4.8.5 1.5.3 2.7.9 3.8 1.6 2.2 1.4 3.9 3.2 4.9 5.5 1.1 2.3 1.6 4.8 1.6 7.5v3.4H44.9c.2 1.9.9 3.3 1.9 4.2 1 .9 2.5 1.4 4.3 1.4 1.3 0 2.4-.3 3.1-.8.8-.5 1.3-1.2 1.7-2.1h10c-.8 3.2-2.4 5.7-4.8 7.6zM47 16.3c-1 .9-1.7 2.2-2 4h11.9c-.2-1.7-.8-3-1.7-3.9-.9-.9-2.3-1.4-4-1.4-1.8-.1-3.2.4-4.2 1.3z"
@@ -122,9 +122,9 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
                 Vemos a atualidade como passado e o não conformismo como uma meta diária.
               </p>
               <div class="service--box nearshore">
-                         <picture>
-                        <source srcset="/public/imgs/service-shore.png 1x, /public/imgs/prospeservice-shorera@2x.png 2x"><img src="/public/imgs/service-shore.png"
-                          alt=""></picture>
+                <picture>
+                  <source srcset="/public/imgs/service-shore.png 1x, /public/imgs/service-shore@2x.png 2x"><img src="/public/imgs/service-shore.png"
+                    alt=""></picture>
                 <h4 class="box--title">
                   Nearshore
                 </h4>
@@ -159,7 +159,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
               <div class="manifesto--details">
                 <div class="row expanded">
                   <div class="xxlarge-7 medium-7 xsmall-8 columns">
-                    
+
                     <p class="manifesto--text">
                       <span><sup>1</sup>Prospera</span>
                       O crescimento está sempre ao teu alcance.
@@ -169,8 +169,9 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
                   </div>
                   <div class="xxlarge-4 xxlarge-offset-1 medium-4 medium-offset-1 xsmall-4 xsmall-offset-0 columns">
                     <div class="manifesto--img">
-                      <picture class="manifesto-picture"><source srcset="/public/imgs/prospera-single.png 1x, /public/imgs/prospera-single.png 2x"><img data-counter="0" class="duplicated" src="/public/imgs/prospera-single.png"
-                          alt=""></picture> 
+                      <div class="rotation-fix">
+                        <img data-counter="0" class="duplicated" src="/public/imgs/prospera-single.png" alt="">
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -743,42 +744,44 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
             </div>
             <div class="row expanded">
               <div class="xxlarge-6">
-              <div class="social">
-              <ul>
-                <!-- <li><a href="">twitter</a></li> -->
-                <li><a target="_blank" href="https://www.linkedin.com/company/nxt-engineering/">linkedin</a></li>
-                <li><a target="_blank" href="https://www.itjobs.pt/emprego?company=4943">it jobs</a></li>
-                <!-- 
+                <div class="social">
+                  <ul>
+                    <!-- <li><a href="">twitter</a></li> -->
+                    <li><a target="_blank" href="https://www.linkedin.com/company/nxt-engineering/">linkedin</a></li>
+                    <li><a target="_blank" href="https://www.itjobs.pt/emprego?company=4943">it jobs</a></li>
+                    <!-- 
                 <li><a href="">instagram</a></li>
                 <li><a href="">facebook</a></li> -->
-              </ul>
-            </div>
-            
+                  </ul>
+                </div>
+
               </div>
               <div class="xxlarge-6">
-              <div class="circle-container-footer">
-              <a class="circle-wrapper" target="_blank" href="https://www.itjobs.pt/emprego?company=4943" >
-                  <svg id="round" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                      y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+                <div class="circle-container-footer">
+                  <a class="circle-wrapper" target="_blank" href="https://www.itjobs.pt/emprego?company=4943">
+                    <svg id="round" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300"
+                      xml:space="preserve">
                       <defs>
-                          <path id="circlePath" d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 " />
+                        <path id="circlePath" d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 " />
                       </defs>
                       <circle cx="150" cy="100" r="75" fill="none" />
                       <g>
-                          <use xlink:href="#circlePath" fill="none" />
-                          <text fill="#000">
-                              <textPath class="rotrating-text" xlink:href="#circlePath"> &nbsp Apply Now &nbsp Apply Now &nbsp
-                                  Apply Now </textPath>
-                          </text>
+                        <use xlink:href="#circlePath" fill="none" />
+                        <text fill="#000">
+                          <textPath class="rotrating-text" xlink:href="#circlePath"> &nbsp Apply Now &nbsp Apply Now
+                            &nbsp
+                            Apply Now </textPath>
+                        </text>
                       </g>
-                  </svg>
+                    </svg>
 
-                  <svg id="base" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <svg id="base" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" version="1.1">
                       <text class="im" text-anchor="middle" x="98" y="95">I’m</text>
                       <text class="im" text-anchor="middle" x="98" y="112">Next</text>
-                  </svg>
-              </a>
-            </div> 
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

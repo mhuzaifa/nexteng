@@ -111,7 +111,9 @@ function homePage() {
 
   });
 
-  moveBackground();
+  if (!$_body.hasClass("mobile")) {
+    moveBackground();
+  }
 
 
   var init = function () {
@@ -162,16 +164,13 @@ console.log( $('.duplicated').attr("counter", i.toString()) )
       s = '';
       s += $('.duplicated')[0].src;
 
-      $('.manifesto--img').append('<img data-counter="' + i + '" class="duplicated" src=' + s + '>');
+      $('.rotation-fix').append('<img data-counter="' + i + '" class="duplicated" src=' + s + '>');
     }
-    var i = 10;
-    var delayTime = 0;
-    // $('.duplicated').attr("counter", "0").css('opacity', 0.5);
-    $('.duplicated').each(function() {
-      
-      TweenMax.staggerTo($(this), 1, {rotation: i*6, x: -i/2, y: -i, transformOrigin:"top left", ease: Power4.easeOut}, 0.1);
-      i++;
-    });
+
+
+    var imgWidth = $('.duplicated');
+    //$('.manifesto--img').css('padding-left', imgWidth / 2);
+
     //Events
     initEvents();
   }
@@ -282,6 +281,7 @@ console.log( $('.duplicated').attr("counter", i.toString()) )
       });
     };
 
+
     if (verge.inViewport($(".service--subtitle"), -50) && !$(".service--subtitle").hasClass("js-inviewport")) {
       $(".service--subtitle").addClass("js-inviewport");
       TweenMax.to($(".service--subtitle"), 1, {
@@ -302,7 +302,7 @@ console.log( $('.duplicated').attr("counter", i.toString()) )
       });
     };
 
-    var $manifestoDetails = $('.manifesto--text');
+    var $manifestoDetails = $('.manifesto--details');
 
     $manifestoDetails.each(function () {
       var $div = $(this);
@@ -310,11 +310,25 @@ console.log( $('.duplicated').attr("counter", i.toString()) )
 
         $div.addClass('js-inviewport');
 
-        TweenMax.to($div, 1, {
+        TweenMax.to($div.find($('.manifesto--text')), 1, {
           y: 0,
           autoAlpha: 1,
           delay: 0.1,
           ease: Expo.easeOut
+        });
+
+        var num = 10;
+        $('.duplicated').each(function () {
+
+          TweenMax.staggerTo($(this), 1, {
+            autoAlpha: 1,
+            rotation: num * 6,
+            x: -num / 2,
+            y: -num,
+            transformOrigin: "top left",
+            ease: Power4.easeOut
+          }, 0.1);
+          num++;
         });
         //TweenMax.to(, 1, { x: 0, autoAlpha: 1, delay: 0.1, ease: Expo.easeOut});
       }
