@@ -16,8 +16,12 @@
         </svg>
 
         <svg id="base" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" version="1.1">
-            <text class="im" text-anchor="middle" x="98" y="95">I’m</text>
-            <text class="im" text-anchor="middle" x="98" y="112">Next</text>
-        </svg>
+       
+                <text class="im" text-anchor="middle" x="100" y="98">I’m</text>
+                <text class="im" text-anchor="middle" x="100" y="116">Next</text>
+            </svg>
+        <div class="imnext-hover">
+            
+        </div>
     </a>
 </div> 

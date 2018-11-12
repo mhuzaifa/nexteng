@@ -29,6 +29,7 @@ $tang: #f4a68e;
 $white: #ffffff;
 $black: #000000;
 
+
 /* — — — — — — — — — — — - — — — — — — — — — — — - — — — — — — — — — — — -
 2. EASINGS
 — — — — — — — — — — — - — — — — — — — — — — — - — — — — — — — — — — — - */
@@ -277,6 +278,10 @@ NOTE: .page-main - if i use translatez menu not fixes on chrome! use will change
   //         transform: translate3d(0,100%,0);
   visibility: hidden;
   opacity: 0;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .js-loading-page .page-next,

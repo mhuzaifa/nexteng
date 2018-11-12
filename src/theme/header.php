@@ -65,23 +65,23 @@ BBÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
   </title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="google-site-verification" content="">
-  <meta name="description" content="<?= $social[" description"]; ?>">
+  <meta name="description" content="<?= $social["description"]; ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="author" content="burocratik.com">
   <link rel="author" href="humans.txt">
-  <link rel="canonical" href="<?= $social[" permalink"]; ?>">
+  <link rel="canonical" href="<?= $social["permalink"]; ?>">
 
   <link rel="alternate" hreflang="en" href="######">
 
   <!-- Sharing -->
-  <meta property="og:title" content="<?= $social[" title"]; ?>">
-  <meta property="og:url" content="<?= $social[" permalink"]; ?>">
-  <meta property="og:image" content="<?= $social[" image"]; ?>">
-  <meta property="og:site_name" content="<?= $social[" title"]; ?>">
-  <meta property="og:description" content="<?= $social[" description"]; ?>">
+  <meta property="og:title" content="<?= $social["title"]; ?>">
+  <meta property="og:url" content="<?= $social["permalink"]; ?>">
+  <meta property="og:image" content="<?= $social["image"]; ?>">
+  <meta property="og:site_name" content="<?= $social["title"]; ?>">
+  <meta property="og:description" content="<?= $social["description"]; ?>">
   <meta property="article:publisher" content="facebook link" />
   <meta property="article:author" content="facebook link" />
 

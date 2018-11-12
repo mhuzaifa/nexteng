@@ -30,14 +30,18 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
 
 
 <div class="page-main page-current">
-  <div class="page-toload home-page" data-bodyclass="home">
+  <div class="page-toload home-page" data-bodyclass="home" data-jq-clipthru="apply-top-right">
     <?php include 'applynow.php'?>
     <nav class="menu">
       <?php include 'menu.php';?>
     </nav>
 
-
-    <header class="page-header header-purple" id="intro" data-jq-clipthru="nav-full-top apply-top-right">
+  <!-- <div class="fakehandler">
+    <div class="dragger">
+x
+    </div>
+  </div> -->
+    <header class="page-header header-purple" id="intro" data-jq-clipthru="nav-full-top">
       <article class="carousel-wrapper">
         <div class="carousel-content inspire">
           <picture class="carousel--img">
@@ -74,7 +78,12 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
               </g>
             </svg>
           </div>
-          <h3 class="carousel--slogan">Inspire and you’ll be<br>next in line to be inspired</h3>
+          <div class="carousel--slogan"><div><h3>Inspire and you’ll be</h3></div><div><h3>next in line to be inspired</h3></div></div>
+          <div class="carousel--slogan only-mobile">
+            <div><h3>Inspire and </h3></div>
+            <div><h3>you’ll be next in line</h3></div>
+            <div><h3>to be inspired</h3></div>
+          </div>
         </div>
       </article>
     </header>
@@ -91,15 +100,21 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
           </svg>
         </h1>
         <!-- SERVICE  -->
-        <article class="service" id="ser-next" data-jq-clipthru="nav-bg-white light dark-logo apply-service">
+        <article class="service" id="ser-next" data-jq-clipthru="nav-bg-white light dark-logo">
           <div class="row expanded">
-            <div class="xxlarge-10 xxlarge-offset-2 xlarge-10 xlarge-offset-2 medium-10 medium-offset-1 xsmall-10 xsmall-offset-1 columns">
+            <div class="xxlarge-10 xxlarge-offset-2 xlarge-8 xlarge-offset-2 medium-10 medium-offset-1 xsmall-10 xsmall-offset-1 columns">
               <h3 class="service--title">
                 Ser Nex t<sup>&copy;</sup> é ser maleável.
                 Acreditamos que a fluidez
                 guia o conhecimento até
                 à inovação.
               </h3>
+
+               <p class="service--subtitle only-mobile">
+                Somos uma consultora 100% portuguesa tecnológica, mas o que nos define é a curiosidade.
+                Vemos a atualidade como passado e o não conformismo como uma meta diária.
+              </p>
+
             </div>
           </div>
           <div class="row expanded">
@@ -109,25 +124,40 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
                   Consultoria <br>
                   Especializada
                 </h4>
+                <div class="consultoria--img">
+                  <img src="/public/imgs/handshake.png" alt="">
+                </div>
               </div>
-              <div class="service--box projectos">
+              <div class="service--box projectos only-desktop">
                 <h4 class="box--title">
                   Projetos
                 </h4>
+                <div class="projectos--img">
+                  <img src="/public/imgs/tv.png" alt="">
+                </div>
               </div>
             </div>
             <div class="xxlarge-4 xxlarge-offset-0 xlarge-4 xlarge-offset-0 medium-5 medium-offset-0 xsmall-10 xsmall-offset-1 columns">
-              <p class="service--subtitle">
+              <p class="service--subtitle only-desktop">
                 Somos uma consultora 100% portuguesa tecnológica, mas o que nos define é a curiosidade.
                 Vemos a atualidade como passado e o não conformismo como uma meta diária.
               </p>
               <div class="service--box nearshore">
-                <picture>
-                  <source srcset="/public/imgs/service-shore.png 1x, /public/imgs/service-shore@2x.png 2x"><img src="/public/imgs/service-shore.png"
-                    alt=""></picture>
+                <div class="nearshore--img">
+                  <img class="mars" src="/public/imgs/mars.png" alt="">
+                  <img class="fly" src="/public/imgs/fly.png" alt="">
+                </div>
                 <h4 class="box--title">
                   Nearshore
+                </h4> 
+              </div>
+              <div class="service--box projectos only-mobile">
+                <h4 class="box--title">
+                  Projetos
                 </h4>
+                <div class="projectos--img">
+                  <img src="/public/imgs/tv.png" alt="">
+                </div>
               </div>
               <p class="service--note">
                 Somos pragmáticos e estratégicos em função de um objectivo: conseguir sempre os melhores projectos para
@@ -167,7 +197,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
                       Celebra o sucesso com todos.
                     </p>
                   </div>
-                  <div class="xxlarge-4 xxlarge-offset-1 medium-4 medium-offset-1 xsmall-4 xsmall-offset-0 columns">
+                  <div class="xxlarge-3 xxlarge-offset-2 medium-4 medium-offset-1 xsmall-4 xsmall-offset-0 columns">
                     <div class="manifesto--img">
                       <div class="rotation-fix">
                         <img data-counter="0" class="duplicated" src="/public/imgs/prospera-single.png" alt="">
@@ -188,7 +218,10 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
                   </div>
                   <div class="xxlarge-4 xxlarge-offset-1 medium-4 medium-offset-1 xsmall-4 xsmall-offset-0 columns">
                     <div class="menifesto--img">
-
+                      <div class="curiosidade">
+                        <img data-counter="0" src="/public/imgs/curiosidade.png"
+                        alt="">
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -206,7 +239,10 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
                   </div>
                   <div class="xxlarge-4 xxlarge-offset-1 medium-4 medium-offset-1 xsmall-4 xsmall-offset-0 columns">
                     <div class="menifesto--img">
-
+                      <div class="altruismo">
+                          <img data-counter="0" src="/public/imgs/altruismo.png"
+                          alt="">
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -223,7 +259,9 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
                   </div>
                   <div class="xxlarge-4 xxlarge-offset-1 medium-4 medium-offset-1 xsmall-4 xsmall-offset-0 columns">
                     <div class="menifesto--img">
-
+                    <div class="caracter">
+                          <img src="/public/imgs/caracter.png" alt="">
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -240,7 +278,9 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
                   </div>
                   <div class="xxlarge-4 xxlarge-offset-1 medium-4 medium-offset-1 xsmall-4 xsmall-offset-0 columns">
                     <div class="menifesto--img">
-
+                    <div class="plasticidade">
+                    <img class="astronaut" width="120" src="/public/imgs/astronaut.png" alt=""><img class="target" width="40" src="/public/imgs/target.png" alt="">
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -252,11 +292,10 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
         <!--  SECTORS: Info Tech -->
         <div data-jq-clipthru="nav-bg-tang light dark-logo apply-tang-right" id="areas">
 
-          <div class="sticky-container nob" data-jq-clipthru="">
+          <div class="sticky-container nob">
             <article class="sectors info-tech" id="infoTech">
               <div class="active-overlay">
               </div>
-
               <div class="row expanded">
                 <div class="xxlarge-6 xxlarge-offset-2 xlarge-6 xlarge-offset-2 medium-8 medium-offset-1 xsmall-10 xsmall-offset-1 columns">
                   <h3 class="sectors-title">
@@ -347,7 +386,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
 
             <!--  SECTORS: Big Data -->
 
-            <article class="sectors big-data" data-jq-clipthru="">
+            <article class="sectors big-data">
 
               <div class="active-overlay">
               </div>
@@ -399,7 +438,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
             </article>
 
             <!--  SECTORS: RPA -->
-            <article class="sectors rpa sticky" data-jq-clipthru="">
+            <article class="sectors rpa">
               <div class="active-overlay">
               </div>
 
@@ -436,6 +475,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
               </div>
             </article>
           </div>
+
           <!--  SECTORS: ATIVIDADE -->
           <article class="sectors setores" id="setores" data-jq-clipthru="nav-bg-tang-lighter light">
             <div class="row expanded">
@@ -447,7 +487,7 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
               </div>
             </div>
             <div class="row expanded">
-              <div class="xxlarge-8 xxlarge-offset-2 xlarge-8 xlarge-offset-2 medium-8 medium-offset-1 xsmall-10 xsmall-offset-0">
+              <div class="xxlarge-8 xxlarge-offset-2 xlarge-8 xlarge-offset-2 medium-10 medium-offset-1 xsmall-11 xsmall-offset-0">
                 <div class="row expanded">
                   <div class="xxlarge-3 xsmall-5 xsmall-offset-1 columns">
                     <div class="sectors-icons">
@@ -758,29 +798,31 @@ if( $mobile_info['type'] == 'tablet') $tablet = 'tablet'; else $tablet = '';
               </div>
               <div class="xxlarge-6">
                 <div class="circle-container-footer">
-                  <a class="circle-wrapper" target="_blank" href="https://www.itjobs.pt/emprego?company=4943">
-                    <svg id="round" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                      x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300"
-                      xml:space="preserve">
+                <a class="circle-wrapper" target="_blank" href="https://www.itjobs.pt/emprego?company=4943" >
+                  <svg id="round" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                      y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
                       <defs>
-                        <path id="circlePath" d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 " />
+                          <path id="circlePath" d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 " />
                       </defs>
                       <circle cx="150" cy="100" r="75" fill="none" />
                       <g>
-                        <use xlink:href="#circlePath" fill="none" />
-                        <text fill="#000">
-                          <textPath class="rotrating-text" xlink:href="#circlePath"> &nbsp Apply Now &nbsp Apply Now
-                            &nbsp
-                            Apply Now </textPath>
-                        </text>
+                          <use xlink:href="#circlePath" fill="none" />
+                          <text fill="#000">
+                              <textPath class="rotrating-text" xlink:href="#circlePath"> &nbsp Apply Now &nbsp Apply Now &nbsp
+                                  Apply Now </textPath>
+                          </text>
                       </g>
-                    </svg>
+                  </svg>
 
-                    <svg id="base" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                      <text class="im" text-anchor="middle" x="98" y="95">I’m</text>
-                      <text class="im" text-anchor="middle" x="98" y="112">Next</text>
-                    </svg>
-                  </a>
+                  <svg id="base" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                
+                          <text class="im" text-anchor="middle" x="100" y="98">I’m</text>
+                          <text class="im" text-anchor="middle" x="100" y="116">Next</text>
+                      </svg>
+                  <div class="imnext-hover">
+                      
+                  </div>
+              </a>
                 </div>
               </div>
             </div>

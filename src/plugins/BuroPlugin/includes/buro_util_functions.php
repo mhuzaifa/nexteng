@@ -188,6 +188,7 @@ function buro_getShareInfo($id, $home_title, $default_img) {
   }
   elseif(is_home()){
     $social["permalink"] = get_bloginfo('url');
+    $social["title"] = get_the_title($id);
   }
   elseif(get_query_var( 'ajax-tax' )){
     $tax_query = get_query_var( 'ajax-tax' );
@@ -229,7 +230,7 @@ function buro_getShareInfo($id, $home_title, $default_img) {
   if(is_front_page())
     $social["title"] = "";
 
-  $social["title"] .= $home_title;
+  $social["title"] .= get_the_title($id);
 
   return $social;
 }
