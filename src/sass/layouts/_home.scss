@@ -59,6 +59,7 @@ html {
 				@include max-screen($xsmall) {
 					top: -20rem;
 				}
+
 				@include max-screen($xxsmall) {
 					top: -15vh;
 				}
@@ -67,14 +68,12 @@ html {
 			&.big-data {
 				@include max-screen($small) {
 					@include landscape() {
-						top: -5rem ;
+						top: -5rem;
 					}
 				}
-				@media only screen 
-				and (min-device-width : 320px)
-				and (max-device-width : 568px) 
-				and (orientation : landscape) {
-					top: -10rem ;
+
+				@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+					top: -10rem;
 				}
 			}
 		}
@@ -96,6 +95,7 @@ html {
 		left: 6.5vw;
 		height: 5rem;
 		top: 11rem;
+
 		svg {
 			will-change: transform;
 			transition: 0.2s;
@@ -129,7 +129,7 @@ html {
 		z-index: 9999;
 	}
 
-	.logo-main.apply-manifesto{
+	.logo-main.apply-manifesto {
 		@include max-screen ($medium) {
 			fill: $tang;
 			opacity: 1;
@@ -137,7 +137,7 @@ html {
 		}
 	}
 
-		
+
 	%applylink {
 		visibility: hidden;
 		height: 120px;
@@ -166,6 +166,7 @@ html {
 			@include min-screen($medium) {
 				top: 8rem;
 			}
+
 			@include max-screen($medium) {
 				top: 4rem;
 			}
@@ -180,18 +181,17 @@ html {
 				@include max-screen($small) {
 					font-size: 17px;
 				}
+
 				@include max-screen($xsmall) {
 					font-size: 16.5px;
-					
+
 				}
+
 				@include max-screen($xxsmall) {
 					font-size: 15.5px;
 				}
 
-				@media only screen 
-				and (min-device-width : 320px)
-				and (max-device-width : 568px) 
-				and (orientation : landscape) {
+				@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
 					font-size: 17px;
 				}
 			}
@@ -203,7 +203,7 @@ html {
 				width: 200px;
 				height: auto;
 				will-change: transform;
-				
+
 				@include max-screen($xsmall) {
 					width: 150px;
 					left: -36px;
@@ -224,15 +224,18 @@ html {
 				font-size: 19px;
 				font-weight: bold;
 				text-transform: uppercase;
+
 				@include max-screen($xsmall) {
 					font-size: 20px;
 				}
 			}
 		}
 	}
+
 	.circle-container {
 		@extend %applylink;
 	}
+
 	.circle-container-footer {
 		@extend %applylink;
 
@@ -241,6 +244,7 @@ html {
 			fill: $purple-text;
 		}
 	}
+
 	.imnext-hover {
 		position: relative;
 		top: 39px;
@@ -267,6 +271,7 @@ html {
 			height: 100%;
 			border-radius: 100%;
 		}
+
 		&:before,
 		&:after {
 			top: 0;
@@ -286,31 +291,31 @@ html {
 	}
 
 	.circle-container:hover .imnext-hover,
-	.circle-container-footer:hover .imnext-hover { 
-		
+	.circle-container-footer:hover .imnext-hover {
+
 
 		&:after {
 			border-left-width: 1pt; // Solid edges, invisible borders
 			border-right-width: 1pt; // Solid edges, invisible borders
 			transform: rotate(180deg); // Rotate around circle
 			transition:
-			transform 0.4s linear 0s,
-			border-left-width 0s linear 0.35s; // Solid edge post-rotation
+				transform 0.4s linear 0s,
+				border-left-width 0s linear 0.35s; // Solid edge post-rotation
 		}
 	}
 
 	.circle-container.apply-top-right:hover .imnext-hover,
 	.circle-container-footer:hover .imnext-hover,
 	.circle-container.apply-tang-right:hover .imnext-hover {
-		
+
 
 		&:after {
 			border-top: 1.5pt solid $purple-light; // Shows border
 		}
 	}
 
-	.circle-container.apply-manifesto:hover .imnext-hover { 
-		
+	.circle-container.apply-manifesto:hover .imnext-hover {
+
 
 		&:after {
 			border-top: 1.5pt solid $tang; // Shows border
@@ -321,14 +326,17 @@ html {
 		visibility: visible;
 		right: 12rem;
 		left: auto;
+
 		@include max-screen($medium) {
 			right: 4rem;
 		}
+
 		@include max-screen($xsmall) {
 			right: 2rem;
 		}
 
 		.circle-wrapper {
+
 			.rotrating-text,
 			.im {
 				fill: $purple-text;
@@ -340,7 +348,7 @@ html {
 
 
 	.circle-container.apply-manifesto {
-		
+
 		@include min-screen($medium) {
 			visibility: visible;
 			left: 12rem;
@@ -349,9 +357,9 @@ html {
 
 		.im,
 		.rotrating-text {
-			fill: $tang ;
+			fill: $tang;
 		}
-		
+
 
 		@include min-screen($xlarge) {
 			left: 15rem;
@@ -385,6 +393,7 @@ html {
 		@include max-screen($medium) {
 			right: 4rem;
 		}
+
 		@include max-screen($xsmall) {
 			right: 2rem;
 		}
@@ -555,7 +564,8 @@ html {
 						transform: scale(1.2)
 					}
 				}
-				&:hover .link-text{
+
+				&:hover .link-text {
 					//opacity: 1;
 				}
 
@@ -577,6 +587,7 @@ html {
 						border-radius: 3px;
 						left: 15px;
 					}
+
 					&:after {
 						content: '';
 						position: absolute;
@@ -709,10 +720,12 @@ html {
 					margin: 10vh 3.5vw 0;
 				}
 			}
+
 			@include max-screen($xsmall) {
 				margin: 15vh 2.5vw 0;
-				min-width: 75vw;	
+				min-width: 75vw;
 			}
+
 			@include max-screen($xxsmall) {
 				min-width: 80vw;
 				margin: 10vh 2.5vw 0;
@@ -745,10 +758,7 @@ html {
 					}
 				}
 
-				@media only screen 
-				and (min-device-width : 320px)
-				and (max-device-width : 568px) 
-				and (orientation : landscape) {
+				@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
 					width: 70rem;
 				}
 			}
@@ -767,14 +777,13 @@ html {
 							max-width: 40rem;
 						}
 					}
-					@media only screen 
-					and (min-device-width : 320px)
-					and (max-device-width : 568px) 
-					and (orientation : landscape) {
+
+					@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
 						top: 13.5rem;
 						max-width: 34rem;
 					}
 				}
+
 				.carousel--slogan {
 					position: relative;
 					top: 36.2rem;
@@ -786,10 +795,8 @@ html {
 							top: 23rem;
 						}
 					}
-					@media only screen 
-					and (min-device-width : 320px)
-					and (max-device-width : 568px) 
-					and (orientation : landscape) {
+
+					@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
 						top: 20rem;
 					}
 
@@ -799,44 +806,48 @@ html {
 						position: relative;
 						overflow: hidden;
 
-						h3{
+						h3 {
 							font-family: 'Sharp Grotesk Medium 25';
 							letter-spacing: -1px;
 							position: relative;
 							font-size: 5.5rem;
-							
+
 							transform: translateY(100%);
 							transform-origin: bottom;
 							color: $white;
-	
-	
+
+
 							@include max-screen($medium) {
 								font-size: 4.5rem;
 							}
-		
+
 							@include max-screen($small) {
 								font-size: 5vw;
-		
+
 								@include landscape() {
 									font-size: 5vh;
 								}
 							}
 						}
-						
+
 					}
+
 					@include max-screen($xsmall) {
 						display: none;
 					}
+
 					&.only-mobile {
 						div h3 {
 							font-size: 5rem;
 						}
+
 						display: none;
+
 						@include max-screen($xsmall) {
 							display: block;
 						}
 					}
-					
+
 				}
 			}
 		}
@@ -903,6 +914,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				padding-top: 5rem;
 				line-height: 35px;
 			}
+
 			@include max-screen($xxsmall) {
 				line-height: 6rem;
 				padding-bottom: 2rem;
@@ -911,6 +923,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 			sup {
 				font-size: 1.6rem;
 				top: -3.5rem;
+
 				@include max-screen($xxsmall) {
 					font-size: 0.5rem;
 					top: -2rem;
@@ -922,28 +935,32 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 			font-family: 'Sharp Grotesk Medium 20';
 			font-size: 3rem;
 
-			
+
 			display: block;
-			
+
 			@include max-screen($midsmall) {
 				display: none;
 			}
 
 			&.only-mobile {
 				display: block;
+
 				@include min-screen($midsmall) {
 					display: none;
 				}
+
 				@include max-screen($small) {
 					margin-top: 5rem;
-	
+
 					@include landscape {
 						margin-top: 5rem !important;
 					}
 				}
 			}
+
 			&.only-desktop {
 				display: none;
+
 				@include min-screen($midsmall) {
 					display: block;
 				}
@@ -959,7 +976,11 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 			@include max-screen($small) {
 				max-height: 30rem;
 			}
-		
+
+			@include max-screen($xsmall) {
+				min-height: 35rem;
+			}
+
 
 			.box--title {
 				font-family: 'Sharp Grotesk Medium 25';
@@ -967,7 +988,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				color: $purple-text;
 				letter-spacing: -2px;
 				padding: 5.3rem 4.8rem;
-				
+
 				/* transform: translateY(2.5rem);
 				opacity: 0; */
 
@@ -1005,29 +1026,44 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 					margin-top: 6rem;
 				}
 			}
+
 			&.nearshore {
 				background-color: #fe8855;
 				position: relative;
-				
+
 				.nearshore--img {
 					max-width: 45rem;
 					position: absolute;
 					top: -5rem;
 					right: -5rem;
+
 					img {
 						backface-visibility: hidden;
 						top: 0;
 					}
+
 					.mars {
 						max-width: 41.5rem;
+
+						@include max-screen($xsmall) {
+							max-width: 33rem;
+						}
 					}
+
 					.fly {
-						position: absolute; 
+						position: absolute;
 						top: 10rem;
 						right: 14rem;
 						max-width: 33rem;
+
+						@include max-screen($xsmall) {
+							max-width: 25rem;
+							top: 8rem;
+							right: 10rem;
+						}
 					}
 				}
+
 				.box--title {
 					position: absolute;
 					bottom: 0;
@@ -1040,27 +1076,33 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				background-color: #ffca6f;
 				position: relative;
 				margin-bottom: 15rem;
+
 				@include max-screen($small) {
 					margin-bottom: 8rem;
 				}
-				.consultoria--img  {
+
+				.consultoria--img {
 					img {
 						width: 100%;
 						position: absolute;
 						bottom: -7.5rem;
-						
+
 						@include min-screen($maxlarge) {
 							bottom: -8rem;
 						}
+
 						@include max-screen($large) {
 							bottom: -8rem;
 						}
+
 						@include max-screen($medium) {
 							bottom: -6.5rem;
 						}
+
 						@include max-screen($xsmall) {
 							bottom: -7.5rem;
 						}
+
 						@include max-screen($xxsmall) {
 							bottom: -6rem;
 						}
@@ -1068,22 +1110,29 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 					}
 				}
 			}
+
 			&.projectos {
 				background-color: darken(#ceb6fd, 2%);
 				margin-top: 3.5rem;
 				position: relative;
 				margin-bottom: 10rem;
 
-				
-				.projectos--img  {
+
+				.projectos--img {
 					img {
 						max-width: 32rem;
 						position: absolute;
 						bottom: -10.5rem;
 						right: -7rem;
 						z-index: 1;
+
 						@include max-screen($xlarge) {
 							bottom: -12rem;
+						}
+
+						@include max-screen($xsmall) {
+							right: -5rem;
+							max-width: 28rem;
 						}
 					}
 				}
@@ -1091,12 +1140,19 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				&.only-mobile {
 					display: block;
 					margin-top: 6rem;
+
+					@include max-screen($xsmall) {
+						margin-bottom: 13rem;
+					}
+
 					@include min-screen($midsmall) {
 						display: none;
 					}
 				}
+
 				&.only-desktop {
 					display: none;
+
 					@include min-screen($midsmall) {
 						display: block;
 					}
@@ -1114,7 +1170,9 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 
 			@include max-screen($xsmall) {
 				font-size: 1.5rem;
+				margin-left: 3rem;
 			}
+
 			@include max-screen($xxsmall) {
 				font-size: 1.8rem;
 				margin: 8rem 0 0 4.5rem;
@@ -1148,15 +1206,18 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 			@include portrait {
 				padding-top: 4rem;
 			}
+
 			@include landscape {
 				padding-top: 4rem;
 			}
 		}
+
 		@include max-screen($small) {
 			padding-bottom: 8rem;
 		}
+
 		@include max-screen($xxsmall) {
-				padding-top: 2rem;
+			padding-top: 2rem;
 		}
 
 		.spacer {
@@ -1176,10 +1237,10 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 			line-height: 9.5rem;
 			padding-top: 5rem;
 			padding-bottom: 8rem;
-			background: -moz-linear-gradient(top,  rgba(61,14,43,1) 40%,rgba(61,14,43,0.85) 75%,rgba(61,14,43,0.35) 95%,rgba(61,14,43,0) 100%);
-			background: -webkit-linear-gradient(top,  rgba(61,14,43,1) 40%,rgba(61,14,43,0.85) 75%,rgba(61,14,43,0.35) 95%,rgba(61,14,43,0) 100%);
-			background: linear-gradient(to bottom, rgba(61,14,43,1) 40%,rgba(61,14,43,0.85) 75%,rgba(61,14,43,0.35) 95%,rgba(61,14,43,0) 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d0e2b', endColorstr='#263d0e2b',GradientType=0 );
+			background: -moz-linear-gradient(top, rgba(61, 14, 43, 1) 40%, rgba(61, 14, 43, 0.85) 75%, rgba(61, 14, 43, 0.35) 95%, rgba(61, 14, 43, 0) 100%);
+			background: -webkit-linear-gradient(top, rgba(61, 14, 43, 1) 40%, rgba(61, 14, 43, 0.85) 75%, rgba(61, 14, 43, 0.35) 95%, rgba(61, 14, 43, 0) 100%);
+			background: linear-gradient(to bottom, rgba(61, 14, 43, 1) 40%, rgba(61, 14, 43, 0.85) 75%, rgba(61, 14, 43, 0.35) 95%, rgba(61, 14, 43, 0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d0e2b', endColorstr='#263d0e2b', GradientType=0);
 
 
 			margin-left: -2rem;
@@ -1195,6 +1256,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				line-height: 40px;
 				padding-bottom: 4.5rem;
 			}
+
 			@include max-screen($xxsmall) {
 				font-size: 6rem;
 				line-height: 6.5rem;
@@ -1203,16 +1265,13 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 			}
 
 
-			@media only screen 
-			and (min-device-width : 320px)
-			and (max-device-width : 568px) 
-			and (orientation : landscape) {
+			@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
 				font-size: 6rem;
 				line-height: 6.5rem;
 				padding-bottom: 2rem;
 				padding-top: 2rem;
 			}
-			
+
 
 			sup {
 				font-size: 2.5rem;
@@ -1222,10 +1281,8 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 					font-size: 3vw;
 					top: -4.2rem;
 				}
-				@media only screen 
-				and (min-device-width : 320px)
-				and (max-device-width : 568px) 
-				and (orientation : landscape) {
+
+				@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
 					font-size: 2rem;
 					top: -3.5rem;
 				}
@@ -1246,12 +1303,14 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				@include portrait {
 					top: 4rem;
 				}
+
 				@include landscape {
 					top: 4rem;
 				}
 			}
+
 			@include max-screen($xxsmall) {
-					top: 2rem;
+				top: 2rem;
 			}
 
 			&:before {
@@ -1263,11 +1322,14 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				top: -8rem;
 				z-index: -1;
 				left: 0;
+
 				@include max-screen($xsmall) {
 					top: -4rem;
 					height: 5rem;
 				}
+
 				left: 0;
+
 				@include max-screen($xxsmall) {
 					top: -2rem;
 					height: 5rem;
@@ -1278,14 +1340,16 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 		.manifesto--details {
 
 			position: relative;
-			padding-top:4.5rem;
-			
+			padding-top: 4.5rem;
+
 			margin-left: -0.7rem;
 			display: block;
 			z-index: 0;
+
 			&:not(:last-child) {
-				padding-bottom:5rem;
+				padding-bottom: 5rem;
 			}
+
 			@include max-screen($xxsmall) {
 				margin-left: -1rem;
 			}
@@ -1318,9 +1382,11 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 					color: $tang;
 					display: block;
 					margin-left: -1.5rem;
+
 					@include max-screen($xsmall) {
 						margin-left: -1rem;
 					}
+
 					sup {
 						font-size: 5rem;
 						top: -0.5rem;
@@ -1341,12 +1407,13 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 
 				}
 			}
-			
+
 			.menifesto--img {
 				img {
 					max-width: 350px;
 				}
 			}
+
 			.rotation-fix {
 				transform: rotate(-45deg);
 				transform-origin: top left;
@@ -1357,102 +1424,127 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 					opacity: 0;
 					max-width: 28rem;
 					left: 1rem;
+
 					@include max-screen($medium) {
 						max-width: 24rem;
 					}
+
 					@include max-screen($small) {
 						max-width: 22rem;
 					}
+
 					@include max-screen($xsmall) {
 						max-width: 20rem;
 					}
+
 					@include max-screen($xxsmall) {
 						max-width: 16rem;
 					}
 				}
-			} 
-			
+			}
+
 			.curiosidade {
 				opacity: 0;
 				transform: translateX(25rem);
+
 				img {
-					top:0;
-					position:absolute;
+					top: 0;
+					position: absolute;
 					max-width: 35rem;
+
 					@include max-screen($medium) {
 						max-width: 25rem;
 					}
+
 					@include max-screen($xsmall) {
 						max-width: 20rem;
 					}
 				}
 			}
+
 			.altruismo {
-				
-				
+
+
 				img {
 					opacity: 0;
 					max-width: 35rem;
+
 					@include max-screen($medium) {
 						max-width: 25rem;
 					}
+
 					@include max-screen($xsmall) {
 						max-width: 20rem;
 					}
 				}
 			}
+
 			.caracter {
 				position: relative;
 				top: 30px;
+
 				@include max-screen($small) {
 					left: -2rem;
 				}
+
 				img {
 					top: 0;
 					position: absolute;
 					max-width: 38rem;
 					opacity: 0;
+
 					@include max-screen($medium) {
 						max-width: 26rem;
 					}
+
 					@include max-screen($small) {
 						max-width: 20rem;
 					}
+
 					@include max-screen($xsmall) {
 						max-width: 18rem;
 						left: -1rem;
 					}
 				}
 			}
+
 			.plasticidade {
 				display: flex;
 				width: 34rem;
 				justify-content: space-between;
+
 				@include max-screen($medium) {
 					max-width: 28rem;
 				}
+
 				@include max-screen($small) {
 					max-width: 21rem;
 				}
+
 				@include max-screen($xsmall) {
 					max-width: 18rem;
 				}
+
 				img {
 					align-self: self-end;
-					
+
 				}
+
 				.astronaut {
 					transform: translateX(-20rem);
 					opacity: 0;
 					max-width: 12.5rem;
+
 					@include max-screen($small) {
 						max-width: 10rem;
 					}
 				}
+
 				.target {
 					transform: translateX(20rem);
 					opacity: 0;
 					max-width: 4rem;
+
 					@include max-screen($small) {
 						max-width: 3rem;
 					}
@@ -1468,6 +1560,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 	.main-footer {
 		position: relative;
 		z-index: 1;
+
 		@include min-screen($large) {
 			overflow: hidden;
 		}
@@ -1481,9 +1574,11 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 		@include max-screen($small) {
 			padding: 8rem 0;
 		}
+
 		@include max-screen($xsmall) {
 			padding: 5rem 0;
 		}
+
 		@include max-screen($xxsmall) {
 			padding: 2rem 0;
 		}
@@ -1529,15 +1624,14 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				line-height: 38px;
 				padding: 2rem 0 4.5rem;
 			}
+
 			@include max-screen($xxsmall) {
 				font-size: 6rem;
 				line-height: 6.5rem;
 				padding-bottom: 2rem;
 			}
-			@media only screen 
-			and (min-device-width : 320px)
-			and (max-device-width : 568px) 
-			and (orientation : landscape) {
+
+			@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
 				font-size: 6rem;
 				line-height: 6.5rem;
 				padding-bottom: 2rem;
@@ -1549,15 +1643,13 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				top: -5.8rem;
 				position: relative;
 
-				
+
 				@include max-screen($xsmall) {
 					font-size: 3vw;
 					top: -4.2rem;
 				}
-				@media only screen 
-				and (min-device-width : 320px)
-				and (max-device-width : 568px) 
-				and (orientation : landscape) {
+
+				@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
 					font-size: 2rem;
 					top: -3.5rem;
 				}
@@ -1604,6 +1696,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				color: $purple-text;
 				font-size: 3rem;
 				margin: 2.5rem 0;
+
 				@include max-screen($xsmall) {
 					font-size: 2.5rem;
 				}
@@ -1616,6 +1709,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 					font-size: 1.7rem;
 					letter-spacing: -0.1rem;
 					color: $purple-text;
+
 					@include max-screen($xsmall) {
 						font-size: 2.2rem;
 					}
@@ -1661,6 +1755,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 					@include max-screen($small) {
 						font-size: 1.8rem;
 					}
+
 					@include max-screen($xsmall) {
 						font-size: 2rem;
 					}
@@ -1674,6 +1769,7 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 		padding-bottom: 12rem;
 		background: white;
 		position: relative;
+
 		@include max-screen($small) {
 			padding-top: 15rem;
 			padding-bottom: 10rem;
@@ -1838,17 +1934,19 @@ only screen and (min-resolution: 2dppx) and (min-device-width: 1025px) {
 				}
 			}
 		}
+
 		.circle-container-footer {
 			visibility: visible;
 			position: absolute;
 			top: auto;
 			bottom: 18rem;
 			right: 12rem;
-			
+
 			@include max-screen($medium) {
 				bottom: 15rem;
 				right: 4rem;
 			}
+
 			@include max-screen($small) {
 				bottom: 10rem;
 			}

@@ -21,18 +21,18 @@ $(document).ready(function () {
     keepClonesInHTML: false,
   });
 
-    var $menuItemsOnHover = $('nav.light .scroll-anchor');
-    var $linkText = $('nav.light .link-text');
-    $linkText.hide();
+  var $menuItemsOnHover = $('nav.light .scroll-anchor');
+  var $linkText = $('nav.light .link-text');
+  $linkText.hide();
 
-    $menuItemsOnHover.hover(
-      function () {
-        $(this).next().fadeIn(150);
-      },
-      function () {
-        $(this).next().fadeOut(150);
-      }
-    );
+  $menuItemsOnHover.hover(
+    function () {
+      $(this).next().fadeIn(150);
+    },
+    function () {
+      $(this).next().fadeOut(150);
+    }
+  );
 
 })
 
@@ -75,34 +75,42 @@ function homePage() {
   var $carouselSlogan = $('.carousel--slogan div h3');
 
   //nex t logo animation for "t" word
-  TweenMax.to($tWordLogo, 0.5, { x: -100, delay: 0,ease: Power4.easeOut });
-  
+  TweenMax.to($tWordLogo, 0.5, {
+    x: -100,
+    delay: 0,
+    ease: Power4.easeOut
+  });
+
   TweenMax.to($carouselSlogan, 0.5, {
-    css: {transform: 'translateY(0%)', opacity: 1},
-    delay: 0.2, 
+    css: {
+      transform: 'translateY(0%)',
+      opacity: 1
+    },
+    delay: 0.2,
     ease: Power3.easeOut
   })
 
 
-  var birdTimeline = new TimelineMax({ repeat: -1, yoyo: true });
-
-  birdTimeline.fromTo( $nearShoreShip, 3, 
-  {
-      rotation: 0,
-      y: -5,
-      x: -5,
-      ease:Power3.easeInOut
-  },
-  {
-      rotation: 0,
-      y: 5,
-      x: 5,
-      ease:Power3.easeInOut
+  var birdTimeline = new TimelineMax({
+    repeat: -1,
+    yoyo: true
   });
 
- function imageDuplicator(number,className) {
-   
- }
+  birdTimeline.fromTo($nearShoreShip, 3, {
+    rotation: 0,
+    y: -5,
+    x: -5,
+    ease: Power3.easeInOut
+  }, {
+    rotation: 0,
+    y: 5,
+    x: 5,
+    ease: Power3.easeInOut
+  });
+
+  function imageDuplicator(number, className) {
+
+  }
 
   /*duplicate images for proxpera*/
   for (var i = 1; i < 8; i++) {
@@ -110,7 +118,7 @@ function homePage() {
     s += $('.duplicated')[0].src;
     $('.rotation-fix').append('<img data-counter="' + i + '" class="duplicated" src=' + s + '>');
   }
-  
+
   /*duplicate images for Curiosidade*/
   for (var i = 1; i < 3; i++) {
     var s = '';
@@ -124,8 +132,8 @@ function homePage() {
     s += $('.caracter img')[0].src;
     $('.caracter').append('<img data-counter="' + i + '" src=' + s + '>');
   }
-  
- 
+
+
 
   var init = function () {
     if (_customScroll == null) {
@@ -154,7 +162,7 @@ function homePage() {
         boxShadow: '0'
       });
     };
-   
+
     //Events
     initEvents();
   }
@@ -191,41 +199,47 @@ function homePage() {
 
   function home_scroll_rAF(status) {
 
-   /* Manifesto sticky title */
+    /* Manifesto sticky title */
     var manifestoTitleHeight = $('.manifesto--title').outerHeight();
     var windowScrollTop = $_window.scrollTop();
 
     if (windowScrollTop >= manifestoTitleOffset) {
-        $manifestoTitle.addClass('fixed-title');
-        $spacer.outerHeight(manifestoTitleHeight);
-    } /* else if (windowScrollTop >= infoTechOffsetTop) {
-        $('.fixed-title').removeClass('fixed-title');
-        $spacer.css('height', '0');
-    } */ else {
-        $('.fixed-title').removeClass('fixed-title');
-        $spacer.css('height', '0');
+      $manifestoTitle.addClass('fixed-title');
+      $spacer.outerHeight(manifestoTitleHeight);
+    }
+    /* else if (windowScrollTop >= infoTechOffsetTop) {
+           $('.fixed-title').removeClass('fixed-title');
+           $spacer.css('height', '0');
+       } */
+    else {
+      $('.fixed-title').removeClass('fixed-title');
+      $spacer.css('height', '0');
     };
-    
+
     // this dosen't work inside above if/else statement so i did it separately
     if (windowScrollTop >= infoTechOffsetTop) {
       $('.fixed-title').removeClass('fixed-title');
       $spacer.css('height', '0');
-    } 
+    }
 
-     /* Transparent Overlay for three sectors */
+    /* Transparent Overlay for three sectors */
     if (verge.inViewport($bigData)) {
       var scaledOpacityInfoTech = scaleBetween($_window.scrollTop(), 0.5, -0.01,
         big_data_wrapper_offset_top,
         big_data_wrapper_offset_top - $_window.height());
 
-      TweenMax.to($overlayInfoTech, 0.5, { opacity: scaledOpacityInfoTech })
+      TweenMax.to($overlayInfoTech, 0.5, {
+        opacity: scaledOpacityInfoTech
+      })
     };
 
     if (verge.inViewport($rpa)) {
       var scaledOpacityInfoTech = scaleBetween($_window.scrollTop(), 0.5, -0.3, rpa_wrapper_offset_top,
         rpa_wrapper_offset_top - $_window.height());
 
-      TweenMax.to($overlayBigData, 0.5, { opacity: scaledOpacityInfoTech})
+      TweenMax.to($overlayBigData, 0.5, {
+        opacity: scaledOpacityInfoTech
+      })
     };
 
     if (verge.inViewport($setores)) {
@@ -234,10 +248,12 @@ function homePage() {
         setores_wrapper_offset_top,
         setores_wrapper_offset_top - $_window.height());
 
-      TweenMax.to($overlayRpa, 0.5, { opacity: scaledOpacityInfoTech });
+      TweenMax.to($overlayRpa, 0.5, {
+        opacity: scaledOpacityInfoTech
+      });
     };
 
-     /* service section title animation */
+    /* service section title animation */
     if (verge.inViewport($(".service--title"), -50) && !$(".service--title").hasClass("js-inviewport")) {
       $(".service--title").addClass("js-inviewport");
       TweenMax.to($(".service--title"), 1, {
@@ -255,16 +271,16 @@ function homePage() {
       TweenMax.to($(".manifesto--title"), 1, {
         y: 0,
         autoAlpha: 1,
-        zIndex:1,
+        zIndex: 1,
         delay: 0.1,
         ease: Expo.easeOut
       });
     };
- 
+
     /* manifesto section title animation */
     var $manifestoDetails = $('.manifesto--details');
-      
-    $manifestoDetails.each(function() {
+
+    $manifestoDetails.each(function () {
       var $div = $(this);
       if (verge.inViewport($div, -200) && !$div.hasClass("js-inviewport")) {
         $div.addClass('js-inviewport');
@@ -319,7 +335,7 @@ function homePage() {
           delay: 0.5,
           ease: Power3.easeInOut
         });
-       
+
 
         TweenMax.to($div.find($curiosidadeImg), 1, {
           css: {
@@ -341,58 +357,58 @@ function homePage() {
 
 
         var $altruismo = $('.altruismo img');
-        
+
 
         TweenMax.fromTo($div.find($altruismo), 1, {
-            scale: 0.2,
-            autoAlpha: 0,
-            rotation: 100 * 10,
+          scale: 0.2,
+          autoAlpha: 0,
+          rotation: 100 * 10,
+          transformOrigin: "center",
+          ease: Power4.easeOut
+        }, {
+          scale: 1,
+          autoAlpha: 1,
+          rotation: 0,
+          delay: 0.5
+        }, 0.2);
+
+        /* animate duplicated prospera image */
+        var $caracter = $('.caracter img');
+
+        var n = 1;
+        var op = 0.90;
+
+        $div.find($caracter).each(function () {
+          TweenMax.staggerTo($(this), 1, {
+            opacity: op / 2.5,
+            delay: 0.8,
+            x: n * 8,
+            y: -n * 6,
             transformOrigin: "center",
             ease: Power4.easeOut
-          },  {
-            scale: 1,
-            autoAlpha: 1,
-            rotation: 0,
-            delay: 0.5
-        }, 0.2 );
+          }, 0.2);
+          n++;
+          op++
+        });
 
-         /* animate duplicated prospera image */
-         var $caracter = $('.caracter img');
+        /* animate astronaut with baseball image */
+        var $astronaut = $('.astronaut');
+        var $target = $('.target');
 
-         var n = 1;
-         var op = 0.90;
-
-         $div.find($caracter).each(function () {
-           TweenMax.staggerTo($(this), 1, {
-            opacity: op/ 2.5,
-             delay: 0.8,
-             x: n * 8,
-             y: -n * 6,
-             transformOrigin: "center",
-             ease: Power4.easeOut
-           }, 0.2);
-           n++;
-           op++
-         });
-
-       /* animate astronaut with baseball image */
-         var $astronaut = $('.astronaut');
-         var $target = $('.target');
-
-         TweenMax.to($div.find($astronaut), 0.6, {
+        TweenMax.to($div.find($astronaut), 0.6, {
           autoAlpha: 1,
           x: 0,
           delay: 0.5,
           ease: Elastic.easeOut.config(1, 0.3)
         });
-         
-         TweenMax.to($div.find($target), 0.4, {
+
+        TweenMax.to($div.find($target), 0.4, {
           autoAlpha: 1,
           x: 0,
           delay: 0.2,
           ease: Power3.easeInOut
         });
-         
+
 
       }
     });
@@ -414,13 +430,13 @@ function homePage() {
     });
 
     /* show hide apply link service section */
-    
+
     var topDistance = $('.manifesto').offset().top;
-        $('.circle-container.apply-top-right').show()
+    $('.circle-container.apply-top-right').show()
 
     if ((topDistance - 180) < windowScrollTop) {
       $('.circle-container.apply-top-right').hide()
-    } else if ( (window.innerWidth <= 414) && (verge.inViewport( $('.manifesto'), -50 ))) {
+    } else if ((window.innerWidth <= 414) && (verge.inViewport($('.manifesto'), -50))) {
       $('.circle-container.apply-top-right').hide()
     }
 
@@ -434,10 +450,10 @@ function homePage() {
     scrollingHandler();
 
   }
-  
+
 
   function scrollingHandler() {
-    if(!canScroll) return;
+    if (!canScroll) return;
     var scaledTranslate = scaleBetween($_window.scrollTop(), 0, menuHeight, 0, $_body.height());
     TweenMax.to($scrollHandler, 0.5, {
       y: scaledTranslate,
@@ -445,36 +461,36 @@ function homePage() {
     });
   }
 
-  
-/*   var handlerHeight = $('.fakehandler').height(); 
 
-  Draggable.create(".dragger", {
-        type:"y",
-        bounds: ".fakehandler",
-        lockAxis:true,
-        onDrag: function(){
-          canScroll = false;
-          isDragging = true;
-          dragScroll = scaleBetween(this.endY, 0, $_body.height(), 0, handlerHeight);
+  /*   var handlerHeight = $('.fakehandler').height(); 
 
-          //$_window.scrollTop(dragScroll);
-          
-        },
-        onDragEnd: function() {
-          canScroll = true;
-          isDragging = false;
-        }
-    });  */
+    Draggable.create(".dragger", {
+          type:"y",
+          bounds: ".fakehandler",
+          lockAxis:true,
+          onDrag: function(){
+            canScroll = false;
+            isDragging = true;
+            dragScroll = scaleBetween(this.endY, 0, $_body.height(), 0, handlerHeight);
+
+            //$_window.scrollTop(dragScroll);
+            
+          },
+          onDragEnd: function() {
+            canScroll = true;
+            isDragging = false;
+          }
+      });  */
 
   function applyLinkRotation() {
     VirtualScroll.on(function (event) {
       vel = event.deltaY;
-  
+
       TweenMax.to("svg#round", 1, {
         rotation: "+=" + vel * .5,
         ease: Linear.easeNone,
       });
-  
+
     });
   }
 
@@ -487,7 +503,7 @@ function homePage() {
     $('.logo-main').on('click', function () {
       var $this = $(this),
         targetLink = $this.attr('data-target');
-        TweenLite.to($_window, 1, {
+      TweenLite.to($_window, 1, {
         scrollTo: targetLink
       });
     });
@@ -501,7 +517,7 @@ function homePage() {
     });
 
   }
-  
+
 
   return {
     init: init,
