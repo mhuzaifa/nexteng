@@ -6,7 +6,7 @@ tmp/**
 backups/**
 wp-config.php
 node_modules/**
-src/assets/imgs/
+src/assets/imgs/**
 src/assets/fonts/
 src/concat/*.scss
 gulpfile.js
